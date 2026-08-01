@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/0xsequence/sequence-cli + docs.sequence.xyz
+name: sequence-cli
+official: true
+binary: sequence-cli
+repo: https://github.com/0xsequence/sequence-cli
+package: packages/sequence-packages.yml
+install:
+- method: npx
+  command: npx sequence-cli
+- method: npm
+  command: npm install -g sequence-cli
+description: >-
+  First-party Sequence command-line tool for scaffolding starter boilerplates and
+  running common Sequence developer flows (embedded wallet, marketplace, primary sales,
+  server-side transactions) from the terminal.
+command_groups:
+- name: boilerplates
+  purpose: Scaffold ready-to-run Sequence starter apps (embedded wallet, marketplace,
+    primary-sale, and server-side templates).
+- name: wallet
+  purpose: Embedded / Universal wallet developer flows.
+- name: marketplace
+  purpose: Marketplace boilerplate and integration scaffolding.
+notes: Command surface is scaffolding-oriented; the CLI wraps the boilerplate templates
+  maintained in the 0xsequence GitHub org.

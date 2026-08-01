@@ -1,0 +1,123 @@
+generated: '2026-07-21'
+method: derived
+source: derived from OpenAPI components.schemas + id-reference fields across Sequence webrpc specs
+id_domains:
+  contractAddress: EVM 0x-address of a token/NFT contract
+  tokenID: integer token id within an ERC-1155/721 contract
+  chainID: EVM numeric chain id (1=mainnet, 137=polygon, ...)
+  accountAddress: EVM 0x wallet address
+entities:
+- Collectible
+- Contract
+- ContractInfo
+- NativeTokenBalance
+- Order
+- Project
+- Token
+- TokenBalance
+- TokenMetadata
+- Transaction
+- TransactionReceipt
+- WebhookListener
+relationship_count: 20
+relationships:
+- from: Token
+  field: chainId
+  to: Chain
+  kind: belongs_to
+  via: chainID
+- from: Token
+  field: contractAddress
+  to: ContractInfo
+  kind: belongs_to
+  via: contractAddress
+- from: Token
+  field: tokenId
+  to: Token
+  kind: belongs_to
+  via: tokenID
+- from: TokenBalance
+  field: accountAddress
+  to: Wallet
+  kind: belongs_to
+  via: accountAddress
+- from: TokenBalance
+  field: chainId
+  to: Chain
+  kind: belongs_to
+  via: chainID
+- from: TokenBalance
+  field: contractAddress
+  to: ContractInfo
+  kind: belongs_to
+  via: contractAddress
+- from: TokenBalance
+  field: tokenID
+  to: Token
+  kind: belongs_to
+  via: tokenID
+- from: NativeTokenBalance
+  field: accountAddress
+  to: Wallet
+  kind: belongs_to
+  via: accountAddress
+- from: ContractInfo
+  field: chainId
+  to: Chain
+  kind: belongs_to
+  via: chainID
+- from: TokenMetadata
+  field: tokenId
+  to: Token
+  kind: belongs_to
+  via: tokenID
+- from: Transaction
+  field: chainId
+  to: Chain
+  kind: belongs_to
+  via: chainID
+- from: Order
+  field: chainId
+  to: Chain
+  kind: belongs_to
+  via: chainID
+- from: Order
+  field: tokenId
+  to: Token
+  kind: belongs_to
+  via: tokenID
+- from: Collectible
+  field: chainId
+  to: Chain
+  kind: belongs_to
+  via: chainID
+- from: Collectible
+  field: contractAddress
+  to: ContractInfo
+  kind: belongs_to
+  via: contractAddress
+- from: Collectible
+  field: tokenId
+  to: Token
+  kind: belongs_to
+  via: tokenID
+- from: Contract
+  field: chainId
+  to: Chain
+  kind: belongs_to
+  via: chainID
+- from: Contract
+  field: contractAddress
+  to: ContractInfo
+  kind: belongs_to
+  via: contractAddress
+- from: Project
+  field: chainId
+  to: Chain
+  kind: belongs_to
+  via: chainID
+- from: Project
+  field: contractAddress
+  to: ContractInfo
+  kind: belongs_to
+  via: contractAddress

@@ -1,0 +1,22 @@
+{
+  "provider": "sequence",
+  "sources": [
+    "sequence-analytics-api-openapi.yml",
+    "sequence-marketplace-api-openapi.yml",
+    "sequence-public-api-openapi.yml",
+    "sequence-rpc-api-openapi.yml",
+    "sequence-secret-api-openapi.yml"
+  ],
+  "outputs": [
+    "sequence-analytics-api-openapi.yml",
+    "sequence-marketplace-api-openapi.yml",
+    "sequence-public-api-openapi.yml",
+    "sequence-rpc-api-openapi.yml",
+    "sequence-secret-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

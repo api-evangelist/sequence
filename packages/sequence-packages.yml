@@ -1,0 +1,91 @@
+generated: '2026-07-21'
+method: searched
+source: github.com/0xsequence org + docs.sequence.xyz SDK pages + npm registry
+note: >-
+  First-party Sequence SDKs are published under the 0xsequence GitHub org and the
+  @0xsequence npm scope. official:true marks clearly first-party libraries.
+packages:
+- name: 0xsequence
+  registry: npm
+  url: https://www.npmjs.com/package/0xsequence
+  repo: https://github.com/0xsequence/sequence.js
+  language: TypeScript
+  official: true
+  description: Core Sequence web3 SDK / account-abstraction stack (monorepo meta package).
+- name: "@0xsequence/connect"
+  registry: npm
+  url: https://www.npmjs.com/package/@0xsequence/connect
+  repo: https://github.com/0xsequence/web-sdk
+  language: TypeScript
+  official: true
+  description: Sequence Web SDK - connect to web3 with any wallet (React connect kit).
+- name: "@0xsequence/indexer"
+  registry: npm
+  url: https://www.npmjs.com/package/@0xsequence/indexer
+  repo: https://github.com/0xsequence/sequence.js
+  language: TypeScript
+  official: true
+  description: Client for the Sequence multi-chain Indexer API.
+- name: "@0xsequence/metadata"
+  registry: npm
+  url: https://www.npmjs.com/package/@0xsequence/metadata
+  repo: https://github.com/0xsequence/sequence.js
+  language: TypeScript
+  official: true
+  description: Client for the Sequence Metadata API.
+- name: "@0xsequence/marketplace-sdk"
+  registry: npm
+  url: https://www.npmjs.com/package/@0xsequence/marketplace-sdk
+  repo: https://github.com/0xsequence/marketplace-sdk
+  language: TypeScript
+  official: true
+  description: Sequence Marketplace SDK (collections, listings, orders).
+- name: go-sequence
+  registry: pkg.go.dev
+  url: https://pkg.go.dev/github.com/0xsequence/go-sequence
+  repo: https://github.com/0xsequence/go-sequence
+  language: Go
+  official: true
+  description: Sequence SDK for Go.
+- name: sequence-unity
+  registry: github
+  url: https://github.com/0xsequence/sequence-unity
+  repo: https://github.com/0xsequence/sequence-unity
+  language: C#
+  official: true
+  description: Sequence Embedded Wallet SDK for the Unity game engine.
+- name: sequence-unreal
+  registry: github
+  url: https://github.com/0xsequence/sequence-unreal
+  repo: https://github.com/0xsequence/sequence-unreal
+  language: C++
+  official: true
+  description: Sequence Embedded Wallet SDK for Unreal Engine.
+- name: kotlin-sdk
+  registry: github
+  url: https://github.com/0xsequence/kotlin-sdk
+  repo: https://github.com/0xsequence/kotlin-sdk
+  language: Kotlin
+  official: true
+  description: Sequence Embedded Wallet SDK for Android.
+- name: swift-sdk
+  registry: github
+  url: https://github.com/0xsequence/swift-sdk
+  repo: https://github.com/0xsequence/swift-sdk
+  language: Swift
+  official: true
+  description: Sequence Embedded Wallet SDK for iOS.
+- name: sequence-cli
+  registry: npm
+  url: https://www.npmjs.com/package/sequence-cli
+  repo: https://github.com/0xsequence/sequence-cli
+  language: TypeScript
+  official: true
+  description: Sequence command-line interface (npx sequence-cli) for scaffolding boilerplates.
+- name: ethkit
+  registry: pkg.go.dev
+  url: https://pkg.go.dev/github.com/0xsequence/ethkit
+  repo: https://github.com/0xsequence/ethkit
+  language: Go
+  official: true
+  description: Ethereum development toolkit for Go used across Sequence services.

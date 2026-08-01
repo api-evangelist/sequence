@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: docs.sequence.xyz + status.sequence.info + 0xsequence.featurebase.app/changelog
+versioning:
+  scheme: webrpc-schema-versioned
+  note: >-
+    Services are webrpc-generated; each service reports its own info.version (0.0.1 in
+    published OpenAPI). Product surfaces (Builder, Marketplace SDK) are semver-tagged in
+    the changelog. No path/date API version segment; new capability lands as new webrpc
+    methods without breaking existing routes.
+status_page:
+  url: https://status.sequence.info
+  title: Sequence status
+  present: true
+deprecation:
+  policy_documented: false
+  sunset_header: false
+  deprecation_header: false
+  note: >-
+    No formal deprecation/sunset policy or RFC 8594 Sunset/Deprecation header usage found
+    in docs. Changes are communicated via the changelog.
+deprecated_operations: []
+changelog:
+  url: https://docs.sequence.xyz/support/changelog
+  redirects_to: https://0xsequence.featurebase.app/changelog
+  present: true

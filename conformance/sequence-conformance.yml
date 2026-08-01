@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: derived
+source: derived from openapi/ (webrpc specs) + docs.sequence.xyz
+standards:
+- id: oauth2
+  conforms: false
+  evidence: No oauth2 securityScheme; auth is project access key (X-Access-Key) + secret JWT bearer.
+- id: oidc
+  conforms: false
+  evidence: No OpenID Connect discovery; /.well-known/openid-configuration returns 404.
+- id: rfc9457
+  conforms: false
+  evidence: Errors are webrpc JSON (code/msg), content-type application/json, not application/problem+json.
+- id: json-rpc
+  conforms: false
+  evidence: 'webrpc (not JSON-RPC 2.0): POST /rpc/<Service>/<Method> with JSON body; typed schema-generated
+    protocol.'
+- id: webrpc
+  conforms: true
+  evidence: 'All 7 services are webrpc-generated: POST /rpc/{Service}/{Method}, application/json, OpenAPI
+    3.0 emitted from webrpc schema.'
+- id: pagination
+  conforms: true
+  evidence: Cursor+page hybrid via shared Page object {page,column,before,after,sort,pageSize,more}.
+- id: idempotency
+  conforms: false
+  evidence: No Idempotency-Key header or idempotent-write mechanism documented in specs or docs.
+- id: scim
+  conforms: false
+  evidence: No SCIM user/group provisioning surface.
+- id: fhir
+  conforms: false
+  evidence: Not a healthcare API.
+- id: odata
+  conforms: false
+  evidence: No OData query surface.
+- id: json:api
+  conforms: false
+  evidence: Response envelopes are webrpc-typed, not JSON:API.

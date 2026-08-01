@@ -1,0 +1,57 @@
+generated: '2026-07-21'
+method: derived
+source: docs.sequence.xyz/api-references + openapi/ (7 webrpc specs)
+protocol:
+  style: webrpc
+  transport: HTTPS POST to /rpc/{Service}/{Method}
+  content_type: application/json
+  note: >-
+    All Sequence APIs are webrpc-generated. Every operation is an HTTP POST with a JSON
+    body; there are no path/query resource semantics. OpenAPI 3.0 is emitted from the
+    webrpc schema for documentation.
+auth:
+  styles:
+  - project_access_key
+  - secret_jwt_bearer
+  access_key_header: X-Access-Key
+  bearer_format: JWT
+  cross_ref: authentication/sequence-authentication.yml
+idempotency:
+  supported: false
+  note: No Idempotency-Key header or idempotent-write mechanism is documented.
+pagination:
+  style: cursor-and-page-hybrid
+  request_object: page
+  request_fields:
+  - page
+  - column
+  - before
+  - after
+  - sort
+  - pageSize
+  response_field: page.more
+  note: >-
+    List operations accept a shared Page object; the returned page.more boolean and
+    before/after cursors drive continuation.
+field_expansion:
+  supported: false
+metadata:
+  supported: true
+  note: Token/contract metadata is a first-class API (Metadata service), not a generic
+    key/value bag on every object.
+request_id:
+  supported: unknown
+  note: No documented request-id/trace header convention.
+versioning:
+  cross_ref: lifecycle/sequence-lifecycle.yml
+errors:
+  envelope: webrpc
+  cross_ref: errors/sequence-problem-types.yml
+  note: JSON body with numeric code + msg and matching HTTP status; not RFC 9457.
+rate_limiting:
+  signaled: true
+  mechanism: >-
+    Rate limits vary by subscription tier and available MAUs (configured per project in
+    Sequence Builder). ErrorRateLimited (code 2005) is returned with HTTP 429.
+  error_code: 2005
+  http_status: 429

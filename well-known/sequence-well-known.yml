@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: probed
+source: live HTTP probes of Sequence hosts
+note: >-
+  No .well-known documents are published. Every probed path returned 404. This is
+  a valid, recorded none-result (no files saved).
+probes:
+- host: sequence.xyz
+  path: /.well-known/security.txt
+  status: 404
+  file: null
+- host: docs.sequence.xyz
+  path: /.well-known/security.txt
+  status: 404
+  file: null
+- host: api.sequence.app
+  path: /.well-known/openid-configuration
+  status: 404
+  file: null
+- host: sequence.xyz
+  path: /.well-known/ai-plugin.json
+  status: 404
+  file: null

@@ -1,0 +1,18 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Sequence Infrastructure API
+  version: 1.0.0
+extends: ../openapi/sequence-infrastructure.json
+actions:
+- target: $.info
+  update:
+    x-provider: Sequence (0xsequence / Polygon Labs)
+    x-protocol: webrpc
+    x-apis-io-slug: sequence
+    x-auth: X-Access-Key project access key + secret JWT bearer
+    x-docs: https://docs.sequence.xyz/api-references/infrastructure/overview
+- target: $
+  update:
+    x-apievangelist:
+      catalogued: '2026-07-21'
+      enhancement: provenance + cross-links added via overlay; original spec unmodified

@@ -1,0 +1,190 @@
+generated: '2026-07-21'
+method: derived
+source: OpenAPI components.schemas Error* across 7 Sequence webrpc specs
+format: webrpc
+envelope: JSON body {status:int, code:int, cause:string, msg:string, error:string} with matching HTTP
+  status; webrpc protocol errors use negative codes
+note: Sequence APIs are webrpc-generated; errors are NOT RFC 9457 problem+json. Application errors carry
+  a positive numeric code + msg; transport/protocol errors carry negative webrpc codes.
+error_count: 45
+errors:
+- name: ErrorAborted
+  code: 1005
+  http_status: 400
+  message: Request aborted
+- name: ErrorAlreadyCollaborator
+  code: 4001
+  http_status: 409
+  message: Already a collaborator
+- name: ErrorChainNotFound
+  code: 3003
+  http_status: 400
+  message: Chain not found
+- name: ErrorEmailTemplateExists
+  code: 3004
+  http_status: 409
+  message: Email Template exists
+- name: ErrorFail
+  code: 1005
+  http_status: 500
+  message: Request Failed
+- name: ErrorFeatureNotIncluded
+  code: 3006
+  http_status: 402
+  message: Feature not included
+- name: ErrorGeoblocked
+  code: 1006
+  http_status: 451
+  message: Geoblocked region
+- name: ErrorInsufficientFee
+  code: 3004
+  http_status: 402
+  message: Insufficient fee
+- name: ErrorInvalidArgument
+  code: 2001
+  http_status: 400
+  message: Invalid argument
+- name: ErrorInvalidNetwork
+  code: 3007
+  http_status: 400
+  message: Invalid network
+- name: ErrorInvalidTier
+  code: 3003
+  http_status: 400
+  message: Invalid subscription tier
+- name: ErrorInvitationExpired
+  code: 4000
+  http_status: 400
+  message: Invitation code is expired
+- name: ErrorMetadataCallFailed
+  code: 3003
+  http_status: 400
+  message: Metadata service call failed
+- name: ErrorMethodNotFound
+  code: 1003
+  http_status: 404
+  message: Method not found
+- name: ErrorNotFound
+  code: 3000
+  http_status: 400
+  message: Resource not found
+- name: ErrorNotImplemented
+  code: 9999
+  http_status: 500
+  message: Not Implemented
+- name: ErrorPermissionDenied
+  code: 1001
+  http_status: 403
+  message: Permission denied
+- name: ErrorProjectLimitReached
+  code: 3005
+  http_status: 402
+  message: Project limit reached
+- name: ErrorProjectNotFound
+  code: 3002
+  http_status: 400
+  message: Project not found
+- name: ErrorQueryFailed
+  code: 2003
+  http_status: 400
+  message: Query failed
+- name: ErrorRateLimited
+  code: 2005
+  http_status: 429
+  message: Rate limited
+- name: ErrorRequestConflict
+  code: 1004
+  http_status: 409
+  message: Conflict with target resource
+- name: ErrorRequiredArgument
+  code: 2002
+  http_status: 400
+  message: Required argument missing
+- name: ErrorResourceExhausted
+  code: 2004
+  http_status: 400
+  message: Resource exhausted
+- name: ErrorServiceDisabled
+  code: 1005
+  http_status: 404
+  message: Service disabled
+- name: ErrorSessionExpired
+  code: 1002
+  http_status: 403
+  message: Session expired
+- name: ErrorSubscriptionLimit
+  code: 3005
+  http_status: 402
+  message: Subscription limit reached
+- name: ErrorTimeout
+  code: 2000
+  http_status: 408
+  message: Request timed out
+- name: ErrorTokenDirectoryDisabled
+  code: 4001
+  http_status: 400
+  message: Token Directory is disabled
+- name: ErrorUnauthorized
+  code: 1000
+  http_status: 401
+  message: Unauthorized access
+- name: ErrorUnavailable
+  code: 2002
+  http_status: 400
+  message: Unavailable resource
+- name: ErrorUserNotFound
+  code: 3001
+  http_status: 400
+  message: User not found
+- name: ErrorValidationFailed
+  code: 2004
+  http_status: 400
+  message: Validation failed
+- name: ErrorWebrpcBadMethod
+  code: -3
+  http_status: 405
+  message: bad method
+- name: ErrorWebrpcBadRequest
+  code: -4
+  http_status: 400
+  message: bad request
+- name: ErrorWebrpcBadResponse
+  code: -5
+  http_status: 500
+  message: bad response
+- name: ErrorWebrpcBadRoute
+  code: -2
+  http_status: 404
+  message: bad route
+- name: ErrorWebrpcClientAborted
+  code: -8
+  http_status: 400
+  message: request aborted by client
+- name: ErrorWebrpcClientDisconnected
+  code: -8
+  http_status: 400
+  message: client disconnected
+- name: ErrorWebrpcEndpoint
+  code: 0
+  http_status: 400
+  message: endpoint error
+- name: ErrorWebrpcInternalError
+  code: -7
+  http_status: 500
+  message: internal error
+- name: ErrorWebrpcRequestFailed
+  code: -1
+  http_status: 400
+  message: request failed
+- name: ErrorWebrpcServerPanic
+  code: -6
+  http_status: 500
+  message: server panic
+- name: ErrorWebrpcStreamFinished
+  code: -10
+  http_status: 200
+  message: stream finished
+- name: ErrorWebrpcStreamLost
+  code: -9
+  http_status: 400
+  message: stream lost

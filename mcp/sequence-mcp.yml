@@ -1,0 +1,1521 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: derived from Sequence webrpc OpenAPI operations; no official Sequence MCP server found as of enrichment
+  date
+note: Candidate tool surface only. Sequence publishes no hosted/remote MCP server at enrichment time;
+  these tools map 1:1 to webrpc operations and would require an X-Access-Key. Not an official server.
+auth: X-Access-Key (project access key) header; secret JWT bearer for privileged services
+tool_count: 302
+tools:
+- name: analytics.TotalCompute
+  operation: TotalCompute
+  service: analytics
+  http: POST /rpc/Analytics/TotalCompute
+  summary: ''
+- name: analytics.ComputeByService
+  operation: ComputeByService
+  service: analytics
+  http: POST /rpc/Analytics/ComputeByService
+  summary: ''
+- name: analytics.DailyComputeByType
+  operation: DailyComputeByType
+  service: analytics
+  http: POST /rpc/Analytics/DailyComputeByType
+  summary: ''
+- name: analytics.DailyComputeByService
+  operation: DailyComputeByService
+  service: analytics
+  http: POST /rpc/Analytics/DailyComputeByService
+  summary: ''
+- name: analytics.GetOrderbookCollections
+  operation: GetOrderbookCollections
+  service: analytics
+  http: POST /rpc/Analytics/GetOrderbookCollections
+  summary: ''
+- name: analytics.CreditsPerDailyActiveUser
+  operation: CreditsPerDailyActiveUser
+  service: analytics
+  http: POST /rpc/Analytics/CreditsPerDailyActiveUser
+  summary: ''
+- name: analytics.CreditsPerMonthlyActiveUser
+  operation: CreditsPerMonthlyActiveUser
+  service: analytics
+  http: POST /rpc/Analytics/CreditsPerMonthlyActiveUser
+  summary: ''
+- name: analytics.WalletsTotal
+  operation: WalletsTotal
+  service: analytics
+  http: POST /rpc/Analytics/WalletsTotal
+  summary: ''
+- name: analytics.WalletsDaily
+  operation: WalletsDaily
+  service: analytics
+  http: POST /rpc/Analytics/WalletsDaily
+  summary: ''
+- name: analytics.WalletsMonthly
+  operation: WalletsMonthly
+  service: analytics
+  http: POST /rpc/Analytics/WalletsMonthly
+  summary: ''
+- name: analytics.WalletsByCountry
+  operation: WalletsByCountry
+  service: analytics
+  http: POST /rpc/Analytics/WalletsByCountry
+  summary: ''
+- name: analytics.WalletsByDevice
+  operation: WalletsByDevice
+  service: analytics
+  http: POST /rpc/Analytics/WalletsByDevice
+  summary: ''
+- name: analytics.WalletsByBrowser
+  operation: WalletsByBrowser
+  service: analytics
+  http: POST /rpc/Analytics/WalletsByBrowser
+  summary: ''
+- name: analytics.WalletsByOS
+  operation: WalletsByOS
+  service: analytics
+  http: POST /rpc/Analytics/WalletsByOS
+  summary: ''
+- name: analytics.WalletsByType
+  operation: WalletsByType
+  service: analytics
+  http: POST /rpc/Analytics/WalletsByType
+  summary: ''
+- name: analytics.WalletsTxnSentTotal
+  operation: WalletsTxnSentTotal
+  service: analytics
+  http: POST /rpc/Analytics/WalletsTxnSentTotal
+  summary: ''
+- name: analytics.WalletsTxnSentDaily
+  operation: WalletsTxnSentDaily
+  service: analytics
+  http: POST /rpc/Analytics/WalletsTxnSentDaily
+  summary: ''
+- name: analytics.WalletsTxnSentMonthly
+  operation: WalletsTxnSentMonthly
+  service: analytics
+  http: POST /rpc/Analytics/WalletsTxnSentMonthly
+  summary: ''
+- name: analytics.WalletsByOrigin
+  operation: WalletsByOrigin
+  service: analytics
+  http: POST /rpc/Analytics/WalletsByOrigin
+  summary: ''
+- name: analytics.ConnectionsByOrigin
+  operation: ConnectionsByOrigin
+  service: analytics
+  http: POST /rpc/Analytics/ConnectionsByOrigin
+  summary: ''
+- name: analytics.MarketTxnEventTotal
+  operation: MarketTxnEventTotal
+  service: analytics
+  http: POST /rpc/Analytics/MarketTxnEventTotal
+  summary: ''
+- name: analytics.MarketTxnEventDaily
+  operation: MarketTxnEventDaily
+  service: analytics
+  http: POST /rpc/Analytics/MarketTxnEventDaily
+  summary: ''
+- name: analytics.MarketTxnEventMonthly
+  operation: MarketTxnEventMonthly
+  service: analytics
+  http: POST /rpc/Analytics/MarketTxnEventMonthly
+  summary: ''
+- name: analytics.MarketWalletsTotal
+  operation: MarketWalletsTotal
+  service: analytics
+  http: POST /rpc/Analytics/MarketWalletsTotal
+  summary: ''
+- name: analytics.MarketWalletsDaily
+  operation: MarketWalletsDaily
+  service: analytics
+  http: POST /rpc/Analytics/MarketWalletsDaily
+  summary: ''
+- name: analytics.MarketWalletsMonthly
+  operation: MarketWalletsMonthly
+  service: analytics
+  http: POST /rpc/Analytics/MarketWalletsMonthly
+  summary: ''
+- name: analytics.TotalWalletTxnConversionRate
+  operation: TotalWalletTxnConversionRate
+  service: analytics
+  http: POST /rpc/Analytics/TotalWalletTxnConversionRate
+  summary: ''
+- name: analytics.DailyWalletTxnConversionRate
+  operation: DailyWalletTxnConversionRate
+  service: analytics
+  http: POST /rpc/Analytics/DailyWalletTxnConversionRate
+  summary: ''
+- name: analytics.MonthlyWalletTxnConversionRate
+  operation: MonthlyWalletTxnConversionRate
+  service: analytics
+  http: POST /rpc/Analytics/MonthlyWalletTxnConversionRate
+  summary: ''
+- name: analytics.DailyNewWallets
+  operation: DailyNewWallets
+  service: analytics
+  http: POST /rpc/Analytics/DailyNewWallets
+  summary: ''
+- name: analytics.MonthlyNewWallets
+  operation: MonthlyNewWallets
+  service: analytics
+  http: POST /rpc/Analytics/MonthlyNewWallets
+  summary: ''
+- name: analytics.TotalNewWallets
+  operation: TotalNewWallets
+  service: analytics
+  http: POST /rpc/Analytics/TotalNewWallets
+  summary: ''
+- name: analytics.AverageDAU
+  operation: AverageDAU
+  service: analytics
+  http: POST /rpc/Analytics/AverageDAU
+  summary: ''
+- name: analytics.RollingStickiness
+  operation: RollingStickiness
+  service: analytics
+  http: POST /rpc/Analytics/RollingStickiness
+  summary: ''
+- name: analytics.AverageStickiness
+  operation: AverageStickiness
+  service: analytics
+  http: POST /rpc/Analytics/AverageStickiness
+  summary: ''
+- name: analytics.D1RetentionByCohort
+  operation: D1RetentionByCohort
+  service: analytics
+  http: POST /rpc/Analytics/D1RetentionByCohort
+  summary: ''
+- name: analytics.D3RetentionByCohort
+  operation: D3RetentionByCohort
+  service: analytics
+  http: POST /rpc/Analytics/D3RetentionByCohort
+  summary: ''
+- name: analytics.D7RetentionByCohort
+  operation: D7RetentionByCohort
+  service: analytics
+  http: POST /rpc/Analytics/D7RetentionByCohort
+  summary: ''
+- name: analytics.D14RetentionByCohort
+  operation: D14RetentionByCohort
+  service: analytics
+  http: POST /rpc/Analytics/D14RetentionByCohort
+  summary: ''
+- name: analytics.D28RetentionByCohort
+  operation: D28RetentionByCohort
+  service: analytics
+  http: POST /rpc/Analytics/D28RetentionByCohort
+  summary: ''
+- name: analytics.AverageD1Retention
+  operation: AverageD1Retention
+  service: analytics
+  http: POST /rpc/Analytics/AverageD1Retention
+  summary: ''
+- name: analytics.AverageD3Retention
+  operation: AverageD3Retention
+  service: analytics
+  http: POST /rpc/Analytics/AverageD3Retention
+  summary: ''
+- name: analytics.AverageD7Retention
+  operation: AverageD7Retention
+  service: analytics
+  http: POST /rpc/Analytics/AverageD7Retention
+  summary: ''
+- name: analytics.AverageD14Retention
+  operation: AverageD14Retention
+  service: analytics
+  http: POST /rpc/Analytics/AverageD14Retention
+  summary: ''
+- name: analytics.AverageD28Retention
+  operation: AverageD28Retention
+  service: analytics
+  http: POST /rpc/Analytics/AverageD28Retention
+  summary: ''
+- name: analytics.MonthlyActiveWalletsBySegment
+  operation: MonthlyActiveWalletsBySegment
+  service: analytics
+  http: POST /rpc/Analytics/MonthlyActiveWalletsBySegment
+  summary: ''
+- name: analytics.MonthlyTransactingWalletsBySegment
+  operation: MonthlyTransactingWalletsBySegment
+  service: analytics
+  http: POST /rpc/Analytics/MonthlyTransactingWalletsBySegment
+  summary: ''
+- name: analytics.WeeklyActiveWallets
+  operation: WeeklyActiveWallets
+  service: analytics
+  http: POST /rpc/Analytics/WeeklyActiveWallets
+  summary: ''
+- name: analytics.TotalViews
+  operation: TotalViews
+  service: analytics
+  http: POST /rpc/Analytics/TotalViews
+  summary: Views Analytics
+- name: analytics.DailyViews
+  operation: DailyViews
+  service: analytics
+  http: POST /rpc/Analytics/DailyViews
+  summary: ''
+- name: analytics.ViewsByCountry
+  operation: ViewsByCountry
+  service: analytics
+  http: POST /rpc/Analytics/ViewsByCountry
+  summary: ''
+- name: analytics.ViewsByDevice
+  operation: ViewsByDevice
+  service: analytics
+  http: POST /rpc/Analytics/ViewsByDevice
+  summary: ''
+- name: analytics.ViewsByOS
+  operation: ViewsByOS
+  service: analytics
+  http: POST /rpc/Analytics/ViewsByOS
+  summary: ''
+- name: analytics.DailyUniqueVisitors
+  operation: DailyUniqueVisitors
+  service: analytics
+  http: POST /rpc/Analytics/DailyUniqueVisitors
+  summary: Visitors Analytics
+- name: analytics.MonthlyUniqueVisitors
+  operation: MonthlyUniqueVisitors
+  service: analytics
+  http: POST /rpc/Analytics/MonthlyUniqueVisitors
+  summary: ''
+- name: analytics.ActiveSessions
+  operation: ActiveSessions
+  service: analytics
+  http: POST /rpc/Analytics/ActiveSessions
+  summary: Real-time Analytics
+- name: analytics.UserEvents
+  operation: UserEvents
+  service: analytics
+  http: POST /rpc/Analytics/UserEvents
+  summary: ''
+- name: analytics.EcosystemTotalWallets
+  operation: EcosystemTotalWallets
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTotalWallets
+  summary: Ecosystem Analytics
+- name: analytics.EcosystemTotalProjects
+  operation: EcosystemTotalProjects
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTotalProjects
+  summary: ''
+- name: analytics.EcosystemTotalProjectsCreated
+  operation: EcosystemTotalProjectsCreated
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTotalProjectsCreated
+  summary: ''
+- name: analytics.EcosystemTotalActiveProjects
+  operation: EcosystemTotalActiveProjects
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTotalActiveProjects
+  summary: ''
+- name: analytics.EcosystemTotalDevelopers
+  operation: EcosystemTotalDevelopers
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTotalDevelopers
+  summary: ''
+- name: analytics.EcosystemActiveDevelopers
+  operation: EcosystemActiveDevelopers
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemActiveDevelopers
+  summary: ''
+- name: analytics.EcosystemDailyActiveWallets
+  operation: EcosystemDailyActiveWallets
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemDailyActiveWallets
+  summary: ''
+- name: analytics.EcosystemMonthlyActiveWallets
+  operation: EcosystemMonthlyActiveWallets
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemMonthlyActiveWallets
+  summary: ''
+- name: analytics.EcosystemDailyNewProjects
+  operation: EcosystemDailyNewProjects
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemDailyNewProjects
+  summary: ''
+- name: analytics.EcosystemMonthlyNewProjects
+  operation: EcosystemMonthlyNewProjects
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemMonthlyNewProjects
+  summary: ''
+- name: analytics.EcosystemTotalContracts
+  operation: EcosystemTotalContracts
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTotalContracts
+  summary: ''
+- name: analytics.EcosystemMonthlyContracts
+  operation: EcosystemMonthlyContracts
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemMonthlyContracts
+  summary: ''
+- name: analytics.EcosystemTopProjectsByActiveWallets
+  operation: EcosystemTopProjectsByActiveWallets
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTopProjectsByActiveWallets
+  summary: ''
+- name: analytics.EcosystemTopProjectsByNewWallets
+  operation: EcosystemTopProjectsByNewWallets
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTopProjectsByNewWallets
+  summary: ''
+- name: analytics.EcosystemWalletsCreated
+  operation: EcosystemWalletsCreated
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemWalletsCreated
+  summary: ''
+- name: analytics.EcosystemMonthlyActiveEcoWallets
+  operation: EcosystemMonthlyActiveEcoWallets
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemMonthlyActiveEcoWallets
+  summary: ''
+- name: analytics.EcosystemDailyNewWallets
+  operation: EcosystemDailyNewWallets
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemDailyNewWallets
+  summary: ''
+- name: analytics.EcosystemMonthlyNewWallets
+  operation: EcosystemMonthlyNewWallets
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemMonthlyNewWallets
+  summary: ''
+- name: analytics.EcosystemTopProjectsByDeveloperActivity
+  operation: EcosystemTopProjectsByDeveloperActivity
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTopProjectsByDeveloperActivity
+  summary: ''
+- name: analytics.EcosystemTopProjectsByNewDevelopers
+  operation: EcosystemTopProjectsByNewDevelopers
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTopProjectsByNewDevelopers
+  summary: ''
+- name: analytics.EcosystemTotalMarketplaces
+  operation: EcosystemTotalMarketplaces
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTotalMarketplaces
+  summary: ''
+- name: analytics.EcosystemMonthlyMarketplaces
+  operation: EcosystemMonthlyMarketplaces
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemMonthlyMarketplaces
+  summary: ''
+- name: analytics.EcosystemActiveMarketplaces
+  operation: EcosystemActiveMarketplaces
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemActiveMarketplaces
+  summary: ''
+- name: analytics.EcosystemWalletsByCountry
+  operation: EcosystemWalletsByCountry
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemWalletsByCountry
+  summary: ''
+- name: analytics.EcosystemWalletsByDevice
+  operation: EcosystemWalletsByDevice
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemWalletsByDevice
+  summary: ''
+- name: analytics.EcosystemWalletsByOS
+  operation: EcosystemWalletsByOS
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemWalletsByOS
+  summary: ''
+- name: analytics.EcosystemWalletsByBrowser
+  operation: EcosystemWalletsByBrowser
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemWalletsByBrowser
+  summary: ''
+- name: analytics.EcosystemWalletsByType
+  operation: EcosystemWalletsByType
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemWalletsByType
+  summary: ''
+- name: analytics.EcosystemWalletsByLoginMethod
+  operation: EcosystemWalletsByLoginMethod
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemWalletsByLoginMethod
+  summary: ''
+- name: analytics.EcosystemTotalTransactions
+  operation: EcosystemTotalTransactions
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTotalTransactions
+  summary: Ecosystem Transaction Analytics
+- name: analytics.EcosystemMonthlyTransactions
+  operation: EcosystemMonthlyTransactions
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemMonthlyTransactions
+  summary: ''
+- name: analytics.EcosystemTotalTransactingUsers
+  operation: EcosystemTotalTransactingUsers
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTotalTransactingUsers
+  summary: ''
+- name: analytics.EcosystemMonthlyTransactingUsers
+  operation: EcosystemMonthlyTransactingUsers
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemMonthlyTransactingUsers
+  summary: ''
+- name: analytics.EcosystemTotalTransactionVolume
+  operation: EcosystemTotalTransactionVolume
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTotalTransactionVolume
+  summary: ''
+- name: analytics.EcosystemMonthlyTransactionVolume
+  operation: EcosystemMonthlyTransactionVolume
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemMonthlyTransactionVolume
+  summary: ''
+- name: analytics.EcosystemTopProjectsByTransactions
+  operation: EcosystemTopProjectsByTransactions
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTopProjectsByTransactions
+  summary: ''
+- name: analytics.EcosystemTopProjectsByTransactingUsers
+  operation: EcosystemTopProjectsByTransactingUsers
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTopProjectsByTransactingUsers
+  summary: ''
+- name: analytics.EcosystemTopProjectsByTransactionVolume
+  operation: EcosystemTopProjectsByTransactionVolume
+  service: analytics
+  http: POST /rpc/Analytics/EcosystemTopProjectsByTransactionVolume
+  summary: ''
+- name: analytics.TotalProjectTransactions
+  operation: TotalProjectTransactions
+  service: analytics
+  http: POST /rpc/Analytics/TotalProjectTransactions
+  summary: Transaction Analytics
+- name: analytics.DailyProjectTransactions
+  operation: DailyProjectTransactions
+  service: analytics
+  http: POST /rpc/Analytics/DailyProjectTransactions
+  summary: ''
+- name: analytics.MonthlyProjectTransactions
+  operation: MonthlyProjectTransactions
+  service: analytics
+  http: POST /rpc/Analytics/MonthlyProjectTransactions
+  summary: ''
+- name: analytics.TotalProjectTransactionsByChain
+  operation: TotalProjectTransactionsByChain
+  service: analytics
+  http: POST /rpc/Analytics/TotalProjectTransactionsByChain
+  summary: ''
+- name: analytics.TotalProjectTransactionsByCollection
+  operation: TotalProjectTransactionsByCollection
+  service: analytics
+  http: POST /rpc/Analytics/TotalProjectTransactionsByCollection
+  summary: ''
+- name: analytics.TotalProjectTransactionsByToken
+  operation: TotalProjectTransactionsByToken
+  service: analytics
+  http: POST /rpc/Analytics/TotalProjectTransactionsByToken
+  summary: ''
+- name: analytics.MonthlyProjectTransactionsByCollection
+  operation: MonthlyProjectTransactionsByCollection
+  service: analytics
+  http: POST /rpc/Analytics/MonthlyProjectTransactionsByCollection
+  summary: ''
+- name: analytics.TotalProjectTransactionVolume
+  operation: TotalProjectTransactionVolume
+  service: analytics
+  http: POST /rpc/Analytics/TotalProjectTransactionVolume
+  summary: ''
+- name: analytics.DailyProjectVolume
+  operation: DailyProjectVolume
+  service: analytics
+  http: POST /rpc/Analytics/DailyProjectVolume
+  summary: ''
+- name: analytics.MonthlyProjectVolume
+  operation: MonthlyProjectVolume
+  service: analytics
+  http: POST /rpc/Analytics/MonthlyProjectVolume
+  summary: ''
+- name: analytics.TotalProjectVolumeByChain
+  operation: TotalProjectVolumeByChain
+  service: analytics
+  http: POST /rpc/Analytics/TotalProjectVolumeByChain
+  summary: ''
+- name: analytics.TotalProjectVolumeByCollection
+  operation: TotalProjectVolumeByCollection
+  service: analytics
+  http: POST /rpc/Analytics/TotalProjectVolumeByCollection
+  summary: ''
+- name: analytics.TotalProjectVolumeByToken
+  operation: TotalProjectVolumeByToken
+  service: analytics
+  http: POST /rpc/Analytics/TotalProjectVolumeByToken
+  summary: ''
+- name: analytics.MonthlyProjectVolumeByCollection
+  operation: MonthlyProjectVolumeByCollection
+  service: analytics
+  http: POST /rpc/Analytics/MonthlyProjectVolumeByCollection
+  summary: ''
+- name: analytics.TransactionVolumePerUser
+  operation: TransactionVolumePerUser
+  service: analytics
+  http: POST /rpc/Analytics/TransactionVolumePerUser
+  summary: ''
+- name: analytics.TransactionVolumePerTransactingUser
+  operation: TransactionVolumePerTransactingUser
+  service: analytics
+  http: POST /rpc/Analytics/TransactionVolumePerTransactingUser
+  summary: ''
+- name: analytics.TotalTransactingUsers
+  operation: TotalTransactingUsers
+  service: analytics
+  http: POST /rpc/Analytics/TotalTransactingUsers
+  summary: ''
+- name: analytics.DailyUniqueTransactingUsers
+  operation: DailyUniqueTransactingUsers
+  service: analytics
+  http: POST /rpc/Analytics/DailyUniqueTransactingUsers
+  summary: ''
+- name: analytics.MonthlyUniqueTransactingUsers
+  operation: MonthlyUniqueTransactingUsers
+  service: analytics
+  http: POST /rpc/Analytics/MonthlyUniqueTransactingUsers
+  summary: ''
+- name: analytics.TransactingUserConversion
+  operation: TransactingUserConversion
+  service: analytics
+  http: POST /rpc/Analytics/TransactingUserConversion
+  summary: ''
+- name: analytics.DailyTransactingUserConversion
+  operation: DailyTransactingUserConversion
+  service: analytics
+  http: POST /rpc/Analytics/DailyTransactingUserConversion
+  summary: ''
+- name: analytics.MonthlyTransactingUserConversion
+  operation: MonthlyTransactingUserConversion
+  service: analytics
+  http: POST /rpc/Analytics/MonthlyTransactingUserConversion
+  summary: ''
+- name: analytics.RepeatingTransactingUserPercentage
+  operation: RepeatingTransactingUserPercentage
+  service: analytics
+  http: POST /rpc/Analytics/RepeatingTransactingUserPercentage
+  summary: ''
+- name: analytics.WeekOnWeekTransactingUserRetention
+  operation: WeekOnWeekTransactingUserRetention
+  service: analytics
+  http: POST /rpc/Analytics/WeekOnWeekTransactingUserRetention
+  summary: ''
+- name: analytics.MonthOnMonthTransactingUserRetention
+  operation: MonthOnMonthTransactingUserRetention
+  service: analytics
+  http: POST /rpc/Analytics/MonthOnMonthTransactingUserRetention
+  summary: ''
+- name: analytics.AvgBalanceOfSequenceWallets
+  operation: AvgBalanceOfSequenceWallets
+  service: analytics
+  http: POST /rpc/Analytics/AvgBalanceOfSequenceWallets
+  summary: ''
+- name: analytics.AvgBalanceOfTransactingSequenceWallets
+  operation: AvgBalanceOfTransactingSequenceWallets
+  service: analytics
+  http: POST /rpc/Analytics/AvgBalanceOfTransactingSequenceWallets
+  summary: ''
+- name: analytics.TotalMarketplaceTransactions
+  operation: TotalMarketplaceTransactions
+  service: analytics
+  http: POST /rpc/Analytics/TotalMarketplaceTransactions
+  summary: Marketplace Analytics
+- name: analytics.DailyMarketplaceTransactions
+  operation: DailyMarketplaceTransactions
+  service: analytics
+  http: POST /rpc/Analytics/DailyMarketplaceTransactions
+  summary: ''
+- name: analytics.MonthlyMarketplaceTransactions
+  operation: MonthlyMarketplaceTransactions
+  service: analytics
+  http: POST /rpc/Analytics/MonthlyMarketplaceTransactions
+  summary: ''
+- name: analytics.TotalMarketplaceItemsTransacted
+  operation: TotalMarketplaceItemsTransacted
+  service: analytics
+  http: POST /rpc/Analytics/TotalMarketplaceItemsTransacted
+  summary: ''
+- name: analytics.TotalMarketplaceItemsPurchased
+  operation: TotalMarketplaceItemsPurchased
+  service: analytics
+  http: POST /rpc/Analytics/TotalMarketplaceItemsPurchased
+  summary: ''
+- name: analytics.TotalMarketplaceItemsSold
+  operation: TotalMarketplaceItemsSold
+  service: analytics
+  http: POST /rpc/Analytics/TotalMarketplaceItemsSold
+  summary: ''
+- name: analytics.TotalMarketplaceItemsListed
+  operation: TotalMarketplaceItemsListed
+  service: analytics
+  http: POST /rpc/Analytics/TotalMarketplaceItemsListed
+  summary: ''
+- name: analytics.TotalMarketplaceItemsOffered
+  operation: TotalMarketplaceItemsOffered
+  service: analytics
+  http: POST /rpc/Analytics/TotalMarketplaceItemsOffered
+  summary: ''
+- name: analytics.TotalMarketplaceTransactingUsers
+  operation: TotalMarketplaceTransactingUsers
+  service: analytics
+  http: POST /rpc/Analytics/TotalMarketplaceTransactingUsers
+  summary: ''
+- name: analytics.TotalMarketplaceVolume
+  operation: TotalMarketplaceVolume
+  service: analytics
+  http: POST /rpc/Analytics/TotalMarketplaceVolume
+  summary: ''
+- name: analytics.DailyMarketplaceVolume
+  operation: DailyMarketplaceVolume
+  service: analytics
+  http: POST /rpc/Analytics/DailyMarketplaceVolume
+  summary: ''
+- name: analytics.MonthlyMarketplaceVolume
+  operation: MonthlyMarketplaceVolume
+  service: analytics
+  http: POST /rpc/Analytics/MonthlyMarketplaceVolume
+  summary: ''
+- name: analytics.AverageMarketplaceTransactionPrice
+  operation: AverageMarketplaceTransactionPrice
+  service: analytics
+  http: POST /rpc/Analytics/AverageMarketplaceTransactionPrice
+  summary: ''
+- name: analytics.TotalMarketplaceTradedCollections
+  operation: TotalMarketplaceTradedCollections
+  service: analytics
+  http: POST /rpc/Analytics/TotalMarketplaceTradedCollections
+  summary: ''
+- name: analytics.TopMarketplaceBuyers
+  operation: TopMarketplaceBuyers
+  service: analytics
+  http: POST /rpc/Analytics/TopMarketplaceBuyers
+  summary: ''
+- name: analytics.TopMarketplaceSellers
+  operation: TopMarketplaceSellers
+  service: analytics
+  http: POST /rpc/Analytics/TopMarketplaceSellers
+  summary: ''
+- name: analytics.MarketplaceCollectionTransactions
+  operation: MarketplaceCollectionTransactions
+  service: analytics
+  http: POST /rpc/Analytics/MarketplaceCollectionTransactions
+  summary: ''
+- name: analytics.TotalShopTransactions
+  operation: TotalShopTransactions
+  service: analytics
+  http: POST /rpc/Analytics/TotalShopTransactions
+  summary: Shop Analytics
+- name: analytics.DailyShopTransactions
+  operation: DailyShopTransactions
+  service: analytics
+  http: POST /rpc/Analytics/DailyShopTransactions
+  summary: ''
+- name: analytics.MonthlyShopTransactions
+  operation: MonthlyShopTransactions
+  service: analytics
+  http: POST /rpc/Analytics/MonthlyShopTransactions
+  summary: ''
+- name: analytics.TotalShopItemsPurchased
+  operation: TotalShopItemsPurchased
+  service: analytics
+  http: POST /rpc/Analytics/TotalShopItemsPurchased
+  summary: ''
+- name: analytics.TotalShopPurchasers
+  operation: TotalShopPurchasers
+  service: analytics
+  http: POST /rpc/Analytics/TotalShopPurchasers
+  summary: ''
+- name: analytics.TotalShopVolume
+  operation: TotalShopVolume
+  service: analytics
+  http: POST /rpc/Analytics/TotalShopVolume
+  summary: ''
+- name: analytics.DailyShopVolume
+  operation: DailyShopVolume
+  service: analytics
+  http: POST /rpc/Analytics/DailyShopVolume
+  summary: ''
+- name: analytics.MonthlyShopVolume
+  operation: MonthlyShopVolume
+  service: analytics
+  http: POST /rpc/Analytics/MonthlyShopVolume
+  summary: ''
+- name: analytics.AverageShopPurchasePrice
+  operation: AverageShopPurchasePrice
+  service: analytics
+  http: POST /rpc/Analytics/AverageShopPurchasePrice
+  summary: ''
+- name: analytics.TopShopBuyers
+  operation: TopShopBuyers
+  service: analytics
+  http: POST /rpc/Analytics/TopShopBuyers
+  summary: ''
+- name: analytics.ShopCollectionTransactions
+  operation: ShopCollectionTransactions
+  service: analytics
+  http: POST /rpc/Analytics/ShopCollectionTransactions
+  summary: ''
+- name: analytics.TotalMarketplaceItemsSoldByToken
+  operation: TotalMarketplaceItemsSoldByToken
+  service: analytics
+  http: POST /rpc/Analytics/TotalMarketplaceItemsSoldByToken
+  summary: Marketplace Token-Level Analytics
+- name: analytics.TotalShopItemsSoldByToken
+  operation: TotalShopItemsSoldByToken
+  service: analytics
+  http: POST /rpc/Analytics/TotalShopItemsSoldByToken
+  summary: ''
+- name: analytics.TrailsTotalTransactionVolume
+  operation: TrailsTotalTransactionVolume
+  service: analytics
+  http: POST /rpc/Analytics/TrailsTotalTransactionVolume
+  summary: Trails Analytics - Big Numbers
+- name: analytics.TrailsTotalTransactions
+  operation: TrailsTotalTransactions
+  service: analytics
+  http: POST /rpc/Analytics/TrailsTotalTransactions
+  summary: ''
+- name: analytics.TrailsTotalUniqueTransactingWallets
+  operation: TrailsTotalUniqueTransactingWallets
+  service: analytics
+  http: POST /rpc/Analytics/TrailsTotalUniqueTransactingWallets
+  summary: ''
+- name: analytics.TrailsAverageTransactionDuration
+  operation: TrailsAverageTransactionDuration
+  service: analytics
+  http: POST /rpc/Analytics/TrailsAverageTransactionDuration
+  summary: ''
+- name: analytics.TrailsPaymentCompletionPercentage
+  operation: TrailsPaymentCompletionPercentage
+  service: analytics
+  http: POST /rpc/Analytics/TrailsPaymentCompletionPercentage
+  summary: ''
+- name: analytics.TrailsTransactionsByDomain
+  operation: TrailsTransactionsByDomain
+  service: analytics
+  http: POST /rpc/Analytics/TrailsTransactionsByDomain
+  summary: Trails Analytics - Category Charts
+- name: analytics.TrailsTransactionsByAmount
+  operation: TrailsTransactionsByAmount
+  service: analytics
+  http: POST /rpc/Analytics/TrailsTransactionsByAmount
+  summary: ''
+- name: analytics.TrailsDailyTransactionVolume
+  operation: TrailsDailyTransactionVolume
+  service: analytics
+  http: POST /rpc/Analytics/TrailsDailyTransactionVolume
+  summary: Trails Analytics - Daily Time Series
+- name: analytics.TrailsDailyTransactions
+  operation: TrailsDailyTransactions
+  service: analytics
+  http: POST /rpc/Analytics/TrailsDailyTransactions
+  summary: ''
+- name: analytics.TrailsDailyTransactingWallets
+  operation: TrailsDailyTransactingWallets
+  service: analytics
+  http: POST /rpc/Analytics/TrailsDailyTransactingWallets
+  summary: ''
+- name: analytics.TrailsDailyActiveWallets
+  operation: TrailsDailyActiveWallets
+  service: analytics
+  http: POST /rpc/Analytics/TrailsDailyActiveWallets
+  summary: ''
+- name: analytics.TrailsDailyAverageTransactionDuration
+  operation: TrailsDailyAverageTransactionDuration
+  service: analytics
+  http: POST /rpc/Analytics/TrailsDailyAverageTransactionDuration
+  summary: ''
+- name: analytics.TrailsDailyPaymentCompletionPercentage
+  operation: TrailsDailyPaymentCompletionPercentage
+  service: analytics
+  http: POST /rpc/Analytics/TrailsDailyPaymentCompletionPercentage
+  summary: ''
+- name: analytics.TrailsMonthlyTransactionVolume
+  operation: TrailsMonthlyTransactionVolume
+  service: analytics
+  http: POST /rpc/Analytics/TrailsMonthlyTransactionVolume
+  summary: Trails Analytics - Monthly Time Series
+- name: analytics.TrailsMonthlyTransactions
+  operation: TrailsMonthlyTransactions
+  service: analytics
+  http: POST /rpc/Analytics/TrailsMonthlyTransactions
+  summary: ''
+- name: analytics.TrailsMonthlyTransactingWallets
+  operation: TrailsMonthlyTransactingWallets
+  service: analytics
+  http: POST /rpc/Analytics/TrailsMonthlyTransactingWallets
+  summary: ''
+- name: analytics.TrailsMonthlyActiveWallets
+  operation: TrailsMonthlyActiveWallets
+  service: analytics
+  http: POST /rpc/Analytics/TrailsMonthlyActiveWallets
+  summary: ''
+- name: analytics.TrailsMonthlyAverageTransactionDuration
+  operation: TrailsMonthlyAverageTransactionDuration
+  service: analytics
+  http: POST /rpc/Analytics/TrailsMonthlyAverageTransactionDuration
+  summary: ''
+- name: analytics.TrailsMonthlyPaymentCompletionPercentage
+  operation: TrailsMonthlyPaymentCompletionPercentage
+  service: analytics
+  http: POST /rpc/Analytics/TrailsMonthlyPaymentCompletionPercentage
+  summary: ''
+- name: analytics.TrailsTransactionsByMode
+  operation: TrailsTransactionsByMode
+  service: analytics
+  http: POST /rpc/Analytics/TrailsTransactionsByMode
+  summary: Trails Analytics - Tables
+- name: analytics.TrailsTransactionsByRoute
+  operation: TrailsTransactionsByRoute
+  service: analytics
+  http: POST /rpc/Analytics/TrailsTransactionsByRoute
+  summary: ''
+- name: analytics.TrailsTransactionsByProvider
+  operation: TrailsTransactionsByProvider
+  service: analytics
+  http: POST /rpc/Analytics/TrailsTransactionsByProvider
+  summary: ''
+- name: analytics.TrailsTransactionsByCountry
+  operation: TrailsTransactionsByCountry
+  service: analytics
+  http: POST /rpc/Analytics/TrailsTransactionsByCountry
+  summary: ''
+- name: analytics.TrailsTopTransactions
+  operation: TrailsTopTransactions
+  service: analytics
+  http: POST /rpc/Analytics/TrailsTopTransactions
+  summary: ''
+- name: analytics.ExportTrailsTransactions
+  operation: ExportTrailsTransactions
+  service: analytics
+  http: POST /rpc/Analytics/ExportTrailsTransactions
+  summary: Trails Analytics - Export (returns all data without limit for CSV export)
+- name: builder.GetContract
+  operation: GetContract
+  service: builder
+  http: POST /rpc/Builder/GetContract
+  summary: GetContract
+- name: builder.ListContracts
+  operation: ListContracts
+  service: builder
+  http: POST /rpc/Builder/ListContracts
+  summary: ListContracts
+- name: builder.ListContractSources
+  operation: ListContractSources
+  service: builder
+  http: POST /rpc/Builder/ListContractSources
+  summary: ListContractSources
+- name: builder.ListAudiences
+  operation: ListAudiences
+  service: builder
+  http: POST /rpc/Builder/ListAudiences
+  summary: ListAudiences
+- name: builder.GetAudience
+  operation: GetAudience
+  service: builder
+  http: POST /rpc/Builder/GetAudience
+  summary: GetAudience
+- name: builder.CreateAudience
+  operation: CreateAudience
+  service: builder
+  http: POST /rpc/Builder/CreateAudience
+  summary: CreateAudience
+- name: builder.UpdateAudience
+  operation: UpdateAudience
+  service: builder
+  http: POST /rpc/Builder/UpdateAudience
+  summary: UpdateAudience
+- name: builder.DeleteAudience
+  operation: DeleteAudience
+  service: builder
+  http: POST /rpc/Builder/DeleteAudience
+  summary: DeleteAudience
+- name: builder.AddAudienceContacts
+  operation: AddAudienceContacts
+  service: builder
+  http: POST /rpc/Builder/AddAudienceContacts
+  summary: AddAudienceContacts
+- name: builder.RemoveAudienceContacts
+  operation: RemoveAudienceContacts
+  service: builder
+  http: POST /rpc/Builder/RemoveAudienceContacts
+  summary: RemoveAudienceContacts
+- name: indexer.GetEtherBalance
+  operation: GetEtherBalance
+  service: indexer
+  http: POST /rpc/Indexer/GetEtherBalance
+  summary: GetEtherBalance
+- name: indexer.GetNativeTokenBalance
+  operation: GetNativeTokenBalance
+  service: indexer
+  http: POST /rpc/Indexer/GetNativeTokenBalance
+  summary: GetNativeTokenBalance
+- name: indexer.GetTokenBalancesSummary
+  operation: GetTokenBalancesSummary
+  service: indexer
+  http: POST /rpc/Indexer/GetTokenBalancesSummary
+  summary: GetTokenBalancesSummary
+- name: indexer.GetTokenBalancesDetails
+  operation: GetTokenBalancesDetails
+  service: indexer
+  http: POST /rpc/Indexer/GetTokenBalancesDetails
+  summary: GetTokenBalancesDetails
+- name: indexer.GetTokenBalancesByContract
+  operation: GetTokenBalancesByContract
+  service: indexer
+  http: POST /rpc/Indexer/GetTokenBalancesByContract
+  summary: GetTokenBalancesByContract
+- name: indexer.GetTokenBalances
+  operation: GetTokenBalances
+  service: indexer
+  http: POST /rpc/Indexer/GetTokenBalances
+  summary: GetTokenBalances
+- name: indexer.GetTokenSupplies
+  operation: GetTokenSupplies
+  service: indexer
+  http: POST /rpc/Indexer/GetTokenSupplies
+  summary: GetTokenSupplies
+- name: indexer.GetTokenSuppliesMap
+  operation: GetTokenSuppliesMap
+  service: indexer
+  http: POST /rpc/Indexer/GetTokenSuppliesMap
+  summary: GetTokenSuppliesMap
+- name: indexer.GetBalanceUpdates
+  operation: GetBalanceUpdates
+  service: indexer
+  http: POST /rpc/Indexer/GetBalanceUpdates
+  summary: GetBalanceUpdates
+- name: indexer.GetTransactionHistory
+  operation: GetTransactionHistory
+  service: indexer
+  http: POST /rpc/Indexer/GetTransactionHistory
+  summary: GetTransactionHistory
+- name: indexer.SyncBalance
+  operation: SyncBalance
+  service: indexer
+  http: POST /rpc/Indexer/SyncBalance
+  summary: SyncBalance
+- name: indexer.FetchTransactionReceipt
+  operation: FetchTransactionReceipt
+  service: indexer
+  http: POST /rpc/Indexer/FetchTransactionReceipt
+  summary: FetchTransactionReceipt
+- name: indexer.GetOrderbookOrders
+  operation: GetOrderbookOrders
+  service: indexer
+  http: POST /rpc/Indexer/GetOrderbookOrders
+  summary: GetOrderbookOrders
+- name: indexer.GetTopOrders
+  operation: GetTopOrders
+  service: indexer
+  http: POST /rpc/Indexer/GetTopOrders
+  summary: GetTopOrders
+- name: indexer.FetchTransactionReceiptWithFilter
+  operation: FetchTransactionReceiptWithFilter
+  service: indexer
+  http: POST /rpc/Indexer/FetchTransactionReceiptWithFilter
+  summary: FetchTransactionReceiptWithFilter
+- name: indexer.GetAllWebhookListeners
+  operation: GetAllWebhookListeners
+  service: indexer
+  http: POST /rpc/Indexer/GetAllWebhookListeners
+  summary: GetAllWebhookListeners
+- name: indexer.GetWebhookListener
+  operation: GetWebhookListener
+  service: indexer
+  http: POST /rpc/Indexer/GetWebhookListener
+  summary: GetWebhookListener
+- name: indexer.AddWebhookListener
+  operation: AddWebhookListener
+  service: indexer
+  http: POST /rpc/Indexer/AddWebhookListener
+  summary: AddWebhookListener
+- name: indexer.UpdateWebhookListener
+  operation: UpdateWebhookListener
+  service: indexer
+  http: POST /rpc/Indexer/UpdateWebhookListener
+  summary: UpdateWebhookListener
+- name: indexer.RemoveWebhookListener
+  operation: RemoveWebhookListener
+  service: indexer
+  http: POST /rpc/Indexer/RemoveWebhookListener
+  summary: RemoveWebhookListener
+- name: indexer.ToggleWebhookListener
+  operation: ToggleWebhookListener
+  service: indexer
+  http: POST /rpc/Indexer/ToggleWebhookListener
+  summary: ToggleWebhookListener
+- name: indexer.PauseAllWebhookListeners
+  operation: PauseAllWebhookListeners
+  service: indexer
+  http: POST /rpc/Indexer/PauseAllWebhookListeners
+  summary: PauseAllWebhookListeners
+- name: indexer.ResumeAllWebhookListeners
+  operation: ResumeAllWebhookListeners
+  service: indexer
+  http: POST /rpc/Indexer/ResumeAllWebhookListeners
+  summary: ResumeAllWebhookListeners
+- name: indexer.SubscribeReceipts
+  operation: SubscribeReceipts
+  service: indexer
+  http: POST /rpc/Indexer/SubscribeReceipts
+  summary: SubscribeReceipts
+- name: indexer.SubscribeEvents
+  operation: SubscribeEvents
+  service: indexer
+  http: POST /rpc/Indexer/SubscribeEvents
+  summary: SubscribeEvents
+- name: indexer.SubscribeBalanceUpdates
+  operation: SubscribeBalanceUpdates
+  service: indexer
+  http: POST /rpc/Indexer/SubscribeBalanceUpdates
+  summary: SubscribeBalanceUpdates
+- name: infrastructure.IsValidSignature
+  operation: IsValidSignature
+  service: infrastructure
+  http: POST /rpc/API/IsValidSignature
+  summary: IsValidSignature
+- name: infrastructure.IsValidMessageSignature
+  operation: IsValidMessageSignature
+  service: infrastructure
+  http: POST /rpc/API/IsValidMessageSignature
+  summary: IsValidMessageSignature
+- name: infrastructure.IsValidTypedDataSignature
+  operation: IsValidTypedDataSignature
+  service: infrastructure
+  http: POST /rpc/API/IsValidTypedDataSignature
+  summary: IsValidTypedDataSignature
+- name: infrastructure.IsValidETHAuthProof
+  operation: IsValidETHAuthProof
+  service: infrastructure
+  http: POST /rpc/API/IsValidETHAuthProof
+  summary: IsValidETHAuthProof
+- name: infrastructure.LinkWallet
+  operation: LinkWallet
+  service: infrastructure
+  http: POST /rpc/API/LinkWallet
+  summary: LinkWallet
+- name: infrastructure.GetLinkedWallets
+  operation: GetLinkedWallets
+  service: infrastructure
+  http: POST /rpc/API/GetLinkedWallets
+  summary: GetLinkedWallets
+- name: infrastructure.RemoveLinkedWallet
+  operation: RemoveLinkedWallet
+  service: infrastructure
+  http: POST /rpc/API/RemoveLinkedWallet
+  summary: RemoveLinkedWallet
+- name: infrastructure.GetSwapPrice
+  operation: GetSwapPrice
+  service: infrastructure
+  http: POST /rpc/API/GetSwapPrice
+  summary: GetSwapPrice
+- name: infrastructure.GetSwapPrices
+  operation: GetSwapPrices
+  service: infrastructure
+  http: POST /rpc/API/GetSwapPrices
+  summary: GetSwapPrices
+- name: infrastructure.GetSwapQuote
+  operation: GetSwapQuote
+  service: infrastructure
+  http: POST /rpc/API/GetSwapQuote
+  summary: GetSwapQuote
+- name: marketplace.ListCurrencies
+  operation: ListCurrencies
+  service: marketplace
+  http: POST /rpc/Marketplace/ListCurrencies
+  summary: ''
+- name: marketplace.GetCollectionDetail
+  operation: GetCollectionDetail
+  service: marketplace
+  http: POST /rpc/Marketplace/GetCollectionDetail
+  summary: ''
+- name: marketplace.GetCollectible
+  operation: GetCollectible
+  service: marketplace
+  http: POST /rpc/Marketplace/GetCollectible
+  summary: ''
+- name: marketplace.GetLowestPriceOfferForCollectible
+  operation: GetLowestPriceOfferForCollectible
+  service: marketplace
+  http: POST /rpc/Marketplace/GetLowestPriceOfferForCollectible
+  summary: ''
+- name: marketplace.GetHighestPriceOfferForCollectible
+  operation: GetHighestPriceOfferForCollectible
+  service: marketplace
+  http: POST /rpc/Marketplace/GetHighestPriceOfferForCollectible
+  summary: ''
+- name: marketplace.GetLowestPriceListingForCollectible
+  operation: GetLowestPriceListingForCollectible
+  service: marketplace
+  http: POST /rpc/Marketplace/GetLowestPriceListingForCollectible
+  summary: ''
+- name: marketplace.GetHighestPriceListingForCollectible
+  operation: GetHighestPriceListingForCollectible
+  service: marketplace
+  http: POST /rpc/Marketplace/GetHighestPriceListingForCollectible
+  summary: ''
+- name: marketplace.ListListingsForCollectible
+  operation: ListListingsForCollectible
+  service: marketplace
+  http: POST /rpc/Marketplace/ListListingsForCollectible
+  summary: ''
+- name: marketplace.ListOffersForCollectible
+  operation: ListOffersForCollectible
+  service: marketplace
+  http: POST /rpc/Marketplace/ListOffersForCollectible
+  summary: ''
+- name: marketplace.GetCountOfListingsForCollectible
+  operation: GetCountOfListingsForCollectible
+  service: marketplace
+  http: POST /rpc/Marketplace/GetCountOfListingsForCollectible
+  summary: ''
+- name: marketplace.GetCountOfOffersForCollectible
+  operation: GetCountOfOffersForCollectible
+  service: marketplace
+  http: POST /rpc/Marketplace/GetCountOfOffersForCollectible
+  summary: ''
+- name: marketplace.GetCollectibleLowestOffer
+  operation: GetCollectibleLowestOffer
+  service: marketplace
+  http: POST /rpc/Marketplace/GetCollectibleLowestOffer
+  summary: 'Deprecated: Please use GetLowestPriceOfferForCollectible instead.'
+- name: marketplace.GetCollectibleHighestOffer
+  operation: GetCollectibleHighestOffer
+  service: marketplace
+  http: POST /rpc/Marketplace/GetCollectibleHighestOffer
+  summary: 'Deprecated: Please use GetHighestPriceOfferForCollectible instead.'
+- name: marketplace.GetCollectibleLowestListing
+  operation: GetCollectibleLowestListing
+  service: marketplace
+  http: POST /rpc/Marketplace/GetCollectibleLowestListing
+  summary: 'Deprecated: Please use GetLowestPriceListingForCollectible instead.'
+- name: marketplace.GetCollectibleHighestListing
+  operation: GetCollectibleHighestListing
+  service: marketplace
+  http: POST /rpc/Marketplace/GetCollectibleHighestListing
+  summary: 'Deprecated: Please use GetHighestPriceListingForCollectible instead.'
+- name: marketplace.ListCollectibleListings
+  operation: ListCollectibleListings
+  service: marketplace
+  http: POST /rpc/Marketplace/ListCollectibleListings
+  summary: 'Deprecated: Please use ListListingsForCollectible instead.'
+- name: marketplace.ListCollectibleOffers
+  operation: ListCollectibleOffers
+  service: marketplace
+  http: POST /rpc/Marketplace/ListCollectibleOffers
+  summary: 'Deprecated: Please use ListOffersForCollectible instead.'
+- name: marketplace.GenerateBuyTransaction
+  operation: GenerateBuyTransaction
+  service: marketplace
+  http: POST /rpc/Marketplace/GenerateBuyTransaction
+  summary: checkout process
+- name: marketplace.GenerateSellTransaction
+  operation: GenerateSellTransaction
+  service: marketplace
+  http: POST /rpc/Marketplace/GenerateSellTransaction
+  summary: ''
+- name: marketplace.GenerateListingTransaction
+  operation: GenerateListingTransaction
+  service: marketplace
+  http: POST /rpc/Marketplace/GenerateListingTransaction
+  summary: ''
+- name: marketplace.GenerateOfferTransaction
+  operation: GenerateOfferTransaction
+  service: marketplace
+  http: POST /rpc/Marketplace/GenerateOfferTransaction
+  summary: ''
+- name: marketplace.GenerateCancelTransaction
+  operation: GenerateCancelTransaction
+  service: marketplace
+  http: POST /rpc/Marketplace/GenerateCancelTransaction
+  summary: ''
+- name: marketplace.ListCollectibles
+  operation: ListCollectibles
+  service: marketplace
+  http: POST /rpc/Marketplace/ListCollectibles
+  summary: list of collectibles with best order for each collectible, by default this only returns collectibles
+    with an order
+- name: marketplace.GetCountOfAllCollectibles
+  operation: GetCountOfAllCollectibles
+  service: marketplace
+  http: POST /rpc/Marketplace/GetCountOfAllCollectibles
+  summary: ''
+- name: marketplace.GetCountOfFilteredCollectibles
+  operation: GetCountOfFilteredCollectibles
+  service: marketplace
+  http: POST /rpc/Marketplace/GetCountOfFilteredCollectibles
+  summary: ''
+- name: marketplace.GetFloorOrder
+  operation: GetFloorOrder
+  service: marketplace
+  http: POST /rpc/Marketplace/GetFloorOrder
+  summary: ''
+- name: marketplace.ListCollectionActivities
+  operation: ListCollectionActivities
+  service: marketplace
+  http: POST /rpc/Marketplace/ListCollectionActivities
+  summary: ''
+- name: marketplace.ListCollectibleActivities
+  operation: ListCollectibleActivities
+  service: marketplace
+  http: POST /rpc/Marketplace/ListCollectibleActivities
+  summary: ''
+- name: marketplace.ListCollectiblesWithLowestListing
+  operation: ListCollectiblesWithLowestListing
+  service: marketplace
+  http: POST /rpc/Marketplace/ListCollectiblesWithLowestListing
+  summary: ''
+- name: marketplace.ListCollectiblesWithHighestOffer
+  operation: ListCollectiblesWithHighestOffer
+  service: marketplace
+  http: POST /rpc/Marketplace/ListCollectiblesWithHighestOffer
+  summary: ''
+- name: marketplace.GetOrders
+  operation: GetOrders
+  service: marketplace
+  http: POST /rpc/Marketplace/GetOrders
+  summary: ''
+- name: marketplace.CheckoutOptionsMarketplace
+  operation: CheckoutOptionsMarketplace
+  service: marketplace
+  http: POST /rpc/Marketplace/CheckoutOptionsMarketplace
+  summary: ''
+- name: marketplace.CheckoutOptionsSalesContract
+  operation: CheckoutOptionsSalesContract
+  service: marketplace
+  http: POST /rpc/Marketplace/CheckoutOptionsSalesContract
+  summary: ''
+- name: marketplace.SupportedMarketplaces
+  operation: SupportedMarketplaces
+  service: marketplace
+  http: POST /rpc/Marketplace/SupportedMarketplaces
+  summary: ''
+- name: metadata.RefreshTokenMetadata
+  operation: RefreshTokenMetadata
+  service: metadata
+  http: POST /rpc/Metadata/RefreshTokenMetadata
+  summary: RefreshTokenMetadata
+- name: metadata.EnqueueTokensForRefresh
+  operation: EnqueueTokensForRefresh
+  service: metadata
+  http: POST /rpc/Metadata/EnqueueTokensForRefresh
+  summary: EnqueueTokensForRefresh
+- name: metadata.RefreshContractInfo
+  operation: RefreshContractInfo
+  service: metadata
+  http: POST /rpc/Metadata/RefreshContractInfo
+  summary: RefreshContractInfo
+- name: metadata.RefreshContractTokens
+  operation: RefreshContractTokens
+  service: metadata
+  http: POST /rpc/Metadata/RefreshContractTokens
+  summary: RefreshContractTokens
+- name: metadata.RefreshAllContractTokens
+  operation: RefreshAllContractTokens
+  service: metadata
+  http: POST /rpc/Metadata/RefreshAllContractTokens
+  summary: RefreshAllContractTokens
+- name: metadata.GetTokenMetadata
+  operation: GetTokenMetadata
+  service: metadata
+  http: POST /rpc/Metadata/GetTokenMetadata
+  summary: GetTokenMetadata
+- name: metadata.GetTokenMetadataBatch
+  operation: GetTokenMetadataBatch
+  service: metadata
+  http: POST /rpc/Metadata/GetTokenMetadataBatch
+  summary: GetTokenMetadataBatch
+- name: metadata.SearchTokenMetadata
+  operation: SearchTokenMetadata
+  service: metadata
+  http: POST /rpc/Metadata/SearchTokenMetadata
+  summary: SearchTokenMetadata
+- name: metadata.SearchTokenIDs
+  operation: SearchTokenIDs
+  service: metadata
+  http: POST /rpc/Metadata/SearchTokenIDs
+  summary: SearchTokenIDs
+- name: metadata.TokenCollectionFilters
+  operation: TokenCollectionFilters
+  service: metadata
+  http: POST /rpc/Metadata/TokenCollectionFilters
+  summary: TokenCollectionFilters
+- name: metadata.GetContractInfo
+  operation: GetContractInfo
+  service: metadata
+  http: POST /rpc/Metadata/GetContractInfo
+  summary: GetContractInfo
+- name: metadata.GetContractInfoBatch
+  operation: GetContractInfoBatch
+  service: metadata
+  http: POST /rpc/Metadata/GetContractInfoBatch
+  summary: GetContractInfoBatch
+- name: metadata.SearchContractInfo
+  operation: SearchContractInfo
+  service: metadata
+  http: POST /rpc/Metadata/SearchContractInfo
+  summary: SearchContractInfo
+- name: metadata.SearchContractInfoBatch
+  operation: SearchContractInfoBatch
+  service: metadata
+  http: POST /rpc/Metadata/SearchContractInfoBatch
+  summary: SearchContractInfoBatch
+- name: metadata.SearchMetadata
+  operation: SearchMetadata
+  service: metadata
+  http: POST /rpc/Metadata/SearchMetadata
+  summary: SearchMetadata
+- name: metadata.SearchTokens
+  operation: SearchTokens
+  service: metadata
+  http: POST /rpc/Metadata/SearchTokens
+  summary: SearchTokens
+- name: metadata.SearchContracts
+  operation: SearchContracts
+  service: metadata
+  http: POST /rpc/Metadata/SearchContracts
+  summary: SearchContracts
+- name: metadata.DirectoryGetNetworks
+  operation: DirectoryGetNetworks
+  service: metadata
+  http: POST /rpc/Metadata/DirectoryGetNetworks
+  summary: DirectoryGetNetworks
+- name: metadata.DirectoryGetCollections
+  operation: DirectoryGetCollections
+  service: metadata
+  http: POST /rpc/Metadata/DirectoryGetCollections
+  summary: DirectoryGetCollections
+- name: metadata.CreateCollection
+  operation: CreateCollection
+  service: metadata
+  http: POST /rpc/Collections/CreateCollection
+  summary: CreateCollection
+- name: metadata.GetCollection
+  operation: GetCollection
+  service: metadata
+  http: POST /rpc/Collections/GetCollection
+  summary: GetCollection
+- name: metadata.ListCollections
+  operation: ListCollections
+  service: metadata
+  http: POST /rpc/Collections/ListCollections
+  summary: ListCollections
+- name: metadata.UpdateCollection
+  operation: UpdateCollection
+  service: metadata
+  http: POST /rpc/Collections/UpdateCollection
+  summary: UpdateCollection
+- name: metadata.DeleteCollection
+  operation: DeleteCollection
+  service: metadata
+  http: POST /rpc/Collections/DeleteCollection
+  summary: DeleteCollection
+- name: metadata.PublishCollection
+  operation: PublishCollection
+  service: metadata
+  http: POST /rpc/Collections/PublishCollection
+  summary: PublishCollection
+- name: metadata.UnpublishCollection
+  operation: UnpublishCollection
+  service: metadata
+  http: POST /rpc/Collections/UnpublishCollection
+  summary: UnpublishCollection
+- name: metadata.CreateContractCollection
+  operation: CreateContractCollection
+  service: metadata
+  http: POST /rpc/Collections/CreateContractCollection
+  summary: CreateContractCollection
+- name: metadata.GetContractCollection
+  operation: GetContractCollection
+  service: metadata
+  http: POST /rpc/Collections/GetContractCollection
+  summary: GetContractCollection
+- name: metadata.ListContractCollections
+  operation: ListContractCollections
+  service: metadata
+  http: POST /rpc/Collections/ListContractCollections
+  summary: ListContractCollections
+- name: metadata.UpdateContractCollection
+  operation: UpdateContractCollection
+  service: metadata
+  http: POST /rpc/Collections/UpdateContractCollection
+  summary: UpdateContractCollection
+- name: metadata.DeleteContractCollection
+  operation: DeleteContractCollection
+  service: metadata
+  http: POST /rpc/Collections/DeleteContractCollection
+  summary: DeleteContractCollection
+- name: metadata.CreateToken
+  operation: CreateToken
+  service: metadata
+  http: POST /rpc/Collections/CreateToken
+  summary: CreateToken
+- name: metadata.GetToken
+  operation: GetToken
+  service: metadata
+  http: POST /rpc/Collections/GetToken
+  summary: GetToken
+- name: metadata.ListTokens
+  operation: ListTokens
+  service: metadata
+  http: POST /rpc/Collections/ListTokens
+  summary: ListTokens
+- name: metadata.UpdateToken
+  operation: UpdateToken
+  service: metadata
+  http: POST /rpc/Collections/UpdateToken
+  summary: UpdateToken
+- name: metadata.DeleteToken
+  operation: DeleteToken
+  service: metadata
+  http: POST /rpc/Collections/DeleteToken
+  summary: DeleteToken
+- name: metadata.CreateAsset
+  operation: CreateAsset
+  service: metadata
+  http: POST /rpc/Collections/CreateAsset
+  summary: CreateAsset
+- name: metadata.GetAsset
+  operation: GetAsset
+  service: metadata
+  http: POST /rpc/Collections/GetAsset
+  summary: GetAsset
+- name: metadata.UpdateAsset
+  operation: UpdateAsset
+  service: metadata
+  http: POST /rpc/Collections/UpdateAsset
+  summary: UpdateAsset
+- name: metadata.DeleteAsset
+  operation: DeleteAsset
+  service: metadata
+  http: POST /rpc/Collections/DeleteAsset
+  summary: DeleteAsset
+- name: transactions.GetChainID
+  operation: GetChainID
+  service: transactions
+  http: POST /rpc/Relayer/GetChainID
+  summary: GetChainID
+- name: transactions.FeeTokens
+  operation: FeeTokens
+  service: transactions
+  http: POST /rpc/Relayer/FeeTokens
+  summary: FeeTokens
+- name: transactions.FeeOptions
+  operation: FeeOptions
+  service: transactions
+  http: POST /rpc/Relayer/FeeOptions
+  summary: FeeOptions
+- name: transactions.ListGasSponsors
+  operation: ListGasSponsors
+  service: transactions
+  http: POST /rpc/Relayer/ListGasSponsors
+  summary: Gas Sponsorship
+- name: transactions.AddGasSponsor
+  operation: AddGasSponsor
+  service: transactions
+  http: POST /rpc/Relayer/AddGasSponsor
+  summary: ''

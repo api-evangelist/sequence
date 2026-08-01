@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/sequence-indexer.json (Indexer webhook + subscribe operations) + docs.sequence.xyz
+type: Webhooks
+note: >-
+  The Sequence Indexer is the provider's event surface. It supports registered HTTP
+  webhook listeners (delivered to a consumer callback URL) and server-push subscription
+  streams. No standalone AsyncAPI document is published by Sequence, so this captures the
+  webhook/subscription catalog derived from the Indexer webrpc spec. NOT fabricated.
+transport:
+  webhooks: HTTP POST to a consumer-registered callback URL, managed via Indexer webrpc ops
+  streams: server-push subscriptions over the webrpc connection
+management_operations:
+- AddWebhookListener
+- GetWebhookListener
+- GetAllWebhookListeners
+- UpdateWebhookListener
+- RemoveWebhookListener
+- ToggleWebhookListener
+- PauseAllWebhookListeners
+- ResumeAllWebhookListeners
+subscription_streams:
+- name: SubscribeReceipts
+  description: Stream of transaction receipts as they are indexed.
+- name: SubscribeEvents
+  description: Stream of contract log events matching a filter.
+- name: SubscribeBalanceUpdates
+  description: Stream of token/native balance changes for watched accounts.
+event_domains:
+- transaction receipts
+- contract events / logs
+- token & native balance updates

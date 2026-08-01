@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: docs.sequence.xyz + github.com/0xsequence/web-sdk
+note: >-
+  Client-side / embeddable UI surfaces distinct from the backend SDKs. Sequence ships a
+  React connect kit and embedded-wallet UI widgets loaded in the browser.
+families:
+- name: Connect Kit
+  loader: "@0xsequence/connect"
+  repo: https://github.com/0xsequence/web-sdk
+  type: react-component-library
+  components:
+  - SequenceConnect / connect modal (multi-wallet + social login modal)
+  - Wallet widget (embedded balances, send/receive, transaction history)
+  description: Prebuilt React components to connect any wallet and render an embedded
+    Sequence wallet experience.
+- name: Embedded Wallet UI
+  loader: "@0xsequence/waas (wallet-as-a-service)"
+  type: embedded-ui
+  components:
+  - Email / social sign-in surfaces
+  - In-app wallet & signing prompts
+  description: Non-custodial embedded wallet UI (WaaS) rendered inside the host app.

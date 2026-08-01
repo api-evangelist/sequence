@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: generated
+source: grounded in real operationIds from openapi/sequence-indexer.json
+note: >-
+  Packaged Agent Skills generated from verified Sequence Indexer webrpc operations. No
+  Sequence-published AGENTS.md/skills were found; these mirror marquee flows and cite
+  only operationIds present in the captured OpenAPI.
+skills:
+- file: skills/sequence-read-token-balances.md
+  name: sequence-read-token-balances
+  api: Sequence Indexer
+  operations:
+  - GetTokenBalancesSummary
+  - GetTokenBalancesDetails
+  - GetNativeTokenBalance
+- file: skills/sequence-watch-onchain-events.md
+  name: sequence-watch-onchain-events
+  api: Sequence Indexer
+  operations:
+  - AddWebhookListener
+  - GetAllWebhookListeners
+  - SubscribeBalanceUpdates

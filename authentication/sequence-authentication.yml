@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/sequence-builder.json, openapi/sequence-indexer.json, openapi/sequence-infrastructure.json,
+  openapi/sequence-marketplace.json, openapi/sequence-metadata.json, openapi/sequence-transactions.json
+summary:
+  types:
+  - apiKey
+  - http
+  api_key_in:
+  - header
+schemes:
+- name: ApiKeyAuth
+  type: apiKey
+  in: header
+  parameter: X-Access-Key
+  description: 'Public project access key for authenticating requests obtained on Sequence Builder.
+    Example Test Key: AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI'
+  sources:
+  - openapi/sequence-builder.json
+  - openapi/sequence-indexer.json
+  - openapi/sequence-infrastructure.json
+  - openapi/sequence-marketplace.json
+  - openapi/sequence-metadata.json
+  - openapi/sequence-transactions.json
+- name: BearerAuth
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  description: Secret JWT token for authenticating requests obtained from Sequence Builder -
+    should not be exposed publicly.
+  sources:
+  - openapi/sequence-builder.json
+  - openapi/sequence-indexer.json
+  - openapi/sequence-infrastructure.json
+  - openapi/sequence-metadata.json
+  - openapi/sequence-transactions.json

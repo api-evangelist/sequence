@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+source: docs.sequence.xyz/api-references + openapi/ server lists (testnet hosts)
+model: testnet-networks
+note: >-
+  Sequence has no separate "test mode" key prefix; instead you point the same project
+  access key at testnet chains. Each service exposes per-chain testnet hosts alongside
+  mainnet. Only published values are recorded here; no test values are invented.
+credentials:
+  test_access_key_published_in_spec: AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+  note: >-
+    This is the public example project access key embedded verbatim in the Sequence
+    OpenAPI (ApiKeyAuth x-example); it is a documented sample, not a secret.
+testnet_hosts:
+  indexer:
+  - https://sepolia-indexer.sequence.app
+  - https://base-sepolia-indexer.sequence.app
+  - https://arbitrum-sepolia-indexer.sequence.app
+  - https://amoy-indexer.sequence.app
+  relayer:
+  - https://sepolia-relayer.sequence.app
+  - https://base-sepolia-relayer.sequence.app
+  - https://arbitrum-sepolia-relayer.sequence.app
+  - https://amoy-relayer.sequence.app
+  marketplace:
+  - https://marketplace-api.sequence.app/sepolia/
+  - https://marketplace-api.sequence.app/base-sepolia/
+sample_testnets:
+- Sepolia
+- Base Sepolia
+- Arbitrum Sepolia
+- Polygon Amoy
+faucet:
+  note: Testnet funds come from the respective public chain faucets, not from Sequence.

@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: https://0xsequence.featurebase.app/changelog (docs.sequence.xyz/support/changelog redirects here)
+scheme: product-semver
+current_versions:
+  builder: 2.0.26
+  marketplace_sdk: 2.0.0
+window: recent
+entries:
+- version: Builder 2.0.26
+  date: '2026-01-29'
+  breaking: false
+  highlights: Updated Gas Tank features, Trails project analytics, and more.
+- version: Marketplace SDK v2.0.0
+  date: '2026-01-20'
+  breaking: true
+  highlights: Trails integration with modern type-system updates and new developer hooks.
+- version: Builder 2.0.22
+  date: '2026-01-16'
+  breaking: false
+  highlights: New admin roles, enhanced Gas Tank features, and Slack notifications.
+- version: Builder 2.0.18
+  date: '2025-12-10'
+  breaking: false
+  highlights: Refreshed gas tank experience, expanded network support, UX + reliability
+    improvements.
+- version: Builder 2.0.12
+  date: '2025-11-26'
+  breaking: false
+  highlights: Improved developer onboarding, better project management, Katana network support.
+- version: Marketplace SDK 1.2.0
+  date: '2025-11-26'
+  breaking: false
+  highlights: Enhanced listings with new pricing filters and Transak integration.
+- version: Builder 2.0.4
+  date: '2025-11-11'
+  breaking: false
+  highlights: Multi-Wallet support plus design-system updates.
+- version: Builder 1.9.10
+  date: '2025-11-05'
+  breaking: false
+  highlights: Major frontend refresh with upgraded authentication and improved analytics.
