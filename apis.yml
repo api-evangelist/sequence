@@ -76,6 +76,8 @@ apis:
   humanURL: https://docs.sequence.xyz/api-references/indexer/overview
   baseURL: https://mainnet-indexer.sequence.app
   tags:
+  - Public
+  tags_raw:
   - public
   properties:
   - type: OpenAPI
@@ -88,6 +90,8 @@ apis:
   humanURL: https://docs.sequence.xyz/api-references/indexer/overview
   baseURL: https://mainnet-indexer.sequence.app
   tags:
+  - RPC
+  tags_raw:
   - Rpc
   properties:
   - type: OpenAPI
@@ -102,6 +106,8 @@ apis:
   humanURL: https://docs.sequence.xyz/api-references/indexer/overview
   baseURL: https://mainnet-indexer.sequence.app
   tags:
+  - Secret
+  tags_raw:
   - secret
   properties:
   - type: OpenAPI
