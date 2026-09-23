@@ -1,15 +1,93 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: Api Analytics public API
+  title: Sequence Public API
   version: 0.0.1
-  description: Endpoints accessible by passing your project-access-key in the header. This is injected whenever you login automatically.
+  description: 'Operations tagged public across 2 of this provider''s published API definitions: sequence-indexer.json, sequence-metadata.json. Each path carries the servers of the definition it was published in.'
 servers:
-- url: https://api.sequence.app
-  description: Analytics
-security:
-- ApiKeyAuth: []
+- url: https://amoy-indexer.sequence.app
+  description: Amoy Mainnet
+- url: https://apechain-mainnet-indexer.sequence.app
+  description: Apechain-Mainnet Mainnet
+- url: https://apechain-testnet-indexer.sequence.app
+  description: Apechain-Testnet Mainnet
+- url: https://arbitrum-indexer.sequence.app
+  description: Arbitrum Mainnet
+- url: https://arbitrum-nova-indexer.sequence.app
+  description: Arbitrum-Nova Mainnet
+- url: https://arbitrum-sepolia-indexer.sequence.app
+  description: Arbitrum-Sepolia Mainnet
+- url: https://astar-zkevm-indexer.sequence.app
+  description: Astar-Zkevm Mainnet
+- url: https://astar-zkyoto-indexer.sequence.app
+  description: Astar-Zkyoto Mainnet
+- url: https://avalanche-indexer.sequence.app
+  description: Avalanche Mainnet
+- url: https://avalanche-testnet-indexer.sequence.app
+  description: Avalanche-Testnet Mainnet
+- url: https://b3-indexer.sequence.app
+  description: B3 Mainnet
+- url: https://b3-sepolia-indexer.sequence.app
+  description: B3-Sepolia Mainnet
+- url: https://base-indexer.sequence.app
+  description: Base Mainnet
+- url: https://base-sepolia-indexer.sequence.app
+  description: Base-Sepolia Mainnet
+- url: https://blast-indexer.sequence.app
+  description: Blast Mainnet
+- url: https://blast-sepolia-indexer.sequence.app
+  description: Blast-Sepolia Mainnet
+- url: https://borne-testnet-indexer.sequence.app
+  description: Borne-Testnet Mainnet
+- url: https://bsc-indexer.sequence.app
+  description: Bsc Mainnet
+- url: https://bsc-testnet-indexer.sequence.app
+  description: Bsc-Testnet Mainnet
+- url: https://gnosis-indexer.sequence.app
+  description: Gnosis Mainnet
+- url: https://homeverse-indexer.sequence.app
+  description: Homeverse Mainnet
+- url: https://homeverse-testnet-indexer.sequence.app
+  description: Homeverse-Testnet Mainnet
+- url: https://immutable-zkevm-indexer.sequence.app
+  description: Immutable-Zkevm Mainnet
+- url: https://immutable-zkevm-testnet-indexer.sequence.app
+  description: Immutable-Zkevm-Testnet Mainnet
+- url: https://imx-indexer.sequence.app
+  description: Imx Mainnet
+- url: https://imx-testnet-indexer.sequence.app
+  description: Imx-Testnet Mainnet
+- url: https://mainnet-indexer.sequence.app
+  description: Mainnet Mainnet
+- url: https://optimism-indexer.sequence.app
+  description: Optimism Mainnet
+- url: https://optimism-sepolia-indexer.sequence.app
+  description: Optimism-Sepolia Mainnet
+- url: https://polygon-indexer.sequence.app
+  description: Polygon Mainnet
+- url: https://polygon-zkevm-indexer.sequence.app
+  description: Polygon-Zkevm Mainnet
+- url: https://rootnet-indexer.sequence.app
+  description: Rootnet Mainnet
+- url: https://rootnet-porcini-indexer.sequence.app
+  description: Rootnet-Porcini Mainnet
+- url: https://sepolia-indexer.sequence.app
+  description: Sepolia Mainnet
+- url: https://skale-nebula-testnet-indexer.sequence.app
+  description: Skale-Nebula-Testnet Mainnet
+- url: https://soneium-minato-indexer.sequence.app
+  description: Soneium-Minato Mainnet
+- url: https://toy-testnet-indexer.sequence.app
+  description: Toy-Testnet Mainnet
+- url: https://xai-indexer.sequence.app
+  description: Xai Mainnet
+- url: https://xai-sepolia-indexer.sequence.app
+  description: Xai-Sepolia Mainnet
+- url: https://xr-sepolia-indexer.sequence.app
+  description: Xr-Sepolia Mainnet
+- url: https://metadata.sequence.app/
+  description: Metadata
 tags:
-- name: public
+- name: Public
   description: Endpoints accessible by passing your project-access-key in the header. This is injected whenever you login automatically.
 paths:
   /rpc/Indexer/GetNativeTokenBalance:
@@ -65,10 +143,93 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcServerPanic'
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcIndexerGetNativeTokenBalance
+      x-operation-id-source: derived
+    servers:
+    - url: https://amoy-indexer.sequence.app
+      description: Amoy Mainnet
+    - url: https://apechain-mainnet-indexer.sequence.app
+      description: Apechain-Mainnet Mainnet
+    - url: https://apechain-testnet-indexer.sequence.app
+      description: Apechain-Testnet Mainnet
+    - url: https://arbitrum-indexer.sequence.app
+      description: Arbitrum Mainnet
+    - url: https://arbitrum-nova-indexer.sequence.app
+      description: Arbitrum-Nova Mainnet
+    - url: https://arbitrum-sepolia-indexer.sequence.app
+      description: Arbitrum-Sepolia Mainnet
+    - url: https://astar-zkevm-indexer.sequence.app
+      description: Astar-Zkevm Mainnet
+    - url: https://astar-zkyoto-indexer.sequence.app
+      description: Astar-Zkyoto Mainnet
+    - url: https://avalanche-indexer.sequence.app
+      description: Avalanche Mainnet
+    - url: https://avalanche-testnet-indexer.sequence.app
+      description: Avalanche-Testnet Mainnet
+    - url: https://b3-indexer.sequence.app
+      description: B3 Mainnet
+    - url: https://b3-sepolia-indexer.sequence.app
+      description: B3-Sepolia Mainnet
+    - url: https://base-indexer.sequence.app
+      description: Base Mainnet
+    - url: https://base-sepolia-indexer.sequence.app
+      description: Base-Sepolia Mainnet
+    - url: https://blast-indexer.sequence.app
+      description: Blast Mainnet
+    - url: https://blast-sepolia-indexer.sequence.app
+      description: Blast-Sepolia Mainnet
+    - url: https://borne-testnet-indexer.sequence.app
+      description: Borne-Testnet Mainnet
+    - url: https://bsc-indexer.sequence.app
+      description: Bsc Mainnet
+    - url: https://bsc-testnet-indexer.sequence.app
+      description: Bsc-Testnet Mainnet
+    - url: https://gnosis-indexer.sequence.app
+      description: Gnosis Mainnet
+    - url: https://homeverse-indexer.sequence.app
+      description: Homeverse Mainnet
+    - url: https://homeverse-testnet-indexer.sequence.app
+      description: Homeverse-Testnet Mainnet
+    - url: https://immutable-zkevm-indexer.sequence.app
+      description: Immutable-Zkevm Mainnet
+    - url: https://immutable-zkevm-testnet-indexer.sequence.app
+      description: Immutable-Zkevm-Testnet Mainnet
+    - url: https://imx-indexer.sequence.app
+      description: Imx Mainnet
+    - url: https://imx-testnet-indexer.sequence.app
+      description: Imx-Testnet Mainnet
+    - url: https://mainnet-indexer.sequence.app
+      description: Mainnet Mainnet
+    - url: https://optimism-indexer.sequence.app
+      description: Optimism Mainnet
+    - url: https://optimism-sepolia-indexer.sequence.app
+      description: Optimism-Sepolia Mainnet
+    - url: https://polygon-indexer.sequence.app
+      description: Polygon Mainnet
+    - url: https://polygon-zkevm-indexer.sequence.app
+      description: Polygon-Zkevm Mainnet
+    - url: https://rootnet-indexer.sequence.app
+      description: Rootnet Mainnet
+    - url: https://rootnet-porcini-indexer.sequence.app
+      description: Rootnet-Porcini Mainnet
+    - url: https://sepolia-indexer.sequence.app
+      description: Sepolia Mainnet
+    - url: https://skale-nebula-testnet-indexer.sequence.app
+      description: Skale-Nebula-Testnet Mainnet
+    - url: https://soneium-minato-indexer.sequence.app
+      description: Soneium-Minato Mainnet
+    - url: https://toy-testnet-indexer.sequence.app
+      description: Toy-Testnet Mainnet
+    - url: https://xai-indexer.sequence.app
+      description: Xai Mainnet
+    - url: https://xai-sepolia-indexer.sequence.app
+      description: Xai-Sepolia Mainnet
+    - url: https://xr-sepolia-indexer.sequence.app
+      description: Xr-Sepolia Mainnet
   /rpc/Indexer/GetTokenBalancesSummary:
     post:
       summary: GetTokenBalancesSummary
@@ -122,10 +283,93 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcServerPanic'
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcIndexerGetTokenBalancesSummary
+      x-operation-id-source: derived
+    servers:
+    - url: https://amoy-indexer.sequence.app
+      description: Amoy Mainnet
+    - url: https://apechain-mainnet-indexer.sequence.app
+      description: Apechain-Mainnet Mainnet
+    - url: https://apechain-testnet-indexer.sequence.app
+      description: Apechain-Testnet Mainnet
+    - url: https://arbitrum-indexer.sequence.app
+      description: Arbitrum Mainnet
+    - url: https://arbitrum-nova-indexer.sequence.app
+      description: Arbitrum-Nova Mainnet
+    - url: https://arbitrum-sepolia-indexer.sequence.app
+      description: Arbitrum-Sepolia Mainnet
+    - url: https://astar-zkevm-indexer.sequence.app
+      description: Astar-Zkevm Mainnet
+    - url: https://astar-zkyoto-indexer.sequence.app
+      description: Astar-Zkyoto Mainnet
+    - url: https://avalanche-indexer.sequence.app
+      description: Avalanche Mainnet
+    - url: https://avalanche-testnet-indexer.sequence.app
+      description: Avalanche-Testnet Mainnet
+    - url: https://b3-indexer.sequence.app
+      description: B3 Mainnet
+    - url: https://b3-sepolia-indexer.sequence.app
+      description: B3-Sepolia Mainnet
+    - url: https://base-indexer.sequence.app
+      description: Base Mainnet
+    - url: https://base-sepolia-indexer.sequence.app
+      description: Base-Sepolia Mainnet
+    - url: https://blast-indexer.sequence.app
+      description: Blast Mainnet
+    - url: https://blast-sepolia-indexer.sequence.app
+      description: Blast-Sepolia Mainnet
+    - url: https://borne-testnet-indexer.sequence.app
+      description: Borne-Testnet Mainnet
+    - url: https://bsc-indexer.sequence.app
+      description: Bsc Mainnet
+    - url: https://bsc-testnet-indexer.sequence.app
+      description: Bsc-Testnet Mainnet
+    - url: https://gnosis-indexer.sequence.app
+      description: Gnosis Mainnet
+    - url: https://homeverse-indexer.sequence.app
+      description: Homeverse Mainnet
+    - url: https://homeverse-testnet-indexer.sequence.app
+      description: Homeverse-Testnet Mainnet
+    - url: https://immutable-zkevm-indexer.sequence.app
+      description: Immutable-Zkevm Mainnet
+    - url: https://immutable-zkevm-testnet-indexer.sequence.app
+      description: Immutable-Zkevm-Testnet Mainnet
+    - url: https://imx-indexer.sequence.app
+      description: Imx Mainnet
+    - url: https://imx-testnet-indexer.sequence.app
+      description: Imx-Testnet Mainnet
+    - url: https://mainnet-indexer.sequence.app
+      description: Mainnet Mainnet
+    - url: https://optimism-indexer.sequence.app
+      description: Optimism Mainnet
+    - url: https://optimism-sepolia-indexer.sequence.app
+      description: Optimism-Sepolia Mainnet
+    - url: https://polygon-indexer.sequence.app
+      description: Polygon Mainnet
+    - url: https://polygon-zkevm-indexer.sequence.app
+      description: Polygon-Zkevm Mainnet
+    - url: https://rootnet-indexer.sequence.app
+      description: Rootnet Mainnet
+    - url: https://rootnet-porcini-indexer.sequence.app
+      description: Rootnet-Porcini Mainnet
+    - url: https://sepolia-indexer.sequence.app
+      description: Sepolia Mainnet
+    - url: https://skale-nebula-testnet-indexer.sequence.app
+      description: Skale-Nebula-Testnet Mainnet
+    - url: https://soneium-minato-indexer.sequence.app
+      description: Soneium-Minato Mainnet
+    - url: https://toy-testnet-indexer.sequence.app
+      description: Toy-Testnet Mainnet
+    - url: https://xai-indexer.sequence.app
+      description: Xai Mainnet
+    - url: https://xai-sepolia-indexer.sequence.app
+      description: Xai-Sepolia Mainnet
+    - url: https://xr-sepolia-indexer.sequence.app
+      description: Xr-Sepolia Mainnet
   /rpc/Indexer/GetTokenBalancesDetails:
     post:
       summary: GetTokenBalancesDetails
@@ -179,10 +423,93 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcServerPanic'
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcIndexerGetTokenBalancesDetails
+      x-operation-id-source: derived
+    servers:
+    - url: https://amoy-indexer.sequence.app
+      description: Amoy Mainnet
+    - url: https://apechain-mainnet-indexer.sequence.app
+      description: Apechain-Mainnet Mainnet
+    - url: https://apechain-testnet-indexer.sequence.app
+      description: Apechain-Testnet Mainnet
+    - url: https://arbitrum-indexer.sequence.app
+      description: Arbitrum Mainnet
+    - url: https://arbitrum-nova-indexer.sequence.app
+      description: Arbitrum-Nova Mainnet
+    - url: https://arbitrum-sepolia-indexer.sequence.app
+      description: Arbitrum-Sepolia Mainnet
+    - url: https://astar-zkevm-indexer.sequence.app
+      description: Astar-Zkevm Mainnet
+    - url: https://astar-zkyoto-indexer.sequence.app
+      description: Astar-Zkyoto Mainnet
+    - url: https://avalanche-indexer.sequence.app
+      description: Avalanche Mainnet
+    - url: https://avalanche-testnet-indexer.sequence.app
+      description: Avalanche-Testnet Mainnet
+    - url: https://b3-indexer.sequence.app
+      description: B3 Mainnet
+    - url: https://b3-sepolia-indexer.sequence.app
+      description: B3-Sepolia Mainnet
+    - url: https://base-indexer.sequence.app
+      description: Base Mainnet
+    - url: https://base-sepolia-indexer.sequence.app
+      description: Base-Sepolia Mainnet
+    - url: https://blast-indexer.sequence.app
+      description: Blast Mainnet
+    - url: https://blast-sepolia-indexer.sequence.app
+      description: Blast-Sepolia Mainnet
+    - url: https://borne-testnet-indexer.sequence.app
+      description: Borne-Testnet Mainnet
+    - url: https://bsc-indexer.sequence.app
+      description: Bsc Mainnet
+    - url: https://bsc-testnet-indexer.sequence.app
+      description: Bsc-Testnet Mainnet
+    - url: https://gnosis-indexer.sequence.app
+      description: Gnosis Mainnet
+    - url: https://homeverse-indexer.sequence.app
+      description: Homeverse Mainnet
+    - url: https://homeverse-testnet-indexer.sequence.app
+      description: Homeverse-Testnet Mainnet
+    - url: https://immutable-zkevm-indexer.sequence.app
+      description: Immutable-Zkevm Mainnet
+    - url: https://immutable-zkevm-testnet-indexer.sequence.app
+      description: Immutable-Zkevm-Testnet Mainnet
+    - url: https://imx-indexer.sequence.app
+      description: Imx Mainnet
+    - url: https://imx-testnet-indexer.sequence.app
+      description: Imx-Testnet Mainnet
+    - url: https://mainnet-indexer.sequence.app
+      description: Mainnet Mainnet
+    - url: https://optimism-indexer.sequence.app
+      description: Optimism Mainnet
+    - url: https://optimism-sepolia-indexer.sequence.app
+      description: Optimism-Sepolia Mainnet
+    - url: https://polygon-indexer.sequence.app
+      description: Polygon Mainnet
+    - url: https://polygon-zkevm-indexer.sequence.app
+      description: Polygon-Zkevm Mainnet
+    - url: https://rootnet-indexer.sequence.app
+      description: Rootnet Mainnet
+    - url: https://rootnet-porcini-indexer.sequence.app
+      description: Rootnet-Porcini Mainnet
+    - url: https://sepolia-indexer.sequence.app
+      description: Sepolia Mainnet
+    - url: https://skale-nebula-testnet-indexer.sequence.app
+      description: Skale-Nebula-Testnet Mainnet
+    - url: https://soneium-minato-indexer.sequence.app
+      description: Soneium-Minato Mainnet
+    - url: https://toy-testnet-indexer.sequence.app
+      description: Toy-Testnet Mainnet
+    - url: https://xai-indexer.sequence.app
+      description: Xai Mainnet
+    - url: https://xai-sepolia-indexer.sequence.app
+      description: Xai-Sepolia Mainnet
+    - url: https://xr-sepolia-indexer.sequence.app
+      description: Xr-Sepolia Mainnet
   /rpc/Indexer/GetTokenBalancesByContract:
     post:
       summary: GetTokenBalancesByContract
@@ -236,10 +563,93 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcServerPanic'
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcIndexerGetTokenBalancesByContract
+      x-operation-id-source: derived
+    servers:
+    - url: https://amoy-indexer.sequence.app
+      description: Amoy Mainnet
+    - url: https://apechain-mainnet-indexer.sequence.app
+      description: Apechain-Mainnet Mainnet
+    - url: https://apechain-testnet-indexer.sequence.app
+      description: Apechain-Testnet Mainnet
+    - url: https://arbitrum-indexer.sequence.app
+      description: Arbitrum Mainnet
+    - url: https://arbitrum-nova-indexer.sequence.app
+      description: Arbitrum-Nova Mainnet
+    - url: https://arbitrum-sepolia-indexer.sequence.app
+      description: Arbitrum-Sepolia Mainnet
+    - url: https://astar-zkevm-indexer.sequence.app
+      description: Astar-Zkevm Mainnet
+    - url: https://astar-zkyoto-indexer.sequence.app
+      description: Astar-Zkyoto Mainnet
+    - url: https://avalanche-indexer.sequence.app
+      description: Avalanche Mainnet
+    - url: https://avalanche-testnet-indexer.sequence.app
+      description: Avalanche-Testnet Mainnet
+    - url: https://b3-indexer.sequence.app
+      description: B3 Mainnet
+    - url: https://b3-sepolia-indexer.sequence.app
+      description: B3-Sepolia Mainnet
+    - url: https://base-indexer.sequence.app
+      description: Base Mainnet
+    - url: https://base-sepolia-indexer.sequence.app
+      description: Base-Sepolia Mainnet
+    - url: https://blast-indexer.sequence.app
+      description: Blast Mainnet
+    - url: https://blast-sepolia-indexer.sequence.app
+      description: Blast-Sepolia Mainnet
+    - url: https://borne-testnet-indexer.sequence.app
+      description: Borne-Testnet Mainnet
+    - url: https://bsc-indexer.sequence.app
+      description: Bsc Mainnet
+    - url: https://bsc-testnet-indexer.sequence.app
+      description: Bsc-Testnet Mainnet
+    - url: https://gnosis-indexer.sequence.app
+      description: Gnosis Mainnet
+    - url: https://homeverse-indexer.sequence.app
+      description: Homeverse Mainnet
+    - url: https://homeverse-testnet-indexer.sequence.app
+      description: Homeverse-Testnet Mainnet
+    - url: https://immutable-zkevm-indexer.sequence.app
+      description: Immutable-Zkevm Mainnet
+    - url: https://immutable-zkevm-testnet-indexer.sequence.app
+      description: Immutable-Zkevm-Testnet Mainnet
+    - url: https://imx-indexer.sequence.app
+      description: Imx Mainnet
+    - url: https://imx-testnet-indexer.sequence.app
+      description: Imx-Testnet Mainnet
+    - url: https://mainnet-indexer.sequence.app
+      description: Mainnet Mainnet
+    - url: https://optimism-indexer.sequence.app
+      description: Optimism Mainnet
+    - url: https://optimism-sepolia-indexer.sequence.app
+      description: Optimism-Sepolia Mainnet
+    - url: https://polygon-indexer.sequence.app
+      description: Polygon Mainnet
+    - url: https://polygon-zkevm-indexer.sequence.app
+      description: Polygon-Zkevm Mainnet
+    - url: https://rootnet-indexer.sequence.app
+      description: Rootnet Mainnet
+    - url: https://rootnet-porcini-indexer.sequence.app
+      description: Rootnet-Porcini Mainnet
+    - url: https://sepolia-indexer.sequence.app
+      description: Sepolia Mainnet
+    - url: https://skale-nebula-testnet-indexer.sequence.app
+      description: Skale-Nebula-Testnet Mainnet
+    - url: https://soneium-minato-indexer.sequence.app
+      description: Soneium-Minato Mainnet
+    - url: https://toy-testnet-indexer.sequence.app
+      description: Toy-Testnet Mainnet
+    - url: https://xai-indexer.sequence.app
+      description: Xai Mainnet
+    - url: https://xai-sepolia-indexer.sequence.app
+      description: Xai-Sepolia Mainnet
+    - url: https://xr-sepolia-indexer.sequence.app
+      description: Xr-Sepolia Mainnet
   /rpc/Indexer/GetTokenBalances:
     post:
       summary: GetTokenBalances
@@ -293,10 +703,93 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcServerPanic'
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcIndexerGetTokenBalances
+      x-operation-id-source: derived
+    servers:
+    - url: https://amoy-indexer.sequence.app
+      description: Amoy Mainnet
+    - url: https://apechain-mainnet-indexer.sequence.app
+      description: Apechain-Mainnet Mainnet
+    - url: https://apechain-testnet-indexer.sequence.app
+      description: Apechain-Testnet Mainnet
+    - url: https://arbitrum-indexer.sequence.app
+      description: Arbitrum Mainnet
+    - url: https://arbitrum-nova-indexer.sequence.app
+      description: Arbitrum-Nova Mainnet
+    - url: https://arbitrum-sepolia-indexer.sequence.app
+      description: Arbitrum-Sepolia Mainnet
+    - url: https://astar-zkevm-indexer.sequence.app
+      description: Astar-Zkevm Mainnet
+    - url: https://astar-zkyoto-indexer.sequence.app
+      description: Astar-Zkyoto Mainnet
+    - url: https://avalanche-indexer.sequence.app
+      description: Avalanche Mainnet
+    - url: https://avalanche-testnet-indexer.sequence.app
+      description: Avalanche-Testnet Mainnet
+    - url: https://b3-indexer.sequence.app
+      description: B3 Mainnet
+    - url: https://b3-sepolia-indexer.sequence.app
+      description: B3-Sepolia Mainnet
+    - url: https://base-indexer.sequence.app
+      description: Base Mainnet
+    - url: https://base-sepolia-indexer.sequence.app
+      description: Base-Sepolia Mainnet
+    - url: https://blast-indexer.sequence.app
+      description: Blast Mainnet
+    - url: https://blast-sepolia-indexer.sequence.app
+      description: Blast-Sepolia Mainnet
+    - url: https://borne-testnet-indexer.sequence.app
+      description: Borne-Testnet Mainnet
+    - url: https://bsc-indexer.sequence.app
+      description: Bsc Mainnet
+    - url: https://bsc-testnet-indexer.sequence.app
+      description: Bsc-Testnet Mainnet
+    - url: https://gnosis-indexer.sequence.app
+      description: Gnosis Mainnet
+    - url: https://homeverse-indexer.sequence.app
+      description: Homeverse Mainnet
+    - url: https://homeverse-testnet-indexer.sequence.app
+      description: Homeverse-Testnet Mainnet
+    - url: https://immutable-zkevm-indexer.sequence.app
+      description: Immutable-Zkevm Mainnet
+    - url: https://immutable-zkevm-testnet-indexer.sequence.app
+      description: Immutable-Zkevm-Testnet Mainnet
+    - url: https://imx-indexer.sequence.app
+      description: Imx Mainnet
+    - url: https://imx-testnet-indexer.sequence.app
+      description: Imx-Testnet Mainnet
+    - url: https://mainnet-indexer.sequence.app
+      description: Mainnet Mainnet
+    - url: https://optimism-indexer.sequence.app
+      description: Optimism Mainnet
+    - url: https://optimism-sepolia-indexer.sequence.app
+      description: Optimism-Sepolia Mainnet
+    - url: https://polygon-indexer.sequence.app
+      description: Polygon Mainnet
+    - url: https://polygon-zkevm-indexer.sequence.app
+      description: Polygon-Zkevm Mainnet
+    - url: https://rootnet-indexer.sequence.app
+      description: Rootnet Mainnet
+    - url: https://rootnet-porcini-indexer.sequence.app
+      description: Rootnet-Porcini Mainnet
+    - url: https://sepolia-indexer.sequence.app
+      description: Sepolia Mainnet
+    - url: https://skale-nebula-testnet-indexer.sequence.app
+      description: Skale-Nebula-Testnet Mainnet
+    - url: https://soneium-minato-indexer.sequence.app
+      description: Soneium-Minato Mainnet
+    - url: https://toy-testnet-indexer.sequence.app
+      description: Toy-Testnet Mainnet
+    - url: https://xai-indexer.sequence.app
+      description: Xai Mainnet
+    - url: https://xai-sepolia-indexer.sequence.app
+      description: Xai-Sepolia Mainnet
+    - url: https://xr-sepolia-indexer.sequence.app
+      description: Xr-Sepolia Mainnet
   /rpc/Indexer/GetTokenSupplies:
     post:
       summary: GetTokenSupplies
@@ -361,10 +854,93 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcServerPanic'
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcIndexerGetTokenSupplies
+      x-operation-id-source: derived
+    servers:
+    - url: https://amoy-indexer.sequence.app
+      description: Amoy Mainnet
+    - url: https://apechain-mainnet-indexer.sequence.app
+      description: Apechain-Mainnet Mainnet
+    - url: https://apechain-testnet-indexer.sequence.app
+      description: Apechain-Testnet Mainnet
+    - url: https://arbitrum-indexer.sequence.app
+      description: Arbitrum Mainnet
+    - url: https://arbitrum-nova-indexer.sequence.app
+      description: Arbitrum-Nova Mainnet
+    - url: https://arbitrum-sepolia-indexer.sequence.app
+      description: Arbitrum-Sepolia Mainnet
+    - url: https://astar-zkevm-indexer.sequence.app
+      description: Astar-Zkevm Mainnet
+    - url: https://astar-zkyoto-indexer.sequence.app
+      description: Astar-Zkyoto Mainnet
+    - url: https://avalanche-indexer.sequence.app
+      description: Avalanche Mainnet
+    - url: https://avalanche-testnet-indexer.sequence.app
+      description: Avalanche-Testnet Mainnet
+    - url: https://b3-indexer.sequence.app
+      description: B3 Mainnet
+    - url: https://b3-sepolia-indexer.sequence.app
+      description: B3-Sepolia Mainnet
+    - url: https://base-indexer.sequence.app
+      description: Base Mainnet
+    - url: https://base-sepolia-indexer.sequence.app
+      description: Base-Sepolia Mainnet
+    - url: https://blast-indexer.sequence.app
+      description: Blast Mainnet
+    - url: https://blast-sepolia-indexer.sequence.app
+      description: Blast-Sepolia Mainnet
+    - url: https://borne-testnet-indexer.sequence.app
+      description: Borne-Testnet Mainnet
+    - url: https://bsc-indexer.sequence.app
+      description: Bsc Mainnet
+    - url: https://bsc-testnet-indexer.sequence.app
+      description: Bsc-Testnet Mainnet
+    - url: https://gnosis-indexer.sequence.app
+      description: Gnosis Mainnet
+    - url: https://homeverse-indexer.sequence.app
+      description: Homeverse Mainnet
+    - url: https://homeverse-testnet-indexer.sequence.app
+      description: Homeverse-Testnet Mainnet
+    - url: https://immutable-zkevm-indexer.sequence.app
+      description: Immutable-Zkevm Mainnet
+    - url: https://immutable-zkevm-testnet-indexer.sequence.app
+      description: Immutable-Zkevm-Testnet Mainnet
+    - url: https://imx-indexer.sequence.app
+      description: Imx Mainnet
+    - url: https://imx-testnet-indexer.sequence.app
+      description: Imx-Testnet Mainnet
+    - url: https://mainnet-indexer.sequence.app
+      description: Mainnet Mainnet
+    - url: https://optimism-indexer.sequence.app
+      description: Optimism Mainnet
+    - url: https://optimism-sepolia-indexer.sequence.app
+      description: Optimism-Sepolia Mainnet
+    - url: https://polygon-indexer.sequence.app
+      description: Polygon Mainnet
+    - url: https://polygon-zkevm-indexer.sequence.app
+      description: Polygon-Zkevm Mainnet
+    - url: https://rootnet-indexer.sequence.app
+      description: Rootnet Mainnet
+    - url: https://rootnet-porcini-indexer.sequence.app
+      description: Rootnet-Porcini Mainnet
+    - url: https://sepolia-indexer.sequence.app
+      description: Sepolia Mainnet
+    - url: https://skale-nebula-testnet-indexer.sequence.app
+      description: Skale-Nebula-Testnet Mainnet
+    - url: https://soneium-minato-indexer.sequence.app
+      description: Soneium-Minato Mainnet
+    - url: https://toy-testnet-indexer.sequence.app
+      description: Toy-Testnet Mainnet
+    - url: https://xai-indexer.sequence.app
+      description: Xai Mainnet
+    - url: https://xai-sepolia-indexer.sequence.app
+      description: Xai-Sepolia Mainnet
+    - url: https://xr-sepolia-indexer.sequence.app
+      description: Xr-Sepolia Mainnet
   /rpc/Indexer/GetTokenSuppliesMap:
     post:
       summary: GetTokenSuppliesMap
@@ -418,10 +994,93 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcServerPanic'
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcIndexerGetTokenSuppliesMap
+      x-operation-id-source: derived
+    servers:
+    - url: https://amoy-indexer.sequence.app
+      description: Amoy Mainnet
+    - url: https://apechain-mainnet-indexer.sequence.app
+      description: Apechain-Mainnet Mainnet
+    - url: https://apechain-testnet-indexer.sequence.app
+      description: Apechain-Testnet Mainnet
+    - url: https://arbitrum-indexer.sequence.app
+      description: Arbitrum Mainnet
+    - url: https://arbitrum-nova-indexer.sequence.app
+      description: Arbitrum-Nova Mainnet
+    - url: https://arbitrum-sepolia-indexer.sequence.app
+      description: Arbitrum-Sepolia Mainnet
+    - url: https://astar-zkevm-indexer.sequence.app
+      description: Astar-Zkevm Mainnet
+    - url: https://astar-zkyoto-indexer.sequence.app
+      description: Astar-Zkyoto Mainnet
+    - url: https://avalanche-indexer.sequence.app
+      description: Avalanche Mainnet
+    - url: https://avalanche-testnet-indexer.sequence.app
+      description: Avalanche-Testnet Mainnet
+    - url: https://b3-indexer.sequence.app
+      description: B3 Mainnet
+    - url: https://b3-sepolia-indexer.sequence.app
+      description: B3-Sepolia Mainnet
+    - url: https://base-indexer.sequence.app
+      description: Base Mainnet
+    - url: https://base-sepolia-indexer.sequence.app
+      description: Base-Sepolia Mainnet
+    - url: https://blast-indexer.sequence.app
+      description: Blast Mainnet
+    - url: https://blast-sepolia-indexer.sequence.app
+      description: Blast-Sepolia Mainnet
+    - url: https://borne-testnet-indexer.sequence.app
+      description: Borne-Testnet Mainnet
+    - url: https://bsc-indexer.sequence.app
+      description: Bsc Mainnet
+    - url: https://bsc-testnet-indexer.sequence.app
+      description: Bsc-Testnet Mainnet
+    - url: https://gnosis-indexer.sequence.app
+      description: Gnosis Mainnet
+    - url: https://homeverse-indexer.sequence.app
+      description: Homeverse Mainnet
+    - url: https://homeverse-testnet-indexer.sequence.app
+      description: Homeverse-Testnet Mainnet
+    - url: https://immutable-zkevm-indexer.sequence.app
+      description: Immutable-Zkevm Mainnet
+    - url: https://immutable-zkevm-testnet-indexer.sequence.app
+      description: Immutable-Zkevm-Testnet Mainnet
+    - url: https://imx-indexer.sequence.app
+      description: Imx Mainnet
+    - url: https://imx-testnet-indexer.sequence.app
+      description: Imx-Testnet Mainnet
+    - url: https://mainnet-indexer.sequence.app
+      description: Mainnet Mainnet
+    - url: https://optimism-indexer.sequence.app
+      description: Optimism Mainnet
+    - url: https://optimism-sepolia-indexer.sequence.app
+      description: Optimism-Sepolia Mainnet
+    - url: https://polygon-indexer.sequence.app
+      description: Polygon Mainnet
+    - url: https://polygon-zkevm-indexer.sequence.app
+      description: Polygon-Zkevm Mainnet
+    - url: https://rootnet-indexer.sequence.app
+      description: Rootnet Mainnet
+    - url: https://rootnet-porcini-indexer.sequence.app
+      description: Rootnet-Porcini Mainnet
+    - url: https://sepolia-indexer.sequence.app
+      description: Sepolia Mainnet
+    - url: https://skale-nebula-testnet-indexer.sequence.app
+      description: Skale-Nebula-Testnet Mainnet
+    - url: https://soneium-minato-indexer.sequence.app
+      description: Soneium-Minato Mainnet
+    - url: https://toy-testnet-indexer.sequence.app
+      description: Toy-Testnet Mainnet
+    - url: https://xai-indexer.sequence.app
+      description: Xai Mainnet
+    - url: https://xai-sepolia-indexer.sequence.app
+      description: Xai-Sepolia Mainnet
+    - url: https://xr-sepolia-indexer.sequence.app
+      description: Xr-Sepolia Mainnet
   /rpc/Indexer/GetBalanceUpdates:
     post:
       summary: GetBalanceUpdates
@@ -523,10 +1182,93 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcServerPanic'
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcIndexerGetBalanceUpdates
+      x-operation-id-source: derived
+    servers:
+    - url: https://amoy-indexer.sequence.app
+      description: Amoy Mainnet
+    - url: https://apechain-mainnet-indexer.sequence.app
+      description: Apechain-Mainnet Mainnet
+    - url: https://apechain-testnet-indexer.sequence.app
+      description: Apechain-Testnet Mainnet
+    - url: https://arbitrum-indexer.sequence.app
+      description: Arbitrum Mainnet
+    - url: https://arbitrum-nova-indexer.sequence.app
+      description: Arbitrum-Nova Mainnet
+    - url: https://arbitrum-sepolia-indexer.sequence.app
+      description: Arbitrum-Sepolia Mainnet
+    - url: https://astar-zkevm-indexer.sequence.app
+      description: Astar-Zkevm Mainnet
+    - url: https://astar-zkyoto-indexer.sequence.app
+      description: Astar-Zkyoto Mainnet
+    - url: https://avalanche-indexer.sequence.app
+      description: Avalanche Mainnet
+    - url: https://avalanche-testnet-indexer.sequence.app
+      description: Avalanche-Testnet Mainnet
+    - url: https://b3-indexer.sequence.app
+      description: B3 Mainnet
+    - url: https://b3-sepolia-indexer.sequence.app
+      description: B3-Sepolia Mainnet
+    - url: https://base-indexer.sequence.app
+      description: Base Mainnet
+    - url: https://base-sepolia-indexer.sequence.app
+      description: Base-Sepolia Mainnet
+    - url: https://blast-indexer.sequence.app
+      description: Blast Mainnet
+    - url: https://blast-sepolia-indexer.sequence.app
+      description: Blast-Sepolia Mainnet
+    - url: https://borne-testnet-indexer.sequence.app
+      description: Borne-Testnet Mainnet
+    - url: https://bsc-indexer.sequence.app
+      description: Bsc Mainnet
+    - url: https://bsc-testnet-indexer.sequence.app
+      description: Bsc-Testnet Mainnet
+    - url: https://gnosis-indexer.sequence.app
+      description: Gnosis Mainnet
+    - url: https://homeverse-indexer.sequence.app
+      description: Homeverse Mainnet
+    - url: https://homeverse-testnet-indexer.sequence.app
+      description: Homeverse-Testnet Mainnet
+    - url: https://immutable-zkevm-indexer.sequence.app
+      description: Immutable-Zkevm Mainnet
+    - url: https://immutable-zkevm-testnet-indexer.sequence.app
+      description: Immutable-Zkevm-Testnet Mainnet
+    - url: https://imx-indexer.sequence.app
+      description: Imx Mainnet
+    - url: https://imx-testnet-indexer.sequence.app
+      description: Imx-Testnet Mainnet
+    - url: https://mainnet-indexer.sequence.app
+      description: Mainnet Mainnet
+    - url: https://optimism-indexer.sequence.app
+      description: Optimism Mainnet
+    - url: https://optimism-sepolia-indexer.sequence.app
+      description: Optimism-Sepolia Mainnet
+    - url: https://polygon-indexer.sequence.app
+      description: Polygon Mainnet
+    - url: https://polygon-zkevm-indexer.sequence.app
+      description: Polygon-Zkevm Mainnet
+    - url: https://rootnet-indexer.sequence.app
+      description: Rootnet Mainnet
+    - url: https://rootnet-porcini-indexer.sequence.app
+      description: Rootnet-Porcini Mainnet
+    - url: https://sepolia-indexer.sequence.app
+      description: Sepolia Mainnet
+    - url: https://skale-nebula-testnet-indexer.sequence.app
+      description: Skale-Nebula-Testnet Mainnet
+    - url: https://soneium-minato-indexer.sequence.app
+      description: Soneium-Minato Mainnet
+    - url: https://toy-testnet-indexer.sequence.app
+      description: Toy-Testnet Mainnet
+    - url: https://xai-indexer.sequence.app
+      description: Xai Mainnet
+    - url: https://xai-sepolia-indexer.sequence.app
+      description: Xai-Sepolia Mainnet
+    - url: https://xr-sepolia-indexer.sequence.app
+      description: Xr-Sepolia Mainnet
   /rpc/Indexer/GetTransactionHistory:
     post:
       summary: GetTransactionHistory
@@ -656,10 +1398,93 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcServerPanic'
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcIndexerGetTransactionHistory
+      x-operation-id-source: derived
+    servers:
+    - url: https://amoy-indexer.sequence.app
+      description: Amoy Mainnet
+    - url: https://apechain-mainnet-indexer.sequence.app
+      description: Apechain-Mainnet Mainnet
+    - url: https://apechain-testnet-indexer.sequence.app
+      description: Apechain-Testnet Mainnet
+    - url: https://arbitrum-indexer.sequence.app
+      description: Arbitrum Mainnet
+    - url: https://arbitrum-nova-indexer.sequence.app
+      description: Arbitrum-Nova Mainnet
+    - url: https://arbitrum-sepolia-indexer.sequence.app
+      description: Arbitrum-Sepolia Mainnet
+    - url: https://astar-zkevm-indexer.sequence.app
+      description: Astar-Zkevm Mainnet
+    - url: https://astar-zkyoto-indexer.sequence.app
+      description: Astar-Zkyoto Mainnet
+    - url: https://avalanche-indexer.sequence.app
+      description: Avalanche Mainnet
+    - url: https://avalanche-testnet-indexer.sequence.app
+      description: Avalanche-Testnet Mainnet
+    - url: https://b3-indexer.sequence.app
+      description: B3 Mainnet
+    - url: https://b3-sepolia-indexer.sequence.app
+      description: B3-Sepolia Mainnet
+    - url: https://base-indexer.sequence.app
+      description: Base Mainnet
+    - url: https://base-sepolia-indexer.sequence.app
+      description: Base-Sepolia Mainnet
+    - url: https://blast-indexer.sequence.app
+      description: Blast Mainnet
+    - url: https://blast-sepolia-indexer.sequence.app
+      description: Blast-Sepolia Mainnet
+    - url: https://borne-testnet-indexer.sequence.app
+      description: Borne-Testnet Mainnet
+    - url: https://bsc-indexer.sequence.app
+      description: Bsc Mainnet
+    - url: https://bsc-testnet-indexer.sequence.app
+      description: Bsc-Testnet Mainnet
+    - url: https://gnosis-indexer.sequence.app
+      description: Gnosis Mainnet
+    - url: https://homeverse-indexer.sequence.app
+      description: Homeverse Mainnet
+    - url: https://homeverse-testnet-indexer.sequence.app
+      description: Homeverse-Testnet Mainnet
+    - url: https://immutable-zkevm-indexer.sequence.app
+      description: Immutable-Zkevm Mainnet
+    - url: https://immutable-zkevm-testnet-indexer.sequence.app
+      description: Immutable-Zkevm-Testnet Mainnet
+    - url: https://imx-indexer.sequence.app
+      description: Imx Mainnet
+    - url: https://imx-testnet-indexer.sequence.app
+      description: Imx-Testnet Mainnet
+    - url: https://mainnet-indexer.sequence.app
+      description: Mainnet Mainnet
+    - url: https://optimism-indexer.sequence.app
+      description: Optimism Mainnet
+    - url: https://optimism-sepolia-indexer.sequence.app
+      description: Optimism-Sepolia Mainnet
+    - url: https://polygon-indexer.sequence.app
+      description: Polygon Mainnet
+    - url: https://polygon-zkevm-indexer.sequence.app
+      description: Polygon-Zkevm Mainnet
+    - url: https://rootnet-indexer.sequence.app
+      description: Rootnet Mainnet
+    - url: https://rootnet-porcini-indexer.sequence.app
+      description: Rootnet-Porcini Mainnet
+    - url: https://sepolia-indexer.sequence.app
+      description: Sepolia Mainnet
+    - url: https://skale-nebula-testnet-indexer.sequence.app
+      description: Skale-Nebula-Testnet Mainnet
+    - url: https://soneium-minato-indexer.sequence.app
+      description: Soneium-Minato Mainnet
+    - url: https://toy-testnet-indexer.sequence.app
+      description: Toy-Testnet Mainnet
+    - url: https://xai-indexer.sequence.app
+      description: Xai Mainnet
+    - url: https://xai-sepolia-indexer.sequence.app
+      description: Xai-Sepolia Mainnet
+    - url: https://xr-sepolia-indexer.sequence.app
+      description: Xr-Sepolia Mainnet
   /rpc/Indexer/FetchTransactionReceipt:
     post:
       summary: FetchTransactionReceipt
@@ -713,10 +1538,93 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcServerPanic'
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcIndexerFetchTransactionReceipt
+      x-operation-id-source: derived
+    servers:
+    - url: https://amoy-indexer.sequence.app
+      description: Amoy Mainnet
+    - url: https://apechain-mainnet-indexer.sequence.app
+      description: Apechain-Mainnet Mainnet
+    - url: https://apechain-testnet-indexer.sequence.app
+      description: Apechain-Testnet Mainnet
+    - url: https://arbitrum-indexer.sequence.app
+      description: Arbitrum Mainnet
+    - url: https://arbitrum-nova-indexer.sequence.app
+      description: Arbitrum-Nova Mainnet
+    - url: https://arbitrum-sepolia-indexer.sequence.app
+      description: Arbitrum-Sepolia Mainnet
+    - url: https://astar-zkevm-indexer.sequence.app
+      description: Astar-Zkevm Mainnet
+    - url: https://astar-zkyoto-indexer.sequence.app
+      description: Astar-Zkyoto Mainnet
+    - url: https://avalanche-indexer.sequence.app
+      description: Avalanche Mainnet
+    - url: https://avalanche-testnet-indexer.sequence.app
+      description: Avalanche-Testnet Mainnet
+    - url: https://b3-indexer.sequence.app
+      description: B3 Mainnet
+    - url: https://b3-sepolia-indexer.sequence.app
+      description: B3-Sepolia Mainnet
+    - url: https://base-indexer.sequence.app
+      description: Base Mainnet
+    - url: https://base-sepolia-indexer.sequence.app
+      description: Base-Sepolia Mainnet
+    - url: https://blast-indexer.sequence.app
+      description: Blast Mainnet
+    - url: https://blast-sepolia-indexer.sequence.app
+      description: Blast-Sepolia Mainnet
+    - url: https://borne-testnet-indexer.sequence.app
+      description: Borne-Testnet Mainnet
+    - url: https://bsc-indexer.sequence.app
+      description: Bsc Mainnet
+    - url: https://bsc-testnet-indexer.sequence.app
+      description: Bsc-Testnet Mainnet
+    - url: https://gnosis-indexer.sequence.app
+      description: Gnosis Mainnet
+    - url: https://homeverse-indexer.sequence.app
+      description: Homeverse Mainnet
+    - url: https://homeverse-testnet-indexer.sequence.app
+      description: Homeverse-Testnet Mainnet
+    - url: https://immutable-zkevm-indexer.sequence.app
+      description: Immutable-Zkevm Mainnet
+    - url: https://immutable-zkevm-testnet-indexer.sequence.app
+      description: Immutable-Zkevm-Testnet Mainnet
+    - url: https://imx-indexer.sequence.app
+      description: Imx Mainnet
+    - url: https://imx-testnet-indexer.sequence.app
+      description: Imx-Testnet Mainnet
+    - url: https://mainnet-indexer.sequence.app
+      description: Mainnet Mainnet
+    - url: https://optimism-indexer.sequence.app
+      description: Optimism Mainnet
+    - url: https://optimism-sepolia-indexer.sequence.app
+      description: Optimism-Sepolia Mainnet
+    - url: https://polygon-indexer.sequence.app
+      description: Polygon Mainnet
+    - url: https://polygon-zkevm-indexer.sequence.app
+      description: Polygon-Zkevm Mainnet
+    - url: https://rootnet-indexer.sequence.app
+      description: Rootnet Mainnet
+    - url: https://rootnet-porcini-indexer.sequence.app
+      description: Rootnet-Porcini Mainnet
+    - url: https://sepolia-indexer.sequence.app
+      description: Sepolia Mainnet
+    - url: https://skale-nebula-testnet-indexer.sequence.app
+      description: Skale-Nebula-Testnet Mainnet
+    - url: https://soneium-minato-indexer.sequence.app
+      description: Soneium-Minato Mainnet
+    - url: https://toy-testnet-indexer.sequence.app
+      description: Toy-Testnet Mainnet
+    - url: https://xai-indexer.sequence.app
+      description: Xai Mainnet
+    - url: https://xai-sepolia-indexer.sequence.app
+      description: Xai-Sepolia Mainnet
+    - url: https://xr-sepolia-indexer.sequence.app
+      description: Xr-Sepolia Mainnet
   /rpc/Indexer/FetchTransactionReceiptWithFilter:
     post:
       summary: FetchTransactionReceiptWithFilter
@@ -770,10 +1678,93 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcServerPanic'
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcIndexerFetchTransactionReceiptWithFilter
+      x-operation-id-source: derived
+    servers:
+    - url: https://amoy-indexer.sequence.app
+      description: Amoy Mainnet
+    - url: https://apechain-mainnet-indexer.sequence.app
+      description: Apechain-Mainnet Mainnet
+    - url: https://apechain-testnet-indexer.sequence.app
+      description: Apechain-Testnet Mainnet
+    - url: https://arbitrum-indexer.sequence.app
+      description: Arbitrum Mainnet
+    - url: https://arbitrum-nova-indexer.sequence.app
+      description: Arbitrum-Nova Mainnet
+    - url: https://arbitrum-sepolia-indexer.sequence.app
+      description: Arbitrum-Sepolia Mainnet
+    - url: https://astar-zkevm-indexer.sequence.app
+      description: Astar-Zkevm Mainnet
+    - url: https://astar-zkyoto-indexer.sequence.app
+      description: Astar-Zkyoto Mainnet
+    - url: https://avalanche-indexer.sequence.app
+      description: Avalanche Mainnet
+    - url: https://avalanche-testnet-indexer.sequence.app
+      description: Avalanche-Testnet Mainnet
+    - url: https://b3-indexer.sequence.app
+      description: B3 Mainnet
+    - url: https://b3-sepolia-indexer.sequence.app
+      description: B3-Sepolia Mainnet
+    - url: https://base-indexer.sequence.app
+      description: Base Mainnet
+    - url: https://base-sepolia-indexer.sequence.app
+      description: Base-Sepolia Mainnet
+    - url: https://blast-indexer.sequence.app
+      description: Blast Mainnet
+    - url: https://blast-sepolia-indexer.sequence.app
+      description: Blast-Sepolia Mainnet
+    - url: https://borne-testnet-indexer.sequence.app
+      description: Borne-Testnet Mainnet
+    - url: https://bsc-indexer.sequence.app
+      description: Bsc Mainnet
+    - url: https://bsc-testnet-indexer.sequence.app
+      description: Bsc-Testnet Mainnet
+    - url: https://gnosis-indexer.sequence.app
+      description: Gnosis Mainnet
+    - url: https://homeverse-indexer.sequence.app
+      description: Homeverse Mainnet
+    - url: https://homeverse-testnet-indexer.sequence.app
+      description: Homeverse-Testnet Mainnet
+    - url: https://immutable-zkevm-indexer.sequence.app
+      description: Immutable-Zkevm Mainnet
+    - url: https://immutable-zkevm-testnet-indexer.sequence.app
+      description: Immutable-Zkevm-Testnet Mainnet
+    - url: https://imx-indexer.sequence.app
+      description: Imx Mainnet
+    - url: https://imx-testnet-indexer.sequence.app
+      description: Imx-Testnet Mainnet
+    - url: https://mainnet-indexer.sequence.app
+      description: Mainnet Mainnet
+    - url: https://optimism-indexer.sequence.app
+      description: Optimism Mainnet
+    - url: https://optimism-sepolia-indexer.sequence.app
+      description: Optimism-Sepolia Mainnet
+    - url: https://polygon-indexer.sequence.app
+      description: Polygon Mainnet
+    - url: https://polygon-zkevm-indexer.sequence.app
+      description: Polygon-Zkevm Mainnet
+    - url: https://rootnet-indexer.sequence.app
+      description: Rootnet Mainnet
+    - url: https://rootnet-porcini-indexer.sequence.app
+      description: Rootnet-Porcini Mainnet
+    - url: https://sepolia-indexer.sequence.app
+      description: Sepolia Mainnet
+    - url: https://skale-nebula-testnet-indexer.sequence.app
+      description: Skale-Nebula-Testnet Mainnet
+    - url: https://soneium-minato-indexer.sequence.app
+      description: Soneium-Minato Mainnet
+    - url: https://toy-testnet-indexer.sequence.app
+      description: Toy-Testnet Mainnet
+    - url: https://xai-indexer.sequence.app
+      description: Xai Mainnet
+    - url: https://xai-sepolia-indexer.sequence.app
+      description: Xai-Sepolia Mainnet
+    - url: https://xr-sepolia-indexer.sequence.app
+      description: Xr-Sepolia Mainnet
   /rpc/Indexer/SubscribeReceipts:
     post:
       summary: SubscribeReceipts
@@ -827,10 +1818,93 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
       description: On Sepolia Mainnet, subscribe and receive receipts based on a filter of transaction hash and transaction details
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcIndexerSubscribeReceipts
+      x-operation-id-source: derived
+    servers:
+    - url: https://amoy-indexer.sequence.app
+      description: Amoy Mainnet
+    - url: https://apechain-mainnet-indexer.sequence.app
+      description: Apechain-Mainnet Mainnet
+    - url: https://apechain-testnet-indexer.sequence.app
+      description: Apechain-Testnet Mainnet
+    - url: https://arbitrum-indexer.sequence.app
+      description: Arbitrum Mainnet
+    - url: https://arbitrum-nova-indexer.sequence.app
+      description: Arbitrum-Nova Mainnet
+    - url: https://arbitrum-sepolia-indexer.sequence.app
+      description: Arbitrum-Sepolia Mainnet
+    - url: https://astar-zkevm-indexer.sequence.app
+      description: Astar-Zkevm Mainnet
+    - url: https://astar-zkyoto-indexer.sequence.app
+      description: Astar-Zkyoto Mainnet
+    - url: https://avalanche-indexer.sequence.app
+      description: Avalanche Mainnet
+    - url: https://avalanche-testnet-indexer.sequence.app
+      description: Avalanche-Testnet Mainnet
+    - url: https://b3-indexer.sequence.app
+      description: B3 Mainnet
+    - url: https://b3-sepolia-indexer.sequence.app
+      description: B3-Sepolia Mainnet
+    - url: https://base-indexer.sequence.app
+      description: Base Mainnet
+    - url: https://base-sepolia-indexer.sequence.app
+      description: Base-Sepolia Mainnet
+    - url: https://blast-indexer.sequence.app
+      description: Blast Mainnet
+    - url: https://blast-sepolia-indexer.sequence.app
+      description: Blast-Sepolia Mainnet
+    - url: https://borne-testnet-indexer.sequence.app
+      description: Borne-Testnet Mainnet
+    - url: https://bsc-indexer.sequence.app
+      description: Bsc Mainnet
+    - url: https://bsc-testnet-indexer.sequence.app
+      description: Bsc-Testnet Mainnet
+    - url: https://gnosis-indexer.sequence.app
+      description: Gnosis Mainnet
+    - url: https://homeverse-indexer.sequence.app
+      description: Homeverse Mainnet
+    - url: https://homeverse-testnet-indexer.sequence.app
+      description: Homeverse-Testnet Mainnet
+    - url: https://immutable-zkevm-indexer.sequence.app
+      description: Immutable-Zkevm Mainnet
+    - url: https://immutable-zkevm-testnet-indexer.sequence.app
+      description: Immutable-Zkevm-Testnet Mainnet
+    - url: https://imx-indexer.sequence.app
+      description: Imx Mainnet
+    - url: https://imx-testnet-indexer.sequence.app
+      description: Imx-Testnet Mainnet
+    - url: https://mainnet-indexer.sequence.app
+      description: Mainnet Mainnet
+    - url: https://optimism-indexer.sequence.app
+      description: Optimism Mainnet
+    - url: https://optimism-sepolia-indexer.sequence.app
+      description: Optimism-Sepolia Mainnet
+    - url: https://polygon-indexer.sequence.app
+      description: Polygon Mainnet
+    - url: https://polygon-zkevm-indexer.sequence.app
+      description: Polygon-Zkevm Mainnet
+    - url: https://rootnet-indexer.sequence.app
+      description: Rootnet Mainnet
+    - url: https://rootnet-porcini-indexer.sequence.app
+      description: Rootnet-Porcini Mainnet
+    - url: https://sepolia-indexer.sequence.app
+      description: Sepolia Mainnet
+    - url: https://skale-nebula-testnet-indexer.sequence.app
+      description: Skale-Nebula-Testnet Mainnet
+    - url: https://soneium-minato-indexer.sequence.app
+      description: Soneium-Minato Mainnet
+    - url: https://toy-testnet-indexer.sequence.app
+      description: Toy-Testnet Mainnet
+    - url: https://xai-indexer.sequence.app
+      description: Xai Mainnet
+    - url: https://xai-sepolia-indexer.sequence.app
+      description: Xai-Sepolia Mainnet
+    - url: https://xr-sepolia-indexer.sequence.app
+      description: Xr-Sepolia Mainnet
   /rpc/Indexer/SubscribeEvents:
     post:
       summary: SubscribeEvents
@@ -884,10 +1958,93 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcServerPanic'
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcIndexerSubscribeEvents
+      x-operation-id-source: derived
+    servers:
+    - url: https://amoy-indexer.sequence.app
+      description: Amoy Mainnet
+    - url: https://apechain-mainnet-indexer.sequence.app
+      description: Apechain-Mainnet Mainnet
+    - url: https://apechain-testnet-indexer.sequence.app
+      description: Apechain-Testnet Mainnet
+    - url: https://arbitrum-indexer.sequence.app
+      description: Arbitrum Mainnet
+    - url: https://arbitrum-nova-indexer.sequence.app
+      description: Arbitrum-Nova Mainnet
+    - url: https://arbitrum-sepolia-indexer.sequence.app
+      description: Arbitrum-Sepolia Mainnet
+    - url: https://astar-zkevm-indexer.sequence.app
+      description: Astar-Zkevm Mainnet
+    - url: https://astar-zkyoto-indexer.sequence.app
+      description: Astar-Zkyoto Mainnet
+    - url: https://avalanche-indexer.sequence.app
+      description: Avalanche Mainnet
+    - url: https://avalanche-testnet-indexer.sequence.app
+      description: Avalanche-Testnet Mainnet
+    - url: https://b3-indexer.sequence.app
+      description: B3 Mainnet
+    - url: https://b3-sepolia-indexer.sequence.app
+      description: B3-Sepolia Mainnet
+    - url: https://base-indexer.sequence.app
+      description: Base Mainnet
+    - url: https://base-sepolia-indexer.sequence.app
+      description: Base-Sepolia Mainnet
+    - url: https://blast-indexer.sequence.app
+      description: Blast Mainnet
+    - url: https://blast-sepolia-indexer.sequence.app
+      description: Blast-Sepolia Mainnet
+    - url: https://borne-testnet-indexer.sequence.app
+      description: Borne-Testnet Mainnet
+    - url: https://bsc-indexer.sequence.app
+      description: Bsc Mainnet
+    - url: https://bsc-testnet-indexer.sequence.app
+      description: Bsc-Testnet Mainnet
+    - url: https://gnosis-indexer.sequence.app
+      description: Gnosis Mainnet
+    - url: https://homeverse-indexer.sequence.app
+      description: Homeverse Mainnet
+    - url: https://homeverse-testnet-indexer.sequence.app
+      description: Homeverse-Testnet Mainnet
+    - url: https://immutable-zkevm-indexer.sequence.app
+      description: Immutable-Zkevm Mainnet
+    - url: https://immutable-zkevm-testnet-indexer.sequence.app
+      description: Immutable-Zkevm-Testnet Mainnet
+    - url: https://imx-indexer.sequence.app
+      description: Imx Mainnet
+    - url: https://imx-testnet-indexer.sequence.app
+      description: Imx-Testnet Mainnet
+    - url: https://mainnet-indexer.sequence.app
+      description: Mainnet Mainnet
+    - url: https://optimism-indexer.sequence.app
+      description: Optimism Mainnet
+    - url: https://optimism-sepolia-indexer.sequence.app
+      description: Optimism-Sepolia Mainnet
+    - url: https://polygon-indexer.sequence.app
+      description: Polygon Mainnet
+    - url: https://polygon-zkevm-indexer.sequence.app
+      description: Polygon-Zkevm Mainnet
+    - url: https://rootnet-indexer.sequence.app
+      description: Rootnet Mainnet
+    - url: https://rootnet-porcini-indexer.sequence.app
+      description: Rootnet-Porcini Mainnet
+    - url: https://sepolia-indexer.sequence.app
+      description: Sepolia Mainnet
+    - url: https://skale-nebula-testnet-indexer.sequence.app
+      description: Skale-Nebula-Testnet Mainnet
+    - url: https://soneium-minato-indexer.sequence.app
+      description: Soneium-Minato Mainnet
+    - url: https://toy-testnet-indexer.sequence.app
+      description: Toy-Testnet Mainnet
+    - url: https://xai-indexer.sequence.app
+      description: Xai Mainnet
+    - url: https://xai-sepolia-indexer.sequence.app
+      description: Xai-Sepolia Mainnet
+    - url: https://xr-sepolia-indexer.sequence.app
+      description: Xr-Sepolia Mainnet
   /rpc/Indexer/SubscribeBalanceUpdates:
     post:
       summary: SubscribeBalanceUpdates
@@ -941,10 +2098,93 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
       description: On Sepolia Mainnet, subscribe and receive balance updates based on the affected address, like wallet and contract address, with specific details
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcIndexerSubscribeBalanceUpdates
+      x-operation-id-source: derived
+    servers:
+    - url: https://amoy-indexer.sequence.app
+      description: Amoy Mainnet
+    - url: https://apechain-mainnet-indexer.sequence.app
+      description: Apechain-Mainnet Mainnet
+    - url: https://apechain-testnet-indexer.sequence.app
+      description: Apechain-Testnet Mainnet
+    - url: https://arbitrum-indexer.sequence.app
+      description: Arbitrum Mainnet
+    - url: https://arbitrum-nova-indexer.sequence.app
+      description: Arbitrum-Nova Mainnet
+    - url: https://arbitrum-sepolia-indexer.sequence.app
+      description: Arbitrum-Sepolia Mainnet
+    - url: https://astar-zkevm-indexer.sequence.app
+      description: Astar-Zkevm Mainnet
+    - url: https://astar-zkyoto-indexer.sequence.app
+      description: Astar-Zkyoto Mainnet
+    - url: https://avalanche-indexer.sequence.app
+      description: Avalanche Mainnet
+    - url: https://avalanche-testnet-indexer.sequence.app
+      description: Avalanche-Testnet Mainnet
+    - url: https://b3-indexer.sequence.app
+      description: B3 Mainnet
+    - url: https://b3-sepolia-indexer.sequence.app
+      description: B3-Sepolia Mainnet
+    - url: https://base-indexer.sequence.app
+      description: Base Mainnet
+    - url: https://base-sepolia-indexer.sequence.app
+      description: Base-Sepolia Mainnet
+    - url: https://blast-indexer.sequence.app
+      description: Blast Mainnet
+    - url: https://blast-sepolia-indexer.sequence.app
+      description: Blast-Sepolia Mainnet
+    - url: https://borne-testnet-indexer.sequence.app
+      description: Borne-Testnet Mainnet
+    - url: https://bsc-indexer.sequence.app
+      description: Bsc Mainnet
+    - url: https://bsc-testnet-indexer.sequence.app
+      description: Bsc-Testnet Mainnet
+    - url: https://gnosis-indexer.sequence.app
+      description: Gnosis Mainnet
+    - url: https://homeverse-indexer.sequence.app
+      description: Homeverse Mainnet
+    - url: https://homeverse-testnet-indexer.sequence.app
+      description: Homeverse-Testnet Mainnet
+    - url: https://immutable-zkevm-indexer.sequence.app
+      description: Immutable-Zkevm Mainnet
+    - url: https://immutable-zkevm-testnet-indexer.sequence.app
+      description: Immutable-Zkevm-Testnet Mainnet
+    - url: https://imx-indexer.sequence.app
+      description: Imx Mainnet
+    - url: https://imx-testnet-indexer.sequence.app
+      description: Imx-Testnet Mainnet
+    - url: https://mainnet-indexer.sequence.app
+      description: Mainnet Mainnet
+    - url: https://optimism-indexer.sequence.app
+      description: Optimism Mainnet
+    - url: https://optimism-sepolia-indexer.sequence.app
+      description: Optimism-Sepolia Mainnet
+    - url: https://polygon-indexer.sequence.app
+      description: Polygon Mainnet
+    - url: https://polygon-zkevm-indexer.sequence.app
+      description: Polygon-Zkevm Mainnet
+    - url: https://rootnet-indexer.sequence.app
+      description: Rootnet Mainnet
+    - url: https://rootnet-porcini-indexer.sequence.app
+      description: Rootnet-Porcini Mainnet
+    - url: https://sepolia-indexer.sequence.app
+      description: Sepolia Mainnet
+    - url: https://skale-nebula-testnet-indexer.sequence.app
+      description: Skale-Nebula-Testnet Mainnet
+    - url: https://soneium-minato-indexer.sequence.app
+      description: Soneium-Minato Mainnet
+    - url: https://toy-testnet-indexer.sequence.app
+      description: Toy-Testnet Mainnet
+    - url: https://xai-indexer.sequence.app
+      description: Xai Mainnet
+    - url: https://xai-sepolia-indexer.sequence.app
+      description: Xai-Sepolia Mainnet
+    - url: https://xr-sepolia-indexer.sequence.app
+      description: Xr-Sepolia Mainnet
   /rpc/Metadata/RefreshTokenMetadata:
     post:
       summary: RefreshTokenMetadata
@@ -1015,10 +2255,15 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
                 - $ref: '#/components/schemas/ErrorFail'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcMetadataRefreshTokenMetadata
+      x-operation-id-source: derived
+    servers:
+    - url: https://metadata.sequence.app/
+      description: Metadata
   /rpc/Metadata/EnqueueTokensForRefresh:
     post:
       summary: EnqueueTokensForRefresh
@@ -1089,10 +2334,15 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
                 - $ref: '#/components/schemas/ErrorFail'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcMetadataEnqueueTokensForRefresh
+      x-operation-id-source: derived
+    servers:
+    - url: https://metadata.sequence.app/
+      description: Metadata
   /rpc/Metadata/GetTokenMetadata:
     post:
       summary: GetTokenMetadata
@@ -1183,10 +2433,15 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
                 - $ref: '#/components/schemas/ErrorFail'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcMetadataGetTokenMetadata
+      x-operation-id-source: derived
+    servers:
+    - url: https://metadata.sequence.app/
+      description: Metadata
   /rpc/Metadata/GetTokenMetadataBatch:
     post:
       summary: GetTokenMetadataBatch
@@ -1347,10 +2602,15 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
                 - $ref: '#/components/schemas/ErrorFail'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcMetadataGetTokenMetadataBatch
+      x-operation-id-source: derived
+    servers:
+    - url: https://metadata.sequence.app/
+      description: Metadata
   /rpc/Metadata/SearchTokenMetadata:
     post:
       summary: SearchTokenMetadata
@@ -1530,10 +2790,15 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
                 - $ref: '#/components/schemas/ErrorFail'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcMetadataSearchTokenMetadata
+      x-operation-id-source: derived
+    servers:
+    - url: https://metadata.sequence.app/
+      description: Metadata
   /rpc/Metadata/SearchTokenIDs:
     post:
       summary: SearchTokenIDs
@@ -1611,10 +2876,15 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
                 - $ref: '#/components/schemas/ErrorFail'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcMetadataSearchTokenIDs
+      x-operation-id-source: derived
+    servers:
+    - url: https://metadata.sequence.app/
+      description: Metadata
   /rpc/Metadata/TokenCollectionFilters:
     post:
       summary: TokenCollectionFilters
@@ -1703,10 +2973,15 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
                 - $ref: '#/components/schemas/ErrorFail'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcMetadataTokenCollectionFilters
+      x-operation-id-source: derived
+    servers:
+    - url: https://metadata.sequence.app/
+      description: Metadata
   /rpc/Metadata/GetContractInfo:
     post:
       summary: GetContractInfo
@@ -1790,10 +3065,15 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
                 - $ref: '#/components/schemas/ErrorFail'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcMetadataGetContractInfo
+      x-operation-id-source: derived
+    servers:
+    - url: https://metadata.sequence.app/
+      description: Metadata
   /rpc/Metadata/GetContractInfoBatch:
     post:
       summary: GetContractInfoBatch
@@ -1898,10 +3178,15 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
                 - $ref: '#/components/schemas/ErrorFail'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcMetadataGetContractInfoBatch
+      x-operation-id-source: derived
+    servers:
+    - url: https://metadata.sequence.app/
+      description: Metadata
   /rpc/Metadata/SearchContractInfo:
     post:
       summary: SearchContractInfo
@@ -1984,10 +3269,15 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
                 - $ref: '#/components/schemas/ErrorFail'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcMetadataSearchContractInfo
+      x-operation-id-source: derived
+    servers:
+    - url: https://metadata.sequence.app/
+      description: Metadata
   /rpc/Metadata/SearchContractInfoBatch:
     post:
       summary: SearchContractInfoBatch
@@ -2072,10 +3362,15 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
                 - $ref: '#/components/schemas/ErrorFail'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcMetadataSearchContractInfoBatch
+      x-operation-id-source: derived
+    servers:
+    - url: https://metadata.sequence.app/
+      description: Metadata
   /rpc/Metadata/SearchTokens:
     post:
       summary: SearchTokens
@@ -2251,10 +3546,15 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
                 - $ref: '#/components/schemas/ErrorFail'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcMetadataSearchTokens
+      x-operation-id-source: derived
+    servers:
+    - url: https://metadata.sequence.app/
+      description: Metadata
   /rpc/Metadata/DirectoryGetNetworks:
     post:
       summary: DirectoryGetNetworks
@@ -2351,10 +3651,15 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
                 - $ref: '#/components/schemas/ErrorFail'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcMetadataDirectoryGetNetworks
+      x-operation-id-source: derived
+    servers:
+    - url: https://metadata.sequence.app/
+      description: Metadata
   /rpc/Metadata/DirectoryGetCollections:
     post:
       summary: DirectoryGetCollections
@@ -2527,118 +3832,43 @@ paths:
                 - $ref: '#/components/schemas/ErrorWebrpcInternalError'
                 - $ref: '#/components/schemas/ErrorFail'
       tags:
-      - public
+      - Public
       security:
       - ApiKeyAuth:
         - AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+      operationId: postRpcMetadataDirectoryGetCollections
+      x-operation-id-source: derived
+    servers:
+    - url: https://metadata.sequence.app/
+      description: Metadata
 components:
   schemas:
-    Filter:
+    Indexer_GetTransactionHistory_Response:
       type: object
       properties:
-        text:
-          type: string
-        properties:
+        page:
+          $ref: '#/components/schemas/Page'
+        transactions:
           type: array
-          description: '[]PropertyFilter'
+          description: '[]Transaction'
           items:
-            $ref: '#/components/schemas/PropertyFilter'
-    PropertyFilter:
-      type: object
-      required:
-      - name
-      - type
-      properties:
-        name:
-          type: string
-        type:
-          $ref: '#/components/schemas/PropertyType'
-        min:
-          type: number
-        max:
-          type: number
-        values:
-          type: array
-          description: '[]any'
-          items:
-            type: object
-    ErrorInvalidArgument:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: InvalidArgument
-        code:
-          type: number
-          example: 2001
-        msg:
-          type: string
-          example: Invalid argument
-        cause:
-          type: string
-        status:
-          type: number
-          example: 400
-    Metadata_GetTokenMetadata_Request:
+            $ref: '#/components/schemas/Transaction'
+    Indexer_GetTokenSuppliesMap_Response:
       type: object
       properties:
-        chainID:
-          type: string
-        contractAddress:
-          type: string
-        tokenIDs:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-    Metadata_DirectoryGetNetworks_Response:
+        supplies:
+          type: object
+          description: map<string,[]TokenSupply>
+          additionalProperties:
+            type: array
+            description: '[]TokenSupply'
+            items:
+              $ref: '#/components/schemas/TokenSupply'
+    Indexer_GetNativeTokenBalance_Request:
       type: object
       properties:
-        networks:
-          type: array
-          description: '[]uint64'
-          items:
-            type: number
-    ErrorUnauthorized:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
+        accountAddress:
           type: string
-          example: Unauthorized
-        code:
-          type: number
-          example: 1000
-        msg:
-          type: string
-          example: Unauthorized access
-        cause:
-          type: string
-        status:
-          type: number
-          example: 401
-    Indexer_SubscribeReceipts_Response:
-      type: object
-      properties:
-        receipt:
-          $ref: '#/components/schemas/TransactionReceipt'
-    Metadata_SearchContractInfo_Response:
-      type: object
-      properties:
-        contractInfoList:
-          type: array
-          description: '[]ContractInfo'
-          items:
-            $ref: '#/components/schemas/ContractInfo_2'
     ErrorPermissionDenied:
       type: object
       required:
@@ -2661,41 +3891,7 @@ components:
         status:
           type: number
           example: 403
-    Metadata_DirectoryGetCollections_Response:
-      type: object
-      properties:
-        collections:
-          type: array
-          description: '[]ContractInfo'
-          items:
-            $ref: '#/components/schemas/ContractInfo_2'
-        page:
-          $ref: '#/components/schemas/Page_2'
-    Indexer_GetTransactionHistory_Response:
-      type: object
-      properties:
-        page:
-          $ref: '#/components/schemas/Page'
-        transactions:
-          type: array
-          description: '[]Transaction'
-          items:
-            $ref: '#/components/schemas/Transaction'
-    ContractType:
-      type: string
-      description: Represented as uint8 on the server side
-      enum:
-      - UNKNOWN
-      - NATIVE
-      - ERC20
-      - ERC721
-      - ERC1155
-      - SEQUENCE_WALLET
-      - ERC20_BRIDGE
-      - ERC721_BRIDGE
-      - ERC1155_BRIDGE
-      - SEQ_MARKETPLACE
-    ErrorUnavailable:
+    ErrorAborted:
       type: object
       required:
       - error
@@ -2705,18 +3901,345 @@ components:
       properties:
         error:
           type: string
-          example: Unavailable
+          example: Aborted
         code:
           type: number
-          example: 2002
+          example: 1005
         msg:
           type: string
-          example: Unavailable resource
+          example: Request aborted
         cause:
           type: string
         status:
           type: number
           example: 400
+    ErrorWebrpcBadRequest:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: WebrpcBadRequest
+        code:
+          type: number
+          example: -4
+        msg:
+          type: string
+          example: bad request
+        cause:
+          type: string
+        status:
+          type: number
+          example: 400
+    TransactionHistoryFilter:
+      type: object
+      properties:
+        accountAddress:
+          type: string
+        contractAddress:
+          type: string
+        accountAddresses:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+        contractAddresses:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+        transactionHashes:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+        metaTransactionIDs:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+        fromBlock:
+          type: number
+        toBlock:
+          type: number
+        tokenID:
+          type: string
+    Indexer_FetchTransactionReceipt_Response:
+      type: object
+      properties:
+        receipt:
+          $ref: '#/components/schemas/TransactionReceipt'
+    ErrorTimeout:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: Timeout
+        code:
+          type: number
+          example: 2000
+        msg:
+          type: string
+          example: Request timed out
+        cause:
+          type: string
+        status:
+          type: number
+          example: 408
+    Indexer_GetTokenSupplies_Response:
+      type: object
+      properties:
+        page:
+          $ref: '#/components/schemas/Page'
+        contractType:
+          $ref: '#/components/schemas/ContractType'
+        tokenIDs:
+          type: array
+          description: '[]TokenSupply'
+          items:
+            $ref: '#/components/schemas/TokenSupply'
+    SortBy:
+      type: object
+      required:
+      - column
+      - order
+      properties:
+        column:
+          type: string
+        order:
+          $ref: '#/components/schemas/SortOrder'
+    TokenBalance:
+      type: object
+      required:
+      - contractType
+      - contractAddress
+      - accountAddress
+      - balance
+      - blockHash
+      - blockNumber
+      - chainId
+      - uniqueCollectibles
+      - isSummary
+      properties:
+        contractType:
+          $ref: '#/components/schemas/ContractType'
+        contractAddress:
+          type: string
+        accountAddress:
+          type: string
+        tokenID:
+          type: string
+        balance:
+          type: string
+        blockHash:
+          type: string
+        blockNumber:
+          type: number
+        chainId:
+          type: number
+        uniqueCollectibles:
+          type: string
+        isSummary:
+          type: boolean
+        contractInfo:
+          $ref: '#/components/schemas/ContractInfo'
+        tokenMetadata:
+          $ref: '#/components/schemas/TokenMetadata'
+    NativeTokenBalance:
+      type: object
+      required:
+      - accountAddress
+      - balance
+      properties:
+        accountAddress:
+          type: string
+        balance:
+          type: string
+    Indexer_FetchTransactionReceiptWithFilter_Response:
+      type: object
+      properties:
+        receipt:
+          $ref: '#/components/schemas/TransactionReceipt'
+    ErrorWebrpcEndpoint:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: WebrpcEndpoint
+        code:
+          type: number
+          example: 0
+        msg:
+          type: string
+          example: endpoint error
+        cause:
+          type: string
+        status:
+          type: number
+          example: 400
+    ErrorQueryFailed:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: QueryFailed
+        code:
+          type: number
+          example: 2003
+        msg:
+          type: string
+          example: Query failed
+        cause:
+          type: string
+        status:
+          type: number
+          example: 400
+    ErrorWebrpcBadRoute:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: WebrpcBadRoute
+        code:
+          type: number
+          example: -2
+        msg:
+          type: string
+          example: bad route
+        cause:
+          type: string
+        status:
+          type: number
+          example: 404
+    EventLogDataType:
+      type: string
+      description: Represented as uint8 on the server side
+      enum:
+      - EVENT
+      - TOKEN_TRANSFER
+      - NATIVE_TOKEN_TRANSFER
+      - SEQUENCE_TXN
+    Indexer_FetchTransactionReceipt_Request:
+      type: object
+      properties:
+        txnHash:
+          type: string
+        maxBlockWait:
+          type: number
+    ContractVerificationStatus:
+      type: string
+      description: Represented as string on the server side
+      enum:
+      - VERIFIED
+      - UNVERIFIED
+      - ALL
+    TokenBalancesByContractFilter:
+      type: object
+      required:
+      - contractAddresses
+      - accountAddresses
+      - contractStatus
+      properties:
+        contractAddresses:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+        accountAddresses:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+        contractStatus:
+          $ref: '#/components/schemas/ContractVerificationStatus'
+    SortOrder:
+      type: string
+      description: Represented as uint32 on the server side
+      enum:
+      - DESC
+      - ASC
+    ErrorInvalidArgument:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: InvalidArgument
+        code:
+          type: number
+          example: 2001
+        msg:
+          type: string
+          example: Invalid argument
+        cause:
+          type: string
+        status:
+          type: number
+          example: 400
+    Indexer_GetTokenSuppliesMap_Request:
+      type: object
+      properties:
+        tokenMap:
+          type: object
+          description: map<string,[]string>
+          additionalProperties:
+            type: array
+            description: '[]string'
+            items:
+              type: string
+        includeMetadata:
+          type: boolean
+        metadataOptions:
+          $ref: '#/components/schemas/MetadataOptions'
+    Indexer_GetTokenBalancesByContract_Request:
+      type: object
+      properties:
+        filter:
+          $ref: '#/components/schemas/TokenBalancesByContractFilter'
+        omitMetadata:
+          type: boolean
+        page:
+          $ref: '#/components/schemas/Page'
+    Indexer_FetchTransactionReceiptWithFilter_Request:
+      type: object
+      properties:
+        filter:
+          $ref: '#/components/schemas/TransactionFilter'
+        maxBlockWait:
+          type: number
+    Indexer_SubscribeBalanceUpdates_Response:
+      type: object
+      properties:
+        balance:
+          $ref: '#/components/schemas/TokenBalance'
     ErrorWebrpcBadResponse:
       type: object
       required:
@@ -2739,34 +4262,407 @@ components:
         status:
           type: number
           example: 500
-    Metadata_RefreshTokenMetadata_Response:
-      type: object
-      properties:
-        taskId:
-          type: number
-    Metadata_GetTokenMetadataBatch_Request:
-      type: object
-      properties:
-        chainID:
-          type: string
-        contractTokenMap:
-          type: object
-          description: map<string,[]string>
-          additionalProperties:
-            type: array
-            description: '[]string'
-            items:
-              type: string
-    Metadata_SearchTokenMetadata_Response:
+    Indexer_GetBalanceUpdates_Response:
       type: object
       properties:
         page:
-          $ref: '#/components/schemas/Page_2'
-        tokenMetadata:
+          $ref: '#/components/schemas/Page'
+        balances:
           type: array
-          description: '[]TokenMetadata'
+          description: '[]TokenBalance'
           items:
-            $ref: '#/components/schemas/TokenMetadata_2'
+            $ref: '#/components/schemas/TokenBalance'
+    ErrorMetadataCallFailed:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: MetadataCallFailed
+        code:
+          type: number
+          example: 3003
+        msg:
+          type: string
+          example: Metadata service call failed
+        cause:
+          type: string
+        status:
+          type: number
+          example: 400
+    TransactionType:
+      type: string
+      description: Represented as uint32 on the server side
+      enum:
+      - LegacyTxnType
+      - AccessListTxnType
+      - DynamicFeeTxnType
+    ErrorRequestConflict:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: RequestConflict
+        code:
+          type: number
+          example: 1004
+        msg:
+          type: string
+          example: Conflict with target resource
+        cause:
+          type: string
+        status:
+          type: number
+          example: 409
+    ErrorWebrpcServerPanic:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: WebrpcServerPanic
+        code:
+          type: number
+          example: -6
+        msg:
+          type: string
+          example: server panic
+        cause:
+          type: string
+        status:
+          type: number
+          example: 500
+    Indexer_GetTokenBalances_Response:
+      type: object
+      properties:
+        page:
+          $ref: '#/components/schemas/Page'
+        balances:
+          type: array
+          description: '[]TokenBalance'
+          items:
+            $ref: '#/components/schemas/TokenBalance'
+    Indexer_SubscribeReceipts_Response:
+      type: object
+      properties:
+        receipt:
+          $ref: '#/components/schemas/TransactionReceipt'
+    Indexer_GetTokenBalancesSummary_Response:
+      type: object
+      properties:
+        page:
+          $ref: '#/components/schemas/Page'
+        balances:
+          type: array
+          description: '[]TokenBalance'
+          items:
+            $ref: '#/components/schemas/TokenBalance'
+    ContractInfoExtensions:
+      type: object
+      required:
+      - link
+      - description
+      - ogImage
+      - originChainId
+      - originAddress
+      - blacklist
+      - verified
+      - verifiedBy
+      - featured
+      properties:
+        link:
+          type: string
+        description:
+          type: string
+        ogImage:
+          type: string
+        originChainId:
+          type: number
+        originAddress:
+          type: string
+        blacklist:
+          type: boolean
+        verified:
+          type: boolean
+        verifiedBy:
+          type: string
+        featured:
+          type: boolean
+    ErrorWebrpcInternalError:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: WebrpcInternalError
+        code:
+          type: number
+          example: -7
+        msg:
+          type: string
+          example: internal error
+        cause:
+          type: string
+        status:
+          type: number
+          example: 500
+    Indexer_GetTransactionHistory_Request:
+      type: object
+      properties:
+        filter:
+          $ref: '#/components/schemas/TransactionHistoryFilter'
+        page:
+          $ref: '#/components/schemas/Page'
+        includeMetadata:
+          type: boolean
+        metadataOptions:
+          $ref: '#/components/schemas/MetadataOptions'
+    Indexer_GetTokenBalancesSummary_Request:
+      type: object
+      properties:
+        filter:
+          $ref: '#/components/schemas/TokenBalancesFilter'
+        omitMetadata:
+          type: boolean
+        page:
+          $ref: '#/components/schemas/Page'
+    EventFilter:
+      type: object
+      properties:
+        events:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+        contractAddresses:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+        accounts:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+        tokenIDs:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+    Indexer_SubscribeBalanceUpdates_Request:
+      type: object
+      properties:
+        contractAddress:
+          type: string
+    TxnTransferType:
+      type: string
+      description: Represented as uint32 on the server side
+      enum:
+      - UNKNOWN
+      - SEND
+      - RECEIVE
+    Indexer_GetTokenBalances_Request:
+      type: object
+      properties:
+        accountAddress:
+          type: string
+        contractAddress:
+          type: string
+        tokenID:
+          type: string
+        includeMetadata:
+          type: boolean
+        metadataOptions:
+          $ref: '#/components/schemas/MetadataOptions'
+        includeCollectionTokens:
+          type: boolean
+        page:
+          $ref: '#/components/schemas/Page'
+    EventDecoded:
+      type: object
+      required:
+      - topicHash
+      - eventSig
+      - types
+      - names
+      - values
+      properties:
+        topicHash:
+          type: string
+        eventSig:
+          type: string
+        types:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+        names:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+        values:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+    Indexer_GetNativeTokenBalance_Response:
+      type: object
+      properties:
+        balance:
+          $ref: '#/components/schemas/NativeTokenBalance'
+    TransactionFilter:
+      type: object
+      properties:
+        txnHash:
+          type: string
+        from:
+          type: string
+        to:
+          type: string
+        contractAddress:
+          type: string
+        event:
+          type: string
+    Indexer_GetTokenBalancesByContract_Response:
+      type: object
+      properties:
+        page:
+          $ref: '#/components/schemas/Page'
+        balances:
+          type: array
+          description: '[]TokenBalance'
+          items:
+            $ref: '#/components/schemas/TokenBalance'
+    Transaction:
+      type: object
+      required:
+      - txnHash
+      - blockNumber
+      - blockHash
+      - chainId
+      - timestamp
+      properties:
+        txnHash:
+          type: string
+        blockNumber:
+          type: number
+        blockHash:
+          type: string
+        chainId:
+          type: number
+        metaTxnID:
+          type: string
+        transfers:
+          type: array
+          description: '[]TxnTransfer'
+          items:
+            $ref: '#/components/schemas/TxnTransfer'
+        timestamp:
+          type: string
+    ErrorProjectNotFound:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: ProjectNotFound
+        code:
+          type: number
+          example: 3002
+        msg:
+          type: string
+          example: Project not found
+        cause:
+          type: string
+        status:
+          type: number
+          example: 400
+    ErrorNotFound:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: NotFound
+        code:
+          type: number
+          example: 3000
+        msg:
+          type: string
+          example: Resource not found
+        cause:
+          type: string
+        status:
+          type: number
+          example: 400
+    ErrorWebrpcBadMethod:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: WebrpcBadMethod
+        code:
+          type: number
+          example: -3
+        msg:
+          type: string
+          example: bad method
+        cause:
+          type: string
+        status:
+          type: number
+          example: 405
+    Page:
+      type: object
+      properties:
+        page:
+          type: number
+        column:
+          type: string
+        before:
+          type: object
+        after:
+          type: object
+        sort:
+          type: array
+          description: '[]SortBy'
+          items:
+            $ref: '#/components/schemas/SortBy'
+        pageSize:
+          type: number
+        more:
+          type: boolean
     ErrorResourceExhausted:
       type: object
       required:
@@ -2789,7 +4685,7 @@ components:
         status:
           type: number
           example: 400
-    ErrorRequiredArgument:
+    ErrorUnauthorized:
       type: object
       required:
       - error
@@ -2799,44 +4695,116 @@ components:
       properties:
         error:
           type: string
-          example: RequiredArgument
+          example: Unauthorized
         code:
           type: number
-          example: 2002
+          example: 1000
         msg:
           type: string
-          example: Required argument missing
+          example: Unauthorized access
         cause:
           type: string
         status:
           type: number
-          example: 400
-    NativeTokenBalance:
+          example: 401
+    Indexer_GetTokenBalancesDetails_Response:
+      type: object
+      properties:
+        page:
+          $ref: '#/components/schemas/Page'
+        balances:
+          type: array
+          description: '[]TokenBalance'
+          items:
+            $ref: '#/components/schemas/TokenBalance'
+    ContractInfo:
       type: object
       required:
-      - accountAddress
-      - balance
+      - chainId
+      - address
+      - name
+      - type
+      - symbol
+      - logoURI
+      - deployed
+      - bytecodeHash
+      - extensions
+      - contentHash
+      - updatedAt
       properties:
-        accountAddress:
+        chainId:
+          type: number
+        address:
           type: string
-        balance:
+        name:
           type: string
-    Metadata_TokenCollectionFilters_Response:
+        type:
+          type: string
+        symbol:
+          type: string
+        decimals:
+          type: number
+        logoURI:
+          type: string
+        deployed:
+          type: boolean
+        bytecodeHash:
+          type: string
+        extensions:
+          $ref: '#/components/schemas/ContractInfoExtensions'
+        contentHash:
+          type: number
+        updatedAt:
+          type: string
+    TxnInfo:
       type: object
+      required:
+      - from
+      - to
+      - value
       properties:
-        filters:
+        from:
+          type: string
+        to:
+          type: string
+        value:
+          type: string
+    TransactionLog:
+      type: object
+      required:
+      - contractAddress
+      - topics
+      - data
+      - index
+      properties:
+        contractAddress:
+          type: string
+        topics:
           type: array
-          description: '[]PropertyFilter'
+          description: '[]string'
           items:
-            $ref: '#/components/schemas/PropertyFilter'
-    PropertyType:
-      type: string
-      description: Represented as uint32 on the server side
-      enum:
-      - INT
-      - STRING
-      - ARRAY
-      - GENERIC
+            type: string
+        data:
+          type: string
+        index:
+          type: number
+    TokenSupply:
+      type: object
+      required:
+      - tokenID
+      - supply
+      - chainId
+      properties:
+        tokenID:
+          type: string
+        supply:
+          type: string
+        chainId:
+          type: number
+        contractInfo:
+          $ref: '#/components/schemas/ContractInfo'
+        tokenMetadata:
+          $ref: '#/components/schemas/TokenMetadata'
     TransactionReceipt:
       type: object
       required:
@@ -2883,370 +4851,35 @@ components:
           type: boolean
         reorged:
           type: boolean
-    Metadata_EnqueueTokensForRefresh_Request:
+    MetadataOptions:
       type: object
       properties:
-        chainID:
-          type: string
+        verifiedOnly:
+          type: boolean
+        unverifiedOnly:
+          type: boolean
+        includeContracts:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+    Indexer_GetTokenSupplies_Request:
+      type: object
+      properties:
         contractAddress:
           type: string
-        tokenIDs:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-        refreshAll:
+        includeMetadata:
           type: boolean
-    ContractInfoExtensions_2:
-      type: object
-      required:
-      - link
-      - description
-      - categories
-      - ogImage
-      - ogName
-      - originChainId
-      - originAddress
-      - blacklist
-      - verified
-      - verifiedBy
-      - featured
-      properties:
-        link:
-          type: string
-        description:
-          type: string
-        categories:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-        ogImage:
-          type: string
-        ogName:
-          type: string
-        originChainId:
-          type: number
-        originAddress:
-          type: string
-        blacklist:
-          type: boolean
-        verified:
-          type: boolean
-        verifiedBy:
-          type: string
-        featured:
-          type: boolean
-    ContractInfo:
-      type: object
-      required:
-      - chainId
-      - address
-      - name
-      - type
-      - symbol
-      - logoURI
-      - deployed
-      - bytecodeHash
-      - extensions
-      - contentHash
-      - updatedAt
-      properties:
-        chainId:
-          type: number
-        address:
-          type: string
-        name:
-          type: string
-        type:
-          type: string
-        symbol:
-          type: string
-        decimals:
-          type: number
-        logoURI:
-          type: string
-        deployed:
-          type: boolean
-        bytecodeHash:
-          type: string
-        extensions:
-          $ref: '#/components/schemas/ContractInfoExtensions'
-        contentHash:
-          type: number
-        updatedAt:
-          type: string
-    Metadata_SearchTokens_Request:
-      type: object
-      properties:
-        q:
-          type: string
-        chainID:
-          type: string
-        page:
-          $ref: '#/components/schemas/Page_2'
-    Metadata_GetContractInfoBatch_Request:
-      type: object
-      properties:
-        chainID:
-          type: string
-        contractAddresses:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-    Indexer_GetTokenBalancesDetails_Response:
-      type: object
-      properties:
+        metadataOptions:
+          $ref: '#/components/schemas/MetadataOptions'
         page:
           $ref: '#/components/schemas/Page'
-        balances:
-          type: array
-          description: '[]TokenBalance'
-          items:
-            $ref: '#/components/schemas/TokenBalance'
-    ErrorWebrpcServerPanic:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: WebrpcServerPanic
-        code:
-          type: number
-          example: -6
-        msg:
-          type: string
-          example: server panic
-        cause:
-          type: string
-        status:
-          type: number
-          example: 500
-    ErrorWebrpcBadRequest:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: WebrpcBadRequest
-        code:
-          type: number
-          example: -4
-        msg:
-          type: string
-          example: bad request
-        cause:
-          type: string
-        status:
-          type: number
-          example: 400
-    TokenMetadata:
-      type: object
-      required:
-      - tokenId
-      - name
-      - attributes
-      properties:
-        tokenId:
-          type: string
-        name:
-          type: string
-        description:
-          type: string
-        image:
-          type: string
-        video:
-          type: string
-        audio:
-          type: string
-        properties:
-          type: object
-          description: map<string,any>
-          additionalProperties:
-            type: object
-        attributes:
-          type: array
-          description: '[]map<string,any>'
-          items:
-            type: object
-            description: map<string,any>
-            additionalProperties:
-              type: object
-        imageData:
-          type: string
-        externalUrl:
-          type: string
-        backgroundColor:
-          type: string
-        animationUrl:
-          type: string
-        decimals:
-          type: number
-        updatedAt:
-          type: string
-        assets:
-          type: array
-          description: '[]Asset'
-          items:
-            $ref: '#/components/schemas/Asset'
-    Metadata_GetTokenMetadataBatch_Response:
-      type: object
-      properties:
-        contractTokenMetadata:
-          type: object
-          description: map<string,[]TokenMetadata>
-          additionalProperties:
-            type: array
-            description: '[]TokenMetadata'
-            items:
-              $ref: '#/components/schemas/TokenMetadata_2'
-        task:
-          $ref: '#/components/schemas/Task'
-    ErrorWebrpcRequestFailed:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: WebrpcRequestFailed
-        code:
-          type: number
-          example: -1
-        msg:
-          type: string
-          example: request failed
-        cause:
-          type: string
-        status:
-          type: number
-          example: 400
     TransactionStatus:
       type: string
       description: Represented as uint32 on the server side
       enum:
       - FAILED
       - SUCCESSFUL
-    Metadata_GetContractInfoBatch_Response:
-      type: object
-      properties:
-        contractInfoMap:
-          type: object
-          description: map<string,ContractInfo>
-          additionalProperties:
-            $ref: '#/components/schemas/ContractInfo_2'
-        task:
-          $ref: '#/components/schemas/Task'
-    Page:
-      type: object
-      properties:
-        page:
-          type: number
-        column:
-          type: string
-        before:
-          type: object
-        after:
-          type: object
-        sort:
-          type: array
-          description: '[]SortBy'
-          items:
-            $ref: '#/components/schemas/SortBy'
-        pageSize:
-          type: number
-        more:
-          type: boolean
-    Indexer_GetBalanceUpdates_Request:
-      type: object
-      properties:
-        contractAddress:
-          type: string
-        lastBlockNumber:
-          type: number
-        lastBlockHash:
-          type: string
-        page:
-          $ref: '#/components/schemas/Page'
-    TxnInfo:
-      type: object
-      required:
-      - from
-      - to
-      - value
-      properties:
-        from:
-          type: string
-        to:
-          type: string
-        value:
-          type: string
-    Indexer_SubscribeReceipts_Request:
-      type: object
-      properties:
-        filter:
-          $ref: '#/components/schemas/TransactionFilter'
-    ErrorProjectNotFound:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: ProjectNotFound
-        code:
-          type: number
-          example: 3002
-        msg:
-          type: string
-          example: Project not found
-        cause:
-          type: string
-        status:
-          type: number
-          example: 400
-    ErrorWebrpcBadRoute:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: WebrpcBadRoute
-        code:
-          type: number
-          example: -2
-        msg:
-          type: string
-          example: bad route
-        cause:
-          type: string
-        status:
-          type: number
-          example: 404
-    Indexer_SubscribeEvents_Response:
-      type: object
-      properties:
-        log:
-          $ref: '#/components/schemas/EventLog'
     Asset:
       type: object
       required:
@@ -3276,7 +4909,21 @@ components:
           type: number
         updatedAt:
           type: string
-    ErrorGeoblocked:
+    ContractType:
+      type: string
+      description: Represented as uint8 on the server side
+      enum:
+      - UNKNOWN
+      - NATIVE
+      - ERC20
+      - ERC721
+      - ERC1155
+      - SEQUENCE_WALLET
+      - ERC20_BRIDGE
+      - ERC721_BRIDGE
+      - ERC1155_BRIDGE
+      - SEQ_MARKETPLACE
+    ErrorWebrpcStreamLost:
       type: object
       required:
       - error
@@ -3286,37 +4933,130 @@ components:
       properties:
         error:
           type: string
-          example: Geoblocked
+          example: WebrpcStreamLost
         code:
           type: number
-          example: 1006
+          example: -9
         msg:
           type: string
-          example: Geoblocked region
+          example: stream lost
         cause:
           type: string
         status:
           type: number
-          example: 451
-    TransactionLog:
+          example: 400
+    Indexer_SubscribeEvents_Request:
+      type: object
+      properties:
+        filter:
+          $ref: '#/components/schemas/EventFilter'
+    TxnTransfer:
       type: object
       required:
+      - transferType
       - contractAddress
-      - topics
-      - data
-      - index
+      - contractType
+      - from
+      - to
+      - amounts
+      - logIndex
       properties:
+        transferType:
+          $ref: '#/components/schemas/TxnTransferType'
         contractAddress:
           type: string
-        topics:
+        contractType:
+          $ref: '#/components/schemas/ContractType'
+        from:
+          type: string
+        to:
+          type: string
+        tokenIds:
           type: array
           description: '[]string'
           items:
             type: string
-        data:
-          type: string
-        index:
+        amounts:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+        logIndex:
           type: number
+        contractInfo:
+          $ref: '#/components/schemas/ContractInfo'
+        tokenMetadata:
+          type: object
+          description: map<string,TokenMetadata>
+          additionalProperties:
+            $ref: '#/components/schemas/TokenMetadata'
+    ErrorWebrpcRequestFailed:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: WebrpcRequestFailed
+        code:
+          type: number
+          example: -1
+        msg:
+          type: string
+          example: request failed
+        cause:
+          type: string
+        status:
+          type: number
+          example: 400
+    ErrorUnavailable:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: Unavailable
+        code:
+          type: number
+          example: 2002
+        msg:
+          type: string
+          example: Unavailable resource
+        cause:
+          type: string
+        status:
+          type: number
+          example: 400
+    Indexer_GetBalanceUpdates_Request:
+      type: object
+      properties:
+        contractAddress:
+          type: string
+        lastBlockNumber:
+          type: number
+        lastBlockHash:
+          type: string
+        page:
+          $ref: '#/components/schemas/Page'
+    Indexer_SubscribeReceipts_Request:
+      type: object
+      properties:
+        filter:
+          $ref: '#/components/schemas/TransactionFilter'
+    EventLogType:
+      type: string
+      description: Represented as uint8 on the server side
+      enum:
+      - UNKNOWN
+      - BLOCK_ADDED
+      - BLOCK_REMOVED
     EventLog:
       type: object
       required:
@@ -3369,167 +5109,7 @@ components:
             type: object
         event:
           $ref: '#/components/schemas/EventDecoded'
-    TransactionFilter:
-      type: object
-      properties:
-        txnHash:
-          type: string
-        from:
-          type: string
-        to:
-          type: string
-        contractAddress:
-          type: string
-        event:
-          type: string
-    Metadata_GetTokenMetadata_Response:
-      type: object
-      properties:
-        tokenMetadata:
-          type: array
-          description: '[]TokenMetadata'
-          items:
-            $ref: '#/components/schemas/TokenMetadata_2'
-        task:
-          $ref: '#/components/schemas/Task'
-    TaskStatus:
-      type: string
-      description: Represented as uint8 on the server side
-      enum:
-      - QUEUED
-      - PAUSED
-      - FAILED
-      - COMPLETED
-    TransactionHistoryFilter:
-      type: object
-      properties:
-        accountAddress:
-          type: string
-        contractAddress:
-          type: string
-        accountAddresses:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-        contractAddresses:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-        transactionHashes:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-        metaTransactionIDs:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-        fromBlock:
-          type: number
-        toBlock:
-          type: number
-        tokenID:
-          type: string
-    Indexer_GetTokenSuppliesMap_Response:
-      type: object
-      properties:
-        supplies:
-          type: object
-          description: map<string,[]TokenSupply>
-          additionalProperties:
-            type: array
-            description: '[]TokenSupply'
-            items:
-              $ref: '#/components/schemas/TokenSupply'
-    TokenBalance:
-      type: object
-      required:
-      - contractType
-      - contractAddress
-      - accountAddress
-      - balance
-      - blockHash
-      - blockNumber
-      - chainId
-      - uniqueCollectibles
-      - isSummary
-      properties:
-        contractType:
-          $ref: '#/components/schemas/ContractType'
-        contractAddress:
-          type: string
-        accountAddress:
-          type: string
-        tokenID:
-          type: string
-        balance:
-          type: string
-        blockHash:
-          type: string
-        blockNumber:
-          type: number
-        chainId:
-          type: number
-        uniqueCollectibles:
-          type: string
-        isSummary:
-          type: boolean
-        contractInfo:
-          $ref: '#/components/schemas/ContractInfo'
-        tokenMetadata:
-          $ref: '#/components/schemas/TokenMetadata'
-    Indexer_GetTokenSupplies_Request:
-      type: object
-      properties:
-        contractAddress:
-          type: string
-        includeMetadata:
-          type: boolean
-        metadataOptions:
-          $ref: '#/components/schemas/MetadataOptions'
-        page:
-          $ref: '#/components/schemas/Page'
-    Indexer_GetNativeTokenBalance_Response:
-      type: object
-      properties:
-        balance:
-          $ref: '#/components/schemas/NativeTokenBalance'
-    TokenSupply:
-      type: object
-      required:
-      - tokenID
-      - supply
-      - chainId
-      properties:
-        tokenID:
-          type: string
-        supply:
-          type: string
-        chainId:
-          type: number
-        contractInfo:
-          $ref: '#/components/schemas/ContractInfo'
-        tokenMetadata:
-          $ref: '#/components/schemas/TokenMetadata'
-    Page_2:
-      type: object
-      properties:
-        page:
-          type: number
-        column:
-          type: string
-        before:
-          type: object
-        after:
-          type: object
-        pageSize:
-          type: number
-        more:
-          type: boolean
-    ErrorRequestConflict:
+    ErrorWebrpcClientDisconnected:
       type: object
       required:
       - error
@@ -3539,48 +5119,24 @@ components:
       properties:
         error:
           type: string
-          example: RequestConflict
+          example: WebrpcClientDisconnected
         code:
           type: number
-          example: 1004
+          example: -8
         msg:
           type: string
-          example: Conflict with target resource
-        cause:
-          type: string
-        status:
-          type: number
-          example: 409
-    ErrorNotFound:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: NotFound
-        code:
-          type: number
-          example: 3000
-        msg:
-          type: string
-          example: Resource not found
+          example: client disconnected
         cause:
           type: string
         status:
           type: number
           example: 400
-    ContractVerificationStatus:
-      type: string
-      description: Represented as string on the server side
-      enum:
-      - VERIFIED
-      - UNVERIFIED
-      - ALL
-    ErrorSessionExpired:
+    Indexer_SubscribeEvents_Response:
+      type: object
+      properties:
+        log:
+          $ref: '#/components/schemas/EventLog'
+    ErrorMethodNotFound:
       type: object
       required:
       - error
@@ -3590,153 +5146,18 @@ components:
       properties:
         error:
           type: string
-          example: SessionExpired
+          example: MethodNotFound
         code:
           type: number
-          example: 1002
+          example: 1003
         msg:
           type: string
-          example: Session expired
+          example: Method not found
         cause:
           type: string
         status:
           type: number
-          example: 403
-    Indexer_FetchTransactionReceiptWithFilter_Request:
-      type: object
-      properties:
-        filter:
-          $ref: '#/components/schemas/TransactionFilter'
-        maxBlockWait:
-          type: number
-    Metadata_SearchTokenIDs_Response:
-      type: object
-      properties:
-        page:
-          $ref: '#/components/schemas/Page_2'
-        tokenIds:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-    TokenBalancesByContractFilter:
-      type: object
-      required:
-      - contractAddresses
-      - accountAddresses
-      - contractStatus
-      properties:
-        contractAddresses:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-        accountAddresses:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-        contractStatus:
-          $ref: '#/components/schemas/ContractVerificationStatus'
-    Metadata_SearchContractInfoBatch_Response:
-      type: object
-      properties:
-        contractInfoByChain:
-          type: object
-          description: map<string,[]ContractInfo>
-          additionalProperties:
-            type: array
-            description: '[]ContractInfo'
-            items:
-              $ref: '#/components/schemas/ContractInfo_2'
-    ErrorTokenDirectoryDisabled:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: TokenDirectoryDisabled
-        code:
-          type: number
-          example: 4001
-        msg:
-          type: string
-          example: Token Directory is disabled
-        cause:
-          type: string
-        status:
-          type: number
-          example: 400
-    Indexer_GetTokenBalancesSummary_Request:
-      type: object
-      properties:
-        filter:
-          $ref: '#/components/schemas/TokenBalancesFilter'
-        omitMetadata:
-          type: boolean
-        page:
-          $ref: '#/components/schemas/Page'
-    Transaction:
-      type: object
-      required:
-      - txnHash
-      - blockNumber
-      - blockHash
-      - chainId
-      - timestamp
-      properties:
-        txnHash:
-          type: string
-        blockNumber:
-          type: number
-        blockHash:
-          type: string
-        chainId:
-          type: number
-        metaTxnID:
-          type: string
-        transfers:
-          type: array
-          description: '[]TxnTransfer'
-          items:
-            $ref: '#/components/schemas/TxnTransfer'
-        timestamp:
-          type: string
-    ContractInfoExtensions:
-      type: object
-      required:
-      - link
-      - description
-      - ogImage
-      - originChainId
-      - originAddress
-      - blacklist
-      - verified
-      - verifiedBy
-      - featured
-      properties:
-        link:
-          type: string
-        description:
-          type: string
-        ogImage:
-          type: string
-        originChainId:
-          type: number
-        originAddress:
-          type: string
-        blacklist:
-          type: boolean
-        verified:
-          type: boolean
-        verifiedBy:
-          type: string
-        featured:
-          type: boolean
+          example: 404
     TokenBalancesFilter:
       type: object
       required:
@@ -3762,17 +5183,7 @@ components:
           description: '[]string'
           items:
             type: string
-    Metadata_SearchTokens_Response:
-      type: object
-      properties:
-        tokenMetadata:
-          type: array
-          description: '[]TokenMetadata'
-          items:
-            $ref: '#/components/schemas/TokenMetadata_2'
-        nextPage:
-          $ref: '#/components/schemas/Page_2'
-    ErrorTimeout:
+    ErrorSessionExpired:
       type: object
       required:
       - error
@@ -3782,69 +5193,76 @@ components:
       properties:
         error:
           type: string
-          example: Timeout
+          example: SessionExpired
         code:
           type: number
-          example: 2000
+          example: 1002
         msg:
           type: string
-          example: Request timed out
+          example: Session expired
         cause:
           type: string
         status:
           type: number
-          example: 408
-    Indexer_GetTokenBalances_Request:
+          example: 403
+    TokenMetadata:
       type: object
+      required:
+      - tokenId
+      - name
+      - attributes
       properties:
-        accountAddress:
+        tokenId:
           type: string
-        contractAddress:
+        name:
           type: string
-        tokenID:
+        description:
           type: string
-        includeMetadata:
-          type: boolean
-        metadataOptions:
-          $ref: '#/components/schemas/MetadataOptions'
-        includeCollectionTokens:
-          type: boolean
-        page:
-          $ref: '#/components/schemas/Page'
-    Indexer_GetTokenSupplies_Response:
-      type: object
-      properties:
-        page:
-          $ref: '#/components/schemas/Page'
-        contractType:
-          $ref: '#/components/schemas/ContractType'
-        tokenIDs:
+        image:
+          type: string
+        video:
+          type: string
+        audio:
+          type: string
+        properties:
+          type: object
+          description: map<string,any>
+          additionalProperties:
+            type: object
+        attributes:
           type: array
-          description: '[]TokenSupply'
+          description: '[]map<string,any>'
           items:
-            $ref: '#/components/schemas/TokenSupply'
-    SortOrder:
-      type: string
-      description: Represented as uint32 on the server side
-      enum:
-      - DESC
-      - ASC
-    Indexer_SubscribeBalanceUpdates_Response:
-      type: object
-      properties:
-        balance:
-          $ref: '#/components/schemas/TokenBalance'
-    Metadata_DirectoryGetCollections_Request:
-      type: object
-      properties:
-        chainId:
+            type: object
+            description: map<string,any>
+            additionalProperties:
+              type: object
+        imageData:
+          type: string
+        externalUrl:
+          type: string
+        backgroundColor:
+          type: string
+        animationUrl:
+          type: string
+        decimals:
           type: number
-        includeTestnets:
-          type: boolean
-        onlyFeatured:
+        updatedAt:
+          type: string
+        assets:
+          type: array
+          description: '[]Asset'
+          items:
+            $ref: '#/components/schemas/Asset'
+    Indexer_GetTokenBalancesDetails_Request:
+      type: object
+      properties:
+        filter:
+          $ref: '#/components/schemas/TokenBalancesFilter'
+        omitMetadata:
           type: boolean
         page:
-          $ref: '#/components/schemas/Page_2'
+          $ref: '#/components/schemas/Page'
     Metadata_SearchTokenIDs_Request:
       type: object
       properties:
@@ -3856,6 +5274,74 @@ components:
           $ref: '#/components/schemas/Filter'
         page:
           $ref: '#/components/schemas/Page_2'
+    Metadata_SearchTokenMetadata_Request:
+      type: object
+      properties:
+        chainID:
+          type: string
+        contractAddress:
+          type: string
+        filter:
+          $ref: '#/components/schemas/Filter'
+        page:
+          $ref: '#/components/schemas/Page_2'
+    PropertyType:
+      type: string
+      description: Represented as uint32 on the server side
+      enum:
+      - INT
+      - STRING
+      - ARRAY
+      - GENERIC
+    Metadata_GetContractInfo_Request:
+      type: object
+      properties:
+        chainID:
+          type: string
+        contractAddress:
+          type: string
+    Metadata_DirectoryGetCollections_Request:
+      type: object
+      properties:
+        chainId:
+          type: number
+        includeTestnets:
+          type: boolean
+        onlyFeatured:
+          type: boolean
+        page:
+          $ref: '#/components/schemas/Page_2'
+    Metadata_GetContractInfo_Response:
+      type: object
+      properties:
+        contractInfo:
+          $ref: '#/components/schemas/ContractInfo_2'
+        task:
+          $ref: '#/components/schemas/Task'
+    ResourceStatus:
+      type: string
+      description: Represented as uint32 on the server side
+      enum:
+      - NOT_AVAILABLE
+      - STALE
+      - AVAILABLE
+    Metadata_TokenCollectionFilters_Request:
+      type: object
+      properties:
+        chainID:
+          type: string
+        contractAddress:
+          type: string
+    Metadata_SearchTokenMetadata_Response:
+      type: object
+      properties:
+        page:
+          $ref: '#/components/schemas/Page_2'
+        tokenMetadata:
+          type: array
+          description: '[]TokenMetadata'
+          items:
+            $ref: '#/components/schemas/TokenMetadata_2'
     Metadata_SearchContractInfoBatch_Request:
       type: object
       properties:
@@ -3864,52 +5350,284 @@ components:
           description: '[]string'
           items:
             type: string
-    EventFilter:
+    Metadata_TokenCollectionFilters_Response:
       type: object
       properties:
-        events:
+        filters:
+          type: array
+          description: '[]PropertyFilter'
+          items:
+            $ref: '#/components/schemas/PropertyFilter'
+    Metadata_GetContractInfoBatch_Response:
+      type: object
+      properties:
+        contractInfoMap:
+          type: object
+          description: map<string,ContractInfo>
+          additionalProperties:
+            $ref: '#/components/schemas/ContractInfo_2'
+        task:
+          $ref: '#/components/schemas/Task'
+    Metadata_DirectoryGetNetworks_Response:
+      type: object
+      properties:
+        networks:
+          type: array
+          description: '[]uint64'
+          items:
+            type: number
+    Metadata_SearchTokenIDs_Response:
+      type: object
+      properties:
+        page:
+          $ref: '#/components/schemas/Page_2'
+        tokenIds:
           type: array
           description: '[]string'
           items:
             type: string
-        contractAddresses:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-        accounts:
-          type: array
-          description: '[]string'
-          items:
-            type: string
+    Metadata_GetTokenMetadata_Request:
+      type: object
+      properties:
+        chainID:
+          type: string
+        contractAddress:
+          type: string
         tokenIDs:
           type: array
           description: '[]string'
           items:
             type: string
-    Indexer_GetTransactionHistory_Request:
+    Filter:
       type: object
       properties:
-        filter:
-          $ref: '#/components/schemas/TransactionHistoryFilter'
-        page:
-          $ref: '#/components/schemas/Page'
-        includeMetadata:
-          type: boolean
-        metadataOptions:
-          $ref: '#/components/schemas/MetadataOptions'
-    MetadataOptions:
+        text:
+          type: string
+        properties:
+          type: array
+          description: '[]PropertyFilter'
+          items:
+            $ref: '#/components/schemas/PropertyFilter'
+    Metadata_SearchTokens_Response:
       type: object
       properties:
-        verifiedOnly:
-          type: boolean
-        unverifiedOnly:
-          type: boolean
-        includeContracts:
+        tokenMetadata:
+          type: array
+          description: '[]TokenMetadata'
+          items:
+            $ref: '#/components/schemas/TokenMetadata_2'
+        nextPage:
+          $ref: '#/components/schemas/Page_2'
+    PropertyFilter:
+      type: object
+      required:
+      - name
+      - type
+      properties:
+        name:
+          type: string
+        type:
+          $ref: '#/components/schemas/PropertyType'
+        min:
+          type: number
+        max:
+          type: number
+        values:
+          type: array
+          description: '[]any'
+          items:
+            type: object
+    Metadata_EnqueueTokensForRefresh_Response:
+      type: object
+      properties:
+        taskId:
+          type: number
+    ErrorChainNotFound:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: ChainNotFound
+        code:
+          type: number
+          example: 3003
+        msg:
+          type: string
+          example: Chain not found
+        cause:
+          type: string
+        status:
+          type: number
+          example: 400
+    ErrorRateLimited:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: RateLimited
+        code:
+          type: number
+          example: 2005
+        msg:
+          type: string
+          example: Rate limited
+        cause:
+          type: string
+        status:
+          type: number
+          example: 429
+    Metadata_EnqueueTokensForRefresh_Request:
+      type: object
+      properties:
+        chainID:
+          type: string
+        contractAddress:
+          type: string
+        tokenIDs:
           type: array
           description: '[]string'
           items:
             type: string
+        refreshAll:
+          type: boolean
+    ErrorValidationFailed:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: ValidationFailed
+        code:
+          type: number
+          example: 2004
+        msg:
+          type: string
+          example: Validation failed
+        cause:
+          type: string
+        status:
+          type: number
+          example: 400
+    ErrorGeoblocked:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: Geoblocked
+        code:
+          type: number
+          example: 1006
+        msg:
+          type: string
+          example: Geoblocked region
+        cause:
+          type: string
+        status:
+          type: number
+          example: 451
+    ErrorRequiredArgument:
+      type: object
+      required:
+      - error
+      - code
+      - msg
+      - status
+      properties:
+        error:
+          type: string
+          example: RequiredArgument
+        code:
+          type: number
+          example: 2002
+        msg:
+          type: string
+          example: Required argument missing
+        cause:
+          type: string
+        status:
+          type: number
+          example: 400
+    Metadata_GetContractInfoBatch_Request:
+      type: object
+      properties:
+        chainID:
+          type: string
+        contractAddresses:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+    Page_2:
+      type: object
+      properties:
+        page:
+          type: number
+        column:
+          type: string
+        before:
+          type: object
+        after:
+          type: object
+        pageSize:
+          type: number
+        more:
+          type: boolean
+    Metadata_SearchContractInfo_Request:
+      type: object
+      properties:
+        contractAddress:
+          type: string
+    Metadata_RefreshTokenMetadata_Request:
+      type: object
+      properties:
+        chainID:
+          type: string
+        contractAddress:
+          type: string
+        tokenIDs:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+        refreshAll:
+          type: boolean
+    Metadata_GetTokenMetadata_Response:
+      type: object
+      properties:
+        tokenMetadata:
+          type: array
+          description: '[]TokenMetadata'
+          items:
+            $ref: '#/components/schemas/TokenMetadata_2'
+        task:
+          $ref: '#/components/schemas/Task'
+    Metadata_SearchContractInfo_Response:
+      type: object
+      properties:
+        contractInfoList:
+          type: array
+          description: '[]ContractInfo'
+          items:
+            $ref: '#/components/schemas/ContractInfo_2'
     Task:
       type: object
       required:
@@ -3939,160 +5657,65 @@ components:
             type: string
         hash:
           type: string
-    Indexer_SubscribeBalanceUpdates_Request:
-      type: object
-      properties:
-        contractAddress:
-          type: string
-    TransactionType:
+    TaskStatus:
       type: string
-      description: Represented as uint32 on the server side
+      description: Represented as uint8 on the server side
       enum:
-      - LegacyTxnType
-      - AccessListTxnType
-      - DynamicFeeTxnType
-    ErrorAborted:
+      - QUEUED
+      - PAUSED
+      - FAILED
+      - COMPLETED
+    ContractInfoExtensions_2:
       type: object
       required:
-      - error
-      - code
-      - msg
-      - status
+      - link
+      - description
+      - categories
+      - ogImage
+      - ogName
+      - originChainId
+      - originAddress
+      - blacklist
+      - verified
+      - verifiedBy
+      - featured
       properties:
-        error:
+        link:
           type: string
-          example: Aborted
-        code:
+        description:
+          type: string
+        categories:
+          type: array
+          description: '[]string'
+          items:
+            type: string
+        ogImage:
+          type: string
+        ogName:
+          type: string
+        originChainId:
           type: number
-          example: 1005
-        msg:
+        originAddress:
           type: string
-          example: Request aborted
-        cause:
-          type: string
-        status:
-          type: number
-          example: 400
-    ResourceStatus:
-      type: string
-      description: Represented as uint32 on the server side
-      enum:
-      - NOT_AVAILABLE
-      - STALE
-      - AVAILABLE
-    ErrorWebrpcEndpoint:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: WebrpcEndpoint
-        code:
-          type: number
-          example: 0
-        msg:
-          type: string
-          example: endpoint error
-        cause:
-          type: string
-        status:
-          type: number
-          example: 400
-    Metadata_DirectoryGetNetworks_Request:
-      type: object
-      properties:
-        includeTestnets:
+        blacklist:
           type: boolean
-        onlyFeatured:
+        verified:
           type: boolean
-    Indexer_GetTokenSuppliesMap_Request:
+        verifiedBy:
+          type: string
+        featured:
+          type: boolean
+    Metadata_SearchContractInfoBatch_Response:
       type: object
       properties:
-        tokenMap:
+        contractInfoByChain:
           type: object
-          description: map<string,[]string>
+          description: map<string,[]ContractInfo>
           additionalProperties:
             type: array
-            description: '[]string'
+            description: '[]ContractInfo'
             items:
-              type: string
-        includeMetadata:
-          type: boolean
-        metadataOptions:
-          $ref: '#/components/schemas/MetadataOptions'
-    ErrorChainNotFound:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: ChainNotFound
-        code:
-          type: number
-          example: 3003
-        msg:
-          type: string
-          example: Chain not found
-        cause:
-          type: string
-        status:
-          type: number
-          example: 400
-    Metadata_TokenCollectionFilters_Request:
-      type: object
-      properties:
-        chainID:
-          type: string
-        contractAddress:
-          type: string
-    ErrorWebrpcBadMethod:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: WebrpcBadMethod
-        code:
-          type: number
-          example: -3
-        msg:
-          type: string
-          example: bad method
-        cause:
-          type: string
-        status:
-          type: number
-          example: 405
-    Metadata_GetContractInfo_Request:
-      type: object
-      properties:
-        chainID:
-          type: string
-        contractAddress:
-          type: string
-    Metadata_SearchTokenMetadata_Request:
-      type: object
-      properties:
-        chainID:
-          type: string
-        contractAddress:
-          type: string
-        filter:
-          $ref: '#/components/schemas/Filter'
-        page:
-          $ref: '#/components/schemas/Page_2'
+              $ref: '#/components/schemas/ContractInfo_2'
     ContractInfo_2:
       type: object
       required:
@@ -4140,7 +5763,16 @@ components:
           type: string
         status:
           $ref: '#/components/schemas/ResourceStatus'
-    ErrorValidationFailed:
+    Metadata_SearchTokens_Request:
+      type: object
+      properties:
+        q:
+          type: string
+        chainID:
+          type: string
+        page:
+          $ref: '#/components/schemas/Page_2'
+    ErrorTokenDirectoryDisabled:
       type: object
       required:
       - error
@@ -4150,254 +5782,41 @@ components:
       properties:
         error:
           type: string
-          example: ValidationFailed
+          example: TokenDirectoryDisabled
         code:
           type: number
-          example: 2004
+          example: 4001
         msg:
           type: string
-          example: Validation failed
+          example: Token Directory is disabled
         cause:
           type: string
         status:
           type: number
           example: 400
-    Indexer_GetTokenBalancesByContract_Response:
+    Metadata_GetTokenMetadataBatch_Response:
       type: object
       properties:
-        page:
-          $ref: '#/components/schemas/Page'
-        balances:
-          type: array
-          description: '[]TokenBalance'
-          items:
-            $ref: '#/components/schemas/TokenBalance'
-    Metadata_GetContractInfo_Response:
-      type: object
-      properties:
-        contractInfo:
-          $ref: '#/components/schemas/ContractInfo_2'
+        contractTokenMetadata:
+          type: object
+          description: map<string,[]TokenMetadata>
+          additionalProperties:
+            type: array
+            description: '[]TokenMetadata'
+            items:
+              $ref: '#/components/schemas/TokenMetadata_2'
         task:
           $ref: '#/components/schemas/Task'
-    Metadata_SearchContractInfo_Request:
+    Metadata_DirectoryGetCollections_Response:
       type: object
       properties:
-        contractAddress:
-          type: string
-    Metadata_EnqueueTokensForRefresh_Response:
-      type: object
-      properties:
-        taskId:
-          type: number
-    EventDecoded:
-      type: object
-      required:
-      - topicHash
-      - eventSig
-      - types
-      - names
-      - values
-      properties:
-        topicHash:
-          type: string
-        eventSig:
-          type: string
-        types:
+        collections:
           type: array
-          description: '[]string'
+          description: '[]ContractInfo'
           items:
-            type: string
-        names:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-        values:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-    EventLogDataType:
-      type: string
-      description: Represented as uint8 on the server side
-      enum:
-      - EVENT
-      - TOKEN_TRANSFER
-      - NATIVE_TOKEN_TRANSFER
-      - SEQUENCE_TXN
-    Indexer_GetTokenBalances_Response:
-      type: object
-      properties:
+            $ref: '#/components/schemas/ContractInfo_2'
         page:
-          $ref: '#/components/schemas/Page'
-        balances:
-          type: array
-          description: '[]TokenBalance'
-          items:
-            $ref: '#/components/schemas/TokenBalance'
-    Indexer_SubscribeEvents_Request:
-      type: object
-      properties:
-        filter:
-          $ref: '#/components/schemas/EventFilter'
-    TxnTransferType:
-      type: string
-      description: Represented as uint32 on the server side
-      enum:
-      - UNKNOWN
-      - SEND
-      - RECEIVE
-    Indexer_FetchTransactionReceiptWithFilter_Response:
-      type: object
-      properties:
-        receipt:
-          $ref: '#/components/schemas/TransactionReceipt'
-    TxnTransfer:
-      type: object
-      required:
-      - transferType
-      - contractAddress
-      - contractType
-      - from
-      - to
-      - amounts
-      - logIndex
-      properties:
-        transferType:
-          $ref: '#/components/schemas/TxnTransferType'
-        contractAddress:
-          type: string
-        contractType:
-          $ref: '#/components/schemas/ContractType'
-        from:
-          type: string
-        to:
-          type: string
-        tokenIds:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-        amounts:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-        logIndex:
-          type: number
-        contractInfo:
-          $ref: '#/components/schemas/ContractInfo'
-        tokenMetadata:
-          type: object
-          description: map<string,TokenMetadata>
-          additionalProperties:
-            $ref: '#/components/schemas/TokenMetadata'
-    Indexer_GetTokenBalancesByContract_Request:
-      type: object
-      properties:
-        filter:
-          $ref: '#/components/schemas/TokenBalancesByContractFilter'
-        omitMetadata:
-          type: boolean
-        page:
-          $ref: '#/components/schemas/Page'
-    EventLogType:
-      type: string
-      description: Represented as uint8 on the server side
-      enum:
-      - UNKNOWN
-      - BLOCK_ADDED
-      - BLOCK_REMOVED
-    ErrorWebrpcInternalError:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: WebrpcInternalError
-        code:
-          type: number
-          example: -7
-        msg:
-          type: string
-          example: internal error
-        cause:
-          type: string
-        status:
-          type: number
-          example: 500
-    Indexer_GetBalanceUpdates_Response:
-      type: object
-      properties:
-        page:
-          $ref: '#/components/schemas/Page'
-        balances:
-          type: array
-          description: '[]TokenBalance'
-          items:
-            $ref: '#/components/schemas/TokenBalance'
-    ErrorMethodNotFound:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: MethodNotFound
-        code:
-          type: number
-          example: 1003
-        msg:
-          type: string
-          example: Method not found
-        cause:
-          type: string
-        status:
-          type: number
-          example: 404
-    Indexer_GetNativeTokenBalance_Request:
-      type: object
-      properties:
-        accountAddress:
-          type: string
-    ErrorMetadataCallFailed:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: MetadataCallFailed
-        code:
-          type: number
-          example: 3003
-        msg:
-          type: string
-          example: Metadata service call failed
-        cause:
-          type: string
-        status:
-          type: number
-          example: 400
-    Indexer_GetTokenBalancesDetails_Request:
-      type: object
-      properties:
-        filter:
-          $ref: '#/components/schemas/TokenBalancesFilter'
-        omitMetadata:
-          type: boolean
-        page:
-          $ref: '#/components/schemas/Page'
+          $ref: '#/components/schemas/Page_2'
     ErrorFail:
       type: object
       required:
@@ -4420,16 +5839,26 @@ components:
         status:
           type: number
           example: 500
-    SortBy:
+    Metadata_DirectoryGetNetworks_Request:
       type: object
-      required:
-      - column
-      - order
       properties:
-        column:
+        includeTestnets:
+          type: boolean
+        onlyFeatured:
+          type: boolean
+    Metadata_GetTokenMetadataBatch_Request:
+      type: object
+      properties:
+        chainID:
           type: string
-        order:
-          $ref: '#/components/schemas/SortOrder'
+        contractTokenMap:
+          type: object
+          description: map<string,[]string>
+          additionalProperties:
+            type: array
+            description: '[]string'
+            items:
+              type: string
     TokenMetadata_2:
       type: object
       required:
@@ -4486,127 +5915,23 @@ components:
           type: string
         lastFetched:
           type: string
-    ErrorRateLimited:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: RateLimited
-        code:
-          type: number
-          example: 2005
-        msg:
-          type: string
-          example: Rate limited
-        cause:
-          type: string
-        status:
-          type: number
-          example: 429
-    ErrorWebrpcClientDisconnected:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: WebrpcClientDisconnected
-        code:
-          type: number
-          example: -8
-        msg:
-          type: string
-          example: client disconnected
-        cause:
-          type: string
-        status:
-          type: number
-          example: 400
-    Indexer_FetchTransactionReceipt_Response:
+    Metadata_RefreshTokenMetadata_Response:
       type: object
       properties:
-        receipt:
-          $ref: '#/components/schemas/TransactionReceipt'
-    Indexer_GetTokenBalancesSummary_Response:
-      type: object
-      properties:
-        page:
-          $ref: '#/components/schemas/Page'
-        balances:
-          type: array
-          description: '[]TokenBalance'
-          items:
-            $ref: '#/components/schemas/TokenBalance'
-    ErrorWebrpcStreamLost:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: WebrpcStreamLost
-        code:
+        taskId:
           type: number
-          example: -9
-        msg:
-          type: string
-          example: stream lost
-        cause:
-          type: string
-        status:
-          type: number
-          example: 400
-    Indexer_FetchTransactionReceipt_Request:
-      type: object
-      properties:
-        txnHash:
-          type: string
-        maxBlockWait:
-          type: number
-    ErrorQueryFailed:
-      type: object
-      required:
-      - error
-      - code
-      - msg
-      - status
-      properties:
-        error:
-          type: string
-          example: QueryFailed
-        code:
-          type: number
-          example: 2003
-        msg:
-          type: string
-          example: Query failed
-        cause:
-          type: string
-        status:
-          type: number
-          example: 400
-    Metadata_RefreshTokenMetadata_Request:
-      type: object
-      properties:
-        chainID:
-          type: string
-        contractAddress:
-          type: string
-        tokenIDs:
-          type: array
-          description: '[]string'
-          items:
-            type: string
-        refreshAll:
-          type: boolean
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      description: 'Public project access key for authenticating requests obtained on Sequence Builder. Example Test Key: AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI'
+      name: X-Access-Key
+      x-example: AQAAAAAAAEGvyZiWA9FMslYeG_yayXaHnSI
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Secret JWT token for authenticating requests obtained from Sequence Builder - should not be exposed publicly.
+x-refined-from:
+- sequence-indexer.json
+- sequence-metadata.json
