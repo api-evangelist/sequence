@@ -83,7 +83,7 @@ apis:
   - type: Webhooks
     url: asyncapi/sequence-indexer-webhooks.yml
 - aid: sequence:sequence-public-api
-  name: Sequence public API
+  name: Sequence Public API
   description: >-
     Endpoints accessible by passing your project-access-key in the header. This is injected whenever you
     login automatically.
@@ -113,7 +113,7 @@ apis:
   - type: Webhooks
     url: asyncapi/sequence-indexer-webhooks.yml
 - aid: sequence:sequence-secret-api
-  name: Sequence secret API
+  name: Sequence Secret API
   description: >-
     Endpoints that require a Sequence service token intended to be secret. You can manually generate one
     on Sequence Builder and pass it as a Bearer Token.
